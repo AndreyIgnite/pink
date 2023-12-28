@@ -304,10 +304,58 @@ template {
 [hidden] {
   display: none;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ul,
+ol,
+button {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../fonts/opensans.woff);
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../fonts/opensans.woff2);
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../../fonts/opensansbold.woff);
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../../fonts/opensansbold.woff2);
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../../fonts/opensanslight.woff);
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../../fonts/opensanslight.woff2);
+}
 html {
   height: 100%;
 }
-.page_body {
+.page-body {
   width: 320px;
   height: 100%;
   margin: 0 auto;
@@ -318,9 +366,19 @@ html {
   background-size: auto;
   background-position: top;
 }
-.page_header {
+.page-header {
   position: relative;
   width: 320px;
+  height: 66px;
+  padding: 22px 20px 21px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+.logo {
+  display: inline-block;
+  width: auto;
+  height: 23px;
 }
 .popup-menu {
   position: absolute;
@@ -329,5 +387,41 @@ html {
   left: 0px;
   width: 100%;
   background-color: #283645;
+}
+.page-main {
+  color: white;
+}
+.download {
+  background-color: #1D2631;
+}
+.page-header__toggler {
+  height: 100%;
+  border: none;
+}
+.download__title {
+  text-align: center;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28.8px;
+}
+.download__wrapper {
+  height: 667px;
+  padding: 29px 20px 38px;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */

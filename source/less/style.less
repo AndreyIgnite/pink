@@ -1,12 +1,42 @@
 // Начните писать стили здесь
 // Global
 @import (less) "global/normalize.css";
+@import (less) "global/reset.css";
 @import "global/global.less";
 
-//Blocks
-@import "blocks/page_body.less";
-@import "blocks/page_header.less";
-@import "blocks/download.less";
+
+//****Blocks******//
+@import "blocks/page-body.less";
+    //Header//
+@import "blocks/page-header.less";
 @import "blocks/logo.less";
 @import "blocks/popup-menu.less";
-@import "blocks/page_header.less";
+@import "blocks/site-list.less";
+    //Main//
+@import "blocks/page-main.less";
+@import "blocks/download.less";
+//****Blocks******//
+
+//****Elements******//
+    //Header//
+@import "elements/page-header__toggler.less";
+    //Main//
+@import "elements/download__title.less";
+@import "elements/download__wrapper.less";
+//****Elements******//
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
