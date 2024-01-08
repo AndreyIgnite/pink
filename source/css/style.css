@@ -356,7 +356,11 @@ html {
   height: 100%;
 }
 .page-body {
+<<<<<<< HEAD
   min-width: 320px;
+=======
+  width: 380px;
+>>>>>>> 1f45ec612f844ecc46eeb3148765a04da3ca0de7
   height: 100%;
   margin: 0 auto;
   outline: 2px solid #c02e02;
