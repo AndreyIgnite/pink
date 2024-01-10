@@ -359,8 +359,6 @@ html {
   min-width: 320px;
   height: 100%;
   margin: 0 auto;
-  outline: 2px solid #c02e02;
-  outline-offset: -2px;
   background-image: url(../img/back-mobile.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -391,14 +389,12 @@ html {
 .page-main {
   color: white;
 }
-.download {
-  background-color: #1D2631;
-}
 .page-header__toggler {
   height: 100%;
   border: none;
 }
 .download__title {
+  margin: 0px;
   text-align: center;
   font-family: inherit;
   font-style: inherit;
@@ -407,8 +403,18 @@ html {
   line-height: 28.8px;
 }
 .download__wrapper {
+  position: relative;
   height: 667px;
-  padding: 29px 20px 38px;
+  padding: 20px 0px;
+}
+.download__header-image {
+  margin: 0 auto;
+  margin-top: 34px;
+}
+.download__header-screen {
+  position: absolute;
+  top: 115px;
+  left: 104px;
 }
 body {
   font-family: "Open Sans", sans-serif;
