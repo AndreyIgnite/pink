@@ -395,6 +395,7 @@ html {
 }
 .download__title {
   margin: 0px;
+  margin-bottom: 23px;
   text-align: center;
   font-family: inherit;
   font-style: inherit;
@@ -403,17 +404,20 @@ html {
   line-height: 28.8px;
 }
 .download__wrapper {
-  position: relative;
   height: 667px;
-  padding: 20px 0px;
+  padding-top: 29px;
+}
+.download__main-img {
+  position: relative;
 }
 .download__header-image {
-  margin: 0 auto;
-  margin-top: 34px;
+  position: relative;
+  left: 0px;
+  top: 0px;
 }
 .download__header-screen {
   position: absolute;
-  top: 115px;
+  top: 33px;
   left: 104px;
 }
 body {
