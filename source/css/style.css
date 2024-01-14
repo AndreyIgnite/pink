@@ -311,10 +311,14 @@ template {
 }
 ul,
 ol,
-button {
+button,
+p {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+img {
+  display: block;
 }
 @font-face {
   font-family: "Open Sans";
@@ -387,7 +391,15 @@ html {
   background-color: #283645;
 }
 .page-main {
+  width: auto;
   color: white;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  height: 271px;
+  padding: 28px 20px 0;
+  background-color: #1D2631;
 }
 .page-header__toggler {
   height: 100%;
@@ -419,6 +431,43 @@ html {
   position: absolute;
   top: 33px;
   left: 104px;
+}
+.links__wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 56px;
+  margin-bottom: 28px;
+}
+.links__platform {
+  display: block;
+  height: 56px;
+  width: 47px;
+  background-position: bottom;
+}
+.links__subscribe-for-platforms {
+  text-align: center;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+}
+.links__button {
+  margin-bottom: 32px;
+}
+.links__platform--apple {
+  background-image: url(../../img/apple-logo.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.links__platform--android {
+  background-image: url(../../img/android-logo.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.links__platform--windows {
+  background-image: url(../../img/microsoft-logo.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 body {
   font-family: "Open Sans", sans-serif;
