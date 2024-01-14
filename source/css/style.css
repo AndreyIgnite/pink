@@ -455,17 +455,17 @@ html {
   margin-bottom: 32px;
 }
 .links__platform--apple {
-  background-image: url(../../img/apple-logo.svg);
+  background-image: url(../img/apple-logo.svg);
   background-repeat: no-repeat;
   background-size: auto;
 }
 .links__platform--android {
-  background-image: url(../../img/android-logo.svg);
+  background-image: url(../img/android-logo.svg);
   background-repeat: no-repeat;
   background-size: auto;
 }
 .links__platform--windows {
-  background-image: url(../../img/microsoft-logo.svg);
+  background-image: url(../img/microsoft-logo.svg);
   background-repeat: no-repeat;
   background-size: auto;
 }
