@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-ul, ol, button, p {
+ul, ol, button, p, h2 {
   margin: 0;
   padding: 0;
   list-style: none;

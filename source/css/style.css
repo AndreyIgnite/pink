@@ -312,7 +312,8 @@ template {
 ul,
 ol,
 button,
-p {
+p,
+h2 {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -397,8 +398,7 @@ html {
 .links {
   display: flex;
   flex-direction: column;
-  height: 280px;
-  padding: 28px 20px 0;
+  padding: 28px 20px 25px;
   background-color: #1D2631;
 }
 .button {
@@ -414,6 +414,10 @@ html {
   font-style: normal;
   font-weight: 700;
   line-height: 18px;
+}
+.advantages {
+  background-color: white;
+  padding-top: 46px;
 }
 .page-header__toggler {
   height: 100%;
@@ -470,6 +474,50 @@ html {
 .links__button {
   margin-bottom: 32px;
 }
+.adventages__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 280px;
+  height: 134px;
+  margin: 0 auto;
+}
+.advantages__intro {
+  color: #283645;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28.8px;
+}
+.advantages__offer-product {
+  color: #283645;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28.8px;
+}
+.advantages__list {
+  padding: 53px 20px 0;
+  height: 828px;
+  text-align: center;
+  background-color: #F2F2F2;
+  color: #283645;
+}
+.advantages__item:not(:last-child) {
+  margin-bottom: 43px;
+}
+.advantages__title {
+  margin: 0;
+  margin-bottom: 24px;
+  color: #000;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
 .links__platform--apple {
   background-image: url(../img/apple-logo.svg);
   background-repeat: no-repeat;
@@ -498,8 +546,5 @@ body {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-h2 {
-  color: #283645;
 }
 /*# sourceMappingURL=style.css.map */
