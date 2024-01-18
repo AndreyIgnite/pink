@@ -547,4 +547,7 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.download__title {
+  color: aqua;
+}
 /*# sourceMappingURL=style.css.map */
