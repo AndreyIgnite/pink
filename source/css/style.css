@@ -417,7 +417,6 @@ html {
 }
 .advantages {
   background-color: white;
-  padding-top: 46px;
 }
 .page-header__toggler {
   height: 100%;
@@ -478,9 +477,9 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 280px;
-  height: 134px;
+  height: 250px;
   margin: 0 auto;
+  padding: 46px 20px 70px;
 }
 .advantages__intro {
   color: #283645;
@@ -499,10 +498,13 @@ html {
   line-height: 28.8px;
 }
 .advantages__list {
-  padding: 53px 20px 0;
+  padding: 129px 20px 0;
   height: 828px;
+  margin-top: -70px;
   text-align: center;
-  background-color: #F2F2F2;
+  background-image: url(../../img/grey\ background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #283645;
 }
 .advantages__item:not(:last-child) {
