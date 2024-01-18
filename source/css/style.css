@@ -502,7 +502,7 @@ html {
   height: 828px;
   margin-top: -70px;
   text-align: center;
-  background-image: url(/img/grey_background.svg);
+  background-image: url(../img/grey_background.svg);
   background-repeat: no-repeat;
   background-size: cover;
   color: #283645;
