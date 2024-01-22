@@ -498,6 +498,9 @@ html {
   line-height: 28.8px;
 }
 .advantages__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 129px 20px 0;
   margin-top: -70px;
   text-align: center;
@@ -506,8 +509,11 @@ html {
   background-size: cover;
   color: #283645;
 }
-.advantages__item:not(:last-child) {
+.advantages__item {
   margin-bottom: 43px;
+}
+.advantages__item:last-of-type {
+  margin-bottom: 48px;
 }
 .advantages__title {
   margin: 0;
@@ -527,11 +533,21 @@ html {
   font-weight: 400;
   line-height: 24px;
 }
-.advantages__wrapper {
-  overflow: hidden;
+.advantages__pic-wrapper {
   height: 277px;
   width: 157px;
-  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.advantages__pic-wrapper img:nth-child(2) {
+  position: absolute;
+  top: 39px;
+  left: 10px;
+}
+.advantages__pic-wrapper img:nth-child(3) {
+  position: absolute;
+  top: 39px;
+  left: 10px;
 }
 .links__platform--apple {
   background-image: url(../img/apple-logo.svg);
