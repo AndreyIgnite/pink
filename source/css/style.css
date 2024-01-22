@@ -418,6 +418,9 @@ html {
 .advantages {
   background-color: white;
 }
+.reviews {
+  background-color: white;
+}
 .page-header__toggler {
   height: 100%;
   border: none;
