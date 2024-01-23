@@ -313,7 +313,8 @@ ul,
 ol,
 button,
 p,
-h2 {
+h2,
+blockquote {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -419,8 +420,18 @@ html {
   background-color: white;
 }
 .reviews {
+  height: 364px;
   background-color: white;
   color: #283645;
+}
+.slider {
+  width: auto;
+  background-color: white;
+  color: #283645;
+}
+.product {
+  height: 506px;
+  background-image: url(../../img/grey_background-2.svg);
 }
 .page-header__toggler {
   height: 100%;
@@ -552,6 +563,32 @@ html {
   position: absolute;
   top: 39px;
   left: 10px;
+}
+.slider__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 110px;
+}
+.reviews__name {
+  color: #000;
+  text-align: center;
+  display: block;
+  margin-bottom: 31px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+}
+.reviews__text {
+  text-align: center;
+  color: #283645;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+.reviews__wrapper {
+  padding: 50px 20px 0;
 }
 .links__platform--apple {
   background-image: url(../img/apple-logo.svg);
