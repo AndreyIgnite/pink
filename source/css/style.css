@@ -420,7 +420,7 @@ html {
   background-color: white;
 }
 .reviews {
-  height: 364px;
+  height: 480px;
   background-color: white;
   color: #283645;
 }
@@ -430,8 +430,7 @@ html {
   color: #283645;
 }
 .product {
-  height: 506px;
-  background-image: url(../../img/grey_background-2.svg);
+  margin-top: -46px;
 }
 .page-header__toggler {
   height: 100%;
@@ -589,6 +588,11 @@ html {
 }
 .reviews__wrapper {
   padding: 50px 20px 0;
+}
+.product__list {
+  background-image: url(../../img/grey_background-2.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .links__platform--apple {
   background-image: url(../img/apple-logo.svg);
