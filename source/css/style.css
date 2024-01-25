@@ -590,9 +590,43 @@ html {
   padding: 50px 20px 0;
 }
 .product__list {
-  background-image: url(../../img/grey_background-2.svg);
+  padding-top: 129px;
+  background-image: url(../img/grey_background-2.svg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+.product__item {
+  background-color: white;
+}
+.product__head {
+  height: 94px;
+  padding-top: 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #283645;
+  color: white;
+}
+.product__title {
+  margin: 0;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+.product__price {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.product__properties-list {
+  display: flex;
+  flex-direction: column;
 }
 .links__platform--apple {
   background-image: url(../img/apple-logo.svg);
