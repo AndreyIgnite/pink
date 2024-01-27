@@ -449,10 +449,13 @@ html {
   background-image: url(../img/triangle_white_footer.svg);
   background-repeat: no-repeat;
   background-position-y: bottom;
+  background-size: contain;
   font-family: "Open Sans", sans-serif;
 }
 .map {
   height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-image: url(../img/map.png);
 }
 .page-header__toggler {
