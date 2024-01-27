@@ -428,9 +428,32 @@ html {
   width: auto;
   background-color: white;
   color: #283645;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
 }
 .product {
   margin-top: -46px;
+}
+.page_footer {
+  width: auto;
+}
+.contacts {
+  margin-bottom: -52px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  padding: 50px 20px 0;
+  background-color: transparent;
+  background-image: url(../img/triangle_white_footer.svg);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  font-family: "Open Sans", sans-serif;
+}
+.map {
+  height: 200px;
+  background-image: url(../img/map.png);
 }
 .page-header__toggler {
   height: 100%;
@@ -596,6 +619,8 @@ html {
   background-size: cover;
 }
 .product__item {
+  width: 86%;
+  margin: 0 auto;
   background-color: white;
 }
 .product__head {
@@ -610,7 +635,6 @@ html {
 .product__title {
   margin: 0;
   margin-bottom: 15px;
-  color: white;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -627,6 +651,44 @@ html {
 .product__properties-list {
   display: flex;
   flex-direction: column;
+  background-color: inherit;
+  text-transform: inherit;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+.product__properties-item {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  height: 59px;
+  line-height: 20px;
+}
+.contacts__feedback {
+  margin-bottom: 45px;
+  font-family: inherit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+}
+.contacts__wrapper {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contacts__wrapper b {
+  margin-bottom: 13px;
+  font-family: inherit;
+}
+.contacts__phone-number,
+.contacts__e-mail_link,
+.contacts__adress {
+  color: #D22856;
+  text-decoration: none;
+  text-align: center;
 }
 .links__platform--apple {
   background-image: url(../img/apple-logo.svg);
