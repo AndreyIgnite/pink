@@ -422,11 +422,12 @@ html {
 }
 @media (min-width: 660px) {
   .download {
+    position: relative;
     padding: 0 20px;
     background-image: url(../../img/phone-tablet.png);
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: 80% 100%;
+    background-position: bottom right 20px;
   }
 }
 .links {
@@ -566,7 +567,13 @@ html {
 }
 @media (min-width: 660px) {
   .download__main-img {
-    display: none;
+    background-image: url(../img/screen-tablet.png);
+    position: absolute;
+    top: 128px;
+    right: 114px;
+    height: 346px;
+    width: 195px;
+    margin: 0;
   }
 }
 .download__header-image {
@@ -577,6 +584,12 @@ html {
   background-position: center;
   background-size: auto;
 }
+@media (min-width: 660px) {
+  .download__header-image {
+    background: none;
+    display: none;
+  }
+}
 .download__header-screen {
   position: absolute;
   top: 32px;
@@ -586,6 +599,12 @@ html {
   background-image: url(../img/screen.jpg);
   background-repeat: no-repeat;
   background-size: auto;
+}
+@media (min-width: 660px) {
+  .download__header-screen {
+    background: none;
+    display: none;
+  }
 }
 .links__wrapper {
   display: flex;
