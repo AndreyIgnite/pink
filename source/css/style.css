@@ -376,20 +376,10 @@ html {
     background-size: 1200px;
   }
 }
-.page-header {
-  position: relative;
-  width: auto;
-  height: 66px;
-  padding: 0 20px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-@media (min-width: 660px) {
-  .page-header {
-    height: 110px;
+@media (min-width: 1080px) {
+  .page-body {
+    background-image: url(../img/back-desktop.jpg);
+    background-size: 2560px;
   }
 }
 .logo {
@@ -406,6 +396,12 @@ html {
     width: 145px;
     height: 40px;
     background-image: url(../img/logotype-white-tablet.svg);
+  }
+}
+@media (min-width: 1080px) {
+  .logo {
+    width: 147px;
+    background-image: url(../img/logotype-white-desktop.svg);
   }
 }
 .popup-menu {
@@ -528,6 +524,29 @@ html {
   height: 4px;
   background-color: white;
   border-radius: 2px;
+}
+.page-header__wrapper {
+  position: relative;
+  width: auto;
+  height: 66px;
+  padding: 0 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 660px) {
+  .page-header__wrapper {
+    height: 110px;
+  }
+}
+@media (min-width: 1080px) {
+  .page-header__wrapper {
+    padding: 0 130px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 .download__title {
   margin: 0;
