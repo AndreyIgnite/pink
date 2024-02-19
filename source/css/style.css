@@ -382,6 +382,11 @@ html {
     background-size: 2560px;
   }
 }
+@media (min-width: 1400px) {
+  .page-header {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
 .logo {
   width: 74px;
   height: 23px;
@@ -405,12 +410,12 @@ html {
   }
 }
 .popup-menu {
-  position: absolute;
   display: none;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  background-color: #283645;
+}
+@media (min-width: 1080px) {
+  .popup-menu {
+    display: block;
+  }
 }
 .page-main {
   width: auto;
@@ -420,10 +425,19 @@ html {
   .download {
     position: relative;
     padding: 0 20px;
-    background-image: url(../../img/phone-tablet.png);
+    background-image: url(../img/phone-tablet.png);
     background-repeat: no-repeat;
     background-size: auto;
     background-position: bottom right 20px;
+  }
+}
+@media (min-width: 1080px) {
+  .download {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 130px;
+    background-image: url(../img/phone-dekstop.png);
+    background-position: bottom right;
   }
 }
 .links {
@@ -431,11 +445,12 @@ html {
   flex-direction: column;
   align-items: center;
   height: 271px;
-  padding: 28px 20px 25px;
+  padding: 28px 0 25px;
   background-color: #1d2631;
 }
 @media (min-width: 660px) {
   .links {
+    height: auto;
     width: 300px;
     background-color: transparent;
     padding: 0;
@@ -458,6 +473,12 @@ html {
 @media (min-width: 660px) {
   .button {
     width: 100%;
+  }
+}
+@media (min-width: 1080px) {
+  .button {
+    height: 56px;
+    font-size: 21px;
   }
 }
 .advantages {
@@ -525,6 +546,11 @@ html {
   background-color: white;
   border-radius: 2px;
 }
+@media (min-width: 1080px) {
+  .page-header__toggler {
+    display: none;
+  }
+}
 .page-header__wrapper {
   position: relative;
   width: auto;
@@ -536,6 +562,11 @@ html {
   align-items: center;
   justify-content: space-between;
 }
+@media (min-width: 1400px) {
+  .page-header__wrapper {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
 @media (min-width: 660px) {
   .page-header__wrapper {
     height: 110px;
@@ -545,6 +576,7 @@ html {
   .page-header__wrapper {
     padding: 0 130px;
     width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
   }
 }
@@ -566,6 +598,13 @@ html {
     font-size: 40px;
   }
 }
+@media (min-width: 1080px) {
+  .download__title {
+    margin-bottom: 51px;
+    line-height: 68.09px;
+    font-size: 50px;
+  }
+}
 .download__wrapper {
   display: flex;
   flex-direction: column;
@@ -577,6 +616,12 @@ html {
     height: 619px;
     width: 300px;
     padding-top: 102px;
+  }
+}
+@media (min-width: 1080px) {
+  .download__wrapper {
+    height: 743px;
+    padding-top: 114px;
   }
 }
 .download__main-img {
@@ -593,6 +638,15 @@ html {
     height: 346px;
     width: 195px;
     margin: 0;
+  }
+}
+@media (min-width: 1080px) {
+  .download__main-img {
+    top: 162px;
+    right: 250px;
+    height: 408px;
+    width: 230px;
+    background-image: url(../img/screen-dekstop.png);
   }
 }
 .download__header-image {
@@ -615,7 +669,7 @@ html {
   left: 104px;
   height: 197px;
   width: 111px;
-  background-image: url(../img/screen.jpg);
+  background-image: url(../img/screen.png);
   background-repeat: no-repeat;
   background-size: auto;
 }
@@ -633,6 +687,16 @@ html {
   height: 56px;
   width: 238px;
   margin-bottom: 28px;
+}
+@media (min-width: 660px) {
+  .links__wrapper {
+    margin-bottom: 38px;
+  }
+}
+@media (min-width: 1080px) {
+  .links__wrapper {
+    margin-bottom: 58px;
+  }
 }
 .links__platform {
   display: block;
@@ -656,6 +720,16 @@ html {
 }
 .links__button {
   margin-bottom: 32px;
+}
+@media (min-width: 660px) {
+  .links__button {
+    margin-bottom: 46px;
+  }
+}
+@media (min-width: 1080px) {
+  .links__button {
+    margin-bottom: 67px;
+  }
 }
 .adventages__header {
   display: flex;
