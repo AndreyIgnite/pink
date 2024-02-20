@@ -319,8 +319,11 @@ blockquote {
   padding: 0;
   list-style: none;
 }
-img {
+img,
+a {
   display: block;
+  text-decoration: none;
+  color: inherit;
 }
 @font-face {
   font-family: "Open Sans";
@@ -416,6 +419,11 @@ html {
   .popup-menu {
     display: block;
   }
+}
+.site-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 620px;
 }
 .page-main {
   width: auto;
@@ -579,6 +587,22 @@ html {
     max-width: 1400px;
     margin: 0 auto;
   }
+}
+.site-list__link {
+  position: relative;
+  padding: 13px 28px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.site-list__link::before {
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  left: 28px;
+  right: 28px;
+  height: 2px;
+  background-color: white;
 }
 .download__title {
   margin: 0;

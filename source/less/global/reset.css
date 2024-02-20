@@ -10,6 +10,8 @@ ul, ol, button, p, h2, blockquote {
   list-style: none;
 }
 
-img {
+img, a {
   display: block;
+  text-decoration: none;
+  color: inherit;
 }
