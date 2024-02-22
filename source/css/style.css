@@ -429,14 +429,13 @@ html {
   width: auto;
   color: white;
 }
+.download {
+  position: relative;
+}
 @media (min-width: 660px) {
   .download {
     position: relative;
     padding: 0 20px;
-    background-image: url(../img/phone-tablet.png);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: bottom right 20px;
   }
 }
 @media (min-width: 1080px) {
@@ -444,8 +443,6 @@ html {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 130px;
-    background-image: url(../img/phone-dekstop.png);
-    background-position: bottom right;
   }
 }
 .links {
@@ -595,7 +592,10 @@ html {
   font-weight: 400;
   line-height: 18px;
 }
-.site-list__link::before {
+.site-list__item {
+  position: relative;
+}
+.site-list__item:first-child:before {
   position: absolute;
   content: "";
   bottom: 0px;
@@ -606,7 +606,8 @@ html {
 }
 .download__title {
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 309px;
+  min-height: 58px;
   text-align: center;
   font-family: inherit;
   font-style: inherit;
@@ -630,6 +631,8 @@ html {
   }
 }
 .download__wrapper {
+  position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   height: 667px;
@@ -649,42 +652,39 @@ html {
   }
 }
 .download__main-img {
-  height: 285px;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 110px;
+  height: 286px;
   width: 320px;
   margin: 0 auto;
-}
-@media (min-width: 660px) {
-  .download__main-img {
-    background-image: url(../img/screen-tablet.png);
-    position: absolute;
-    top: 128px;
-    right: 114px;
-    height: 346px;
-    width: 195px;
-    margin: 0;
-  }
-}
-@media (min-width: 1080px) {
-  .download__main-img {
-    top: 162px;
-    right: 250px;
-    height: 408px;
-    width: 230px;
-    background-image: url(../img/screen-dekstop.png);
-  }
-}
-.download__header-image {
-  height: 100%;
-  position: relative;
   background-image: url(../img/phone.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
 }
 @media (min-width: 660px) {
-  .download__header-image {
-    background: none;
-    display: none;
+  .download__main-img {
+    background-image: url(../img/phone-tablet.png);
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: auto;
+    transform: none;
+    right: 10px;
+    height: 545px;
+    width: 660px;
+    margin: 0;
+  }
+}
+@media (min-width: 1080px) {
+  .download__main-img {
+    height: 645px;
+    width: 1050px;
+    background-image: url(../img/phone-dekstop.png);
+    right: 0;
   }
 }
 .download__header-screen {
@@ -699,8 +699,23 @@ html {
 }
 @media (min-width: 660px) {
   .download__header-screen {
-    background: none;
-    display: none;
+    position: absolute;
+    top: 54px;
+    left: auto;
+    right: 94px;
+    height: 346px;
+    width: 195px;
+    background-image: url(../img/screen-tablet.png);
+  }
+}
+@media (min-width: 1080px) {
+  .download__header-screen {
+    position: absolute;
+    top: 65px;
+    right: 250px;
+    height: 408px;
+    width: 230px;
+    background-image: url(../img/screen-dekstop.png);
   }
 }
 .links__wrapper {

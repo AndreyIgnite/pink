@@ -1,25 +1,36 @@
 .download__main-img {
-  height: 285px;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: @download__title + 29px + 23px;
+  height: @download__main-img;
   width: 320px;
   margin: 0 auto;
+  background-image: url(../img/phone.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
 }
 @media (min-width: 660px) {
   .download__main-img {
-    background-image: url(../img/screen-tablet.png);
+    background-image: url(../img/phone-tablet.png);
     position: absolute;
-    top: 128px;
-    right: 114px;
-    height: 346px;
-    width: 195px;
+    top: auto;
+    bottom: 0;
+    left: auto;
+    transform: none;
+    right: 10px;
+    height: 545px;
+    width: 660px;
     margin: 0;
   }
 }
 @media (min-width: 1080px) {
   .download__main-img {
-    top: 162px;
-    right: 250px;
-    height: 408px;
-    width: 230px;
-    background-image: url(../img/screen-dekstop.png);
+    height: 645px;
+    width: 1050px;
+    background-image: url(../img/phone-dekstop.png);
+    right: 0;
   }
 }
