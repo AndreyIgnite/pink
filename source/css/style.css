@@ -487,6 +487,13 @@ html {
 }
 .advantages {
   background-color: white;
+  outline: 2px solid #20dab2;
+  outline-offset: -2px;
+}
+@media (min-width: 660px) {
+  .advantages {
+    height: 1055px;
+  }
 }
 .reviews {
   height: 480px;
@@ -674,6 +681,17 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   color: #283645;
+  outline: 2px solid goldenrod;
+  outline-offset: -2px;
+}
+@media (min-width: 660px) {
+  .advantages__list {
+    position: relative;
+    margin: 0;
+    padding: 0 20px;
+    height: 509px;
+    width: 50%;
+  }
 }
 .advantages__item {
   width: 280px;
@@ -706,6 +724,11 @@ html {
   width: 157px;
   margin-bottom: -36px;
   background-image: url(../img/iphone_3.png);
+}
+@media (min-width: 660px) {
+  .advantages__pic-wrapper {
+    position: absolute;
+  }
 }
 .advantages__pic-screen {
   height: 244px;
