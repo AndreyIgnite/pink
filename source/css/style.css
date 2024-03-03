@@ -487,8 +487,6 @@ html {
 }
 .advantages {
   background-color: white;
-  outline: 2px solid #20dab2;
-  outline-offset: -2px;
 }
 @media (min-width: 660px) {
   .advantages {
@@ -635,8 +633,8 @@ html {
 }
 @media (min-width: 660px) {
   .adventages__header {
-    height: 216px;
-    padding-top: 58px;
+    height: 210px;
+    padding-top: 47px;
   }
 }
 .advantages__intro {
@@ -669,46 +667,94 @@ html {
     line-height: 51px;
   }
 }
-.advantages__list {
+.advantages__list-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 129px 20px 0;
-  margin-top: -70px;
-  overflow: hidden;
+  padding: 135px 20px 0;
+  margin-top: -80px;
   background-image: url(../img/grey_background.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
   color: #283645;
-  outline: 2px solid goldenrod;
-  outline-offset: -2px;
+}
+@media (min-width: 660px) {
+  .advantages__list-wrapper {
+    padding: 0;
+    margin: 0;
+    background: none;
+  }
+}
+.advantages__list {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 660px) {
   .advantages__list {
-    position: relative;
-    margin: 0;
-    padding: 0 20px;
-    height: 509px;
+    order: 2;
+    align-items: flex-start;
     width: 50%;
+    margin-left: auto;
+  }
+}
+.advantages__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 660px) {
+  .advantages__container {
+    height: 528px;
+    width: 100%;
+    padding: 0 20px;
+    flex-direction: row;
+    align-items: end;
+    background-image: url(../img/grey_background_tablet.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+}
+.advantages__effect-24 {
+  display: none;
+}
+@media (min-width: 660px) {
+  .advantages__effect-24 {
+    display: block;
+    height: 330px;
+    width: 100%;
   }
 }
 .advantages__item {
   width: 280px;
-  margin-bottom: 43px;
+  margin-bottom: 25px;
 }
 .advantages__item:last-of-type {
-  margin-bottom: 48px;
+  margin-bottom: 35px;
+}
+@media (min-width: 660px) {
+  .advantages__item {
+    width: 100%;
+  }
 }
 .advantages__title {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 15px;
   color: #000;
   text-align: center;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
+}
+@media (min-width: 660px) {
+  .advantages__title {
+    text-align: left;
+  }
 }
 .advantages__text {
   color: #283645;
@@ -718,16 +764,28 @@ html {
   font-weight: 400;
   line-height: 24px;
 }
+@media (min-width: 660px) {
+  .advantages__text {
+    text-align: left;
+    line-height: 28px;
+  }
+}
 .advantages__pic-wrapper {
   position: relative;
   height: 320px;
   width: 157px;
   margin-bottom: -36px;
   background-image: url(../img/iphone_3.png);
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 @media (min-width: 660px) {
   .advantages__pic-wrapper {
-    position: absolute;
+    order: 0;
+    height: 481px;
+    width: 268px;
+    margin-bottom: 0;
+    background-image: url(../img/iphone3-tablet.png);
   }
 }
 .advantages__pic-screen {
@@ -737,6 +795,18 @@ html {
   top: 38px;
   left: 10px;
   background-image: url(../img/iphone_screen.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+@media (min-width: 660px) {
+  .advantages__pic-screen {
+    background-image: url(../img/iphone_screen-tablet.png);
+    background-size: contain;
+    height: 421px;
+    width: 237px;
+    top: 64px;
+    left: 15px;
+  }
 }
 .download__title {
   margin: 0;
