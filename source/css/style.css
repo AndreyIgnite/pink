@@ -388,6 +388,8 @@ html {
 @media (min-width: 940px) {
   .page-header {
     background-color: rgba(0, 0, 0, 0.3);
+    max-width: 2560px;
+    margin: 0 auto;
   }
 }
 .logo {
@@ -644,7 +646,7 @@ html {
 @media (min-width: 1080px) {
   .adventages__header {
     height: 317px;
-    padding: 0 130px;
+    padding: 0;
     padding-top: 66px;
     padding-bottom: 63px;
   }
@@ -765,10 +767,12 @@ html {
 }
 @media (min-width: 1080px) {
   .advantages__container {
+    background-image: none;
     flex-direction: column;
     height: 715px;
-    max-width: 1400px;
-    padding: 0 130px;
+    width: 940px;
+    padding: 0;
+    margin-bottom: -99px;
   }
 }
 .advantages__pic-wrapper-dekstop {
@@ -815,33 +819,50 @@ html {
 @media (min-width: 1080px) {
   .advantages__effect-24 {
     background-color: #f2f2f2;
-    padding: 0 130px;
-    max-width: 1400px;
+    padding: 0;
+    padding-top: 17px;
+    width: 940px;
+    height: 429px;
   }
 }
-.advantages__24 {
-  height: 276px;
-  width: 238px;
-  align-self: end;
-  background-image: url(../img/timer.png);
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center;
+@media (min-width: 660px) {
+  .advantages__24 {
+    height: 276px;
+    width: 238px;
+    align-self: end;
+    background-image: url(../img/timer.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .advantages__24 div {
+    height: 100%;
+    background-image: url(../img/diagram-fill.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: bottom 20px center;
+    font-size: 96px;
+    line-height: 163px;
+    font-weight: 700;
+    color: #d22856;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
-.advantages__24 div {
-  height: 100%;
-  background-image: url(../img/diagram-fill.png);
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: bottom 20px center;
-  font-size: 96px;
-  line-height: 163px;
-  font-weight: 700;
-  color: #d22856;
-  padding-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (min-width: 1080px) {
+  .advantages__24 {
+    align-self: start;
+    width: 298px;
+    height: 345px;
+    background-image: url(../img/timer-dekstop.png);
+  }
+  .advantages__24 div {
+    background-image: url(../img/diagram-fill-dekstop.png);
+    font-size: 120px;
+    padding-top: 35px;
+  }
 }
 .advantages__24-about {
   display: flex;
@@ -851,23 +872,48 @@ html {
   align-self: center;
   padding-top: 64px;
 }
+@media (min-width: 1080px) {
+  .advantages__24-about {
+    padding-top: 75px;
+    align-self: start;
+  }
+}
 .advantages__24-about h2 {
   margin-bottom: 24px;
   font-size: 30px;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 36px;
+}
+@media (min-width: 1080px) {
+  .advantages__24-about h2 {
+    line-height: 30px;
+    margin-bottom: 37px;
+  }
 }
 .advantages__24-about p {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   font-weight: 400;
   font-size: 14px;
-  line-height: 26px;
+  line-height: 24px;
+}
+@media (min-width: 1080px) {
+  .advantages__24-about p {
+    margin-bottom: 37px;
+    line-height: 30px;
+    font-size: 18px;
+  }
 }
 .advantages__24-about a {
   color: #d22856;
   font-weight: 400;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 24px;
+}
+@media (min-width: 1080px) {
+  .advantages__24-about a {
+    line-height: 30px;
+    font-size: 18px;
+  }
 }
 .advantages__item {
   width: 280px;
@@ -879,6 +925,14 @@ html {
 @media (min-width: 660px) {
   .advantages__item {
     width: 300px;
+  }
+}
+@media (min-width: 1080px) {
+  .advantages__item {
+    width: 300px;
+    height: 250px;
+    margin: 0;
+    padding: 59px 24px 0;
   }
 }
 .advantages__title {
@@ -896,6 +950,15 @@ html {
     text-align: left;
   }
 }
+@media (min-width: 1080px) {
+  .advantages__title {
+    margin-bottom: 35px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
 .advantages__text {
   color: #283645;
   text-align: center;
@@ -908,6 +971,14 @@ html {
   .advantages__text {
     text-align: left;
     line-height: 28px;
+  }
+}
+@media (min-width: 1080px) {
+  .advantages__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
   }
 }
 .advantages__pic-wrapper {
