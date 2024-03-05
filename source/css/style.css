@@ -382,10 +382,10 @@ html {
 @media (min-width: 1080px) {
   .page-body {
     background-image: url(../img/back-desktop.jpg);
-    background-size: 2560px;
+    background-size: auto;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 940px) {
   .page-header {
     background-color: rgba(0, 0, 0, 0.3);
   }
@@ -439,9 +439,9 @@ html {
 }
 @media (min-width: 1080px) {
   .download {
-    max-width: 1400px;
+    width: 940px;
     margin: 0 auto;
-    padding: 0 130px;
+    padding: 0;
   }
 }
 .links {
@@ -459,6 +459,9 @@ html {
     background-color: transparent;
     padding: 0;
   }
+}
+.card {
+  width: 300px;
 }
 .button {
   color: white;
@@ -566,7 +569,7 @@ html {
   align-items: center;
   justify-content: space-between;
 }
-@media (min-width: 1400px) {
+@media (min-width: 940px) {
   .page-header__wrapper {
     background-color: rgba(0, 0, 0, 0);
   }
@@ -578,9 +581,9 @@ html {
 }
 @media (min-width: 1080px) {
   .page-header__wrapper {
-    padding: 0 130px;
+    padding: 0;
     width: 100%;
-    max-width: 1400px;
+    max-width: 940px;
     margin: 0 auto;
   }
 }
@@ -737,7 +740,9 @@ html {
   .advantages__list {
     margin: 0;
     width: 100%;
+    height: 250px;
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 .advantages__container {
@@ -768,13 +773,33 @@ html {
 }
 .advantages__pic-wrapper-dekstop {
   display: none;
-  height: 301px;
 }
 @media (min-width: 1080px) {
   .advantages__pic-wrapper-dekstop {
     display: flex;
+    justify-content: space-between;
+    height: 301px;
     width: 100%;
   }
+}
+.card__pic {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  height: 301px;
+  box-shadow: inset 0px -9px 14px -17px #3f3f3f;
+  background-image: url(../img/iphone-dekstop-card.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: auto;
+}
+.card__screen {
+  height: 259px;
+  width: 168px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top;
 }
 .advantages__effect-24 {
   display: none;
@@ -853,7 +878,7 @@ html {
 }
 @media (min-width: 660px) {
   .advantages__item {
-    width: 100%;
+    width: 300px;
   }
 }
 .advantages__title {
@@ -930,7 +955,7 @@ html {
 }
 .download__title {
   margin: 0;
-  margin-bottom: 309px;
+  margin-bottom: 308px;
   min-height: 58px;
   text-align: center;
   font-family: inherit;
@@ -1006,9 +1031,10 @@ html {
 @media (min-width: 1080px) {
   .download__main-img {
     height: 645px;
-    width: 1050px;
+    width: 920px;
     background-image: url(../img/phone-dekstop.png);
-    right: 0;
+    background-position: left;
+    left: 16px;
   }
 }
 .download__header-screen {
@@ -1036,7 +1062,7 @@ html {
   .download__header-screen {
     position: absolute;
     top: 65px;
-    right: 250px;
+    right: 120px;
     height: 408px;
     width: 230px;
     background-image: url(../img/screen-dekstop.png);
@@ -1255,9 +1281,19 @@ html {
   background-repeat: no-repeat;
   background-size: auto;
 }
+.card__screen--grey {
+  background-image: url(../img/iphone_screen-1.png);
+}
+.card__screen--color {
+  background-image: url(../img/iphone_screen-2.png);
+}
+.card__screen--color-hello {
+  background-image: url(../img/iphone_screen-3.png);
+}
 body {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
+  min-height: 100%;
 }
 .visually-hidden {
   position: absolute;
