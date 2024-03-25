@@ -1,0 +1,27 @@
+.main-nav__toggler {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 90px;
+  height: 66px;
+  border: none;
+  background-color: transparent;
+}
+.main-nav--closed .main-nav__toggler::before {
+  position: absolute;
+  top: 21px;
+  left: 20px;
+  right: 20px;
+  border-radius: 1px;
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: white;
+  box-shadow: 0 9px 0 0 #ffffff, 0 18px 0 0 #ffffff;
+}
+@media (min-width: @mobile-and-tablet-width-only) {
+  .main-nav__toggler {
+    display: none;
+  }
+}
