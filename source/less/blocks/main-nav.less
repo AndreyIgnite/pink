@@ -1,18 +1,17 @@
 .main-nav {
-  @media (max-width: @mobile-width-only) {
-  min-height: 66px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: fade(black, 30%);
+  @media (max-width: @mobile-and-tablet-width-only) {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 66px;
+    color: white;
   }
-  @media (min-width: 940px) {
-    background-color: rgba(0, 0, 0, 0);
-  }
-}
-@media (min-width: 660px) {
-  .main-nav{
-    height: 110px;
+  @media (min-width:@tablet-width) and (max-width: @mobile-and-tablet-width-only) {
+    min-height: 110px;
   }
 }
+
 @media (min-width: 1080px) {
   .main-nav {
     padding: 0;

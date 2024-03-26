@@ -392,21 +392,21 @@ html {
     margin: 0 auto;
   }
 }
-@media (max-width: 659px) {
+.main-nav {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 939px) {
   .main-nav {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
     min-height: 66px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.3);
   }
 }
-@media (min-width: 940px) {
+@media (min-width: 660px) and (max-width: 939px) {
   .main-nav {
-    background-color: rgba(0, 0, 0, 0);
-  }
-}
-@media (min-width: 660px) {
-  .main-nav {
-    height: 110px;
+    min-height: 110px;
   }
 }
 @media (min-width: 1080px) {
@@ -415,14 +415,6 @@ html {
     width: 100%;
     max-width: 940px;
     margin: 0 auto;
-  }
-}
-.popup-menu {
-  display: none;
-}
-@media (min-width: 1080px) {
-  .popup-menu {
-    display: block;
   }
 }
 .site-list {
@@ -544,29 +536,37 @@ html {
   padding-top: 40px;
 }
 .main-nav__toggler {
-  position: absolute;
-  right: 0;
-  top: 0;
+  position: relative;
+  z-index: 10;
   display: block;
-  width: 90px;
-  height: 66px;
+  width: 50px;
+  height: 24px;
+  align-self: center;
   border: none;
   background-color: transparent;
 }
-.main-nav--closed .main-nav__toggler::before {
-  position: absolute;
-  top: 21px;
-  left: 20px;
-  right: 20px;
-  border-radius: 1px;
-  content: "";
-  display: block;
-  height: 4px;
-  background-color: white;
-  box-shadow: 0 9px 0 0 #ffffff, 0 18px 0 0 #ffffff;
+@media (max-width: 939px) {
+  .main-nav--closed .main-nav__toggler::before {
+    position: absolute;
+    top: 21px;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 1px;
+    content: "";
+    display: block;
+    height: 4px;
+    background-color: white;
+    box-shadow: 0 9px 0 0 #ffffff, 0 18px 0 0 #ffffff;
+  }
 }
 @media (min-width: 939px) {
   .main-nav__toggler {
+    display: none;
+  }
+}
+@media (max-width: 939px) {
+  .main-nav--closed .main-nav__wrapper {
     display: none;
   }
 }
@@ -1201,22 +1201,25 @@ html {
   padding: 50px 20px 0;
 }
 .main-nav__logo {
-  padding: 22px 20px 21px;
+  position: relative;
+  z-index: 10;
   width: 74px;
   height: 23px;
+  align-self: center;
   box-sizing: content-box;
-  background-image: url(../img/pink.svg);
+  background-image: url(../img/logo-mobile.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
 }
 @media (min-width: 660px) {
   .main-nav__logo {
-    align-self: end;
-    margin-bottom: 43px;
     width: 145px;
     height: 40px;
     background-image: url(../img/logotype-white-tablet.svg);
+    align-self: start;
+    padding-top: 27px;
+    background-position: bottom;
   }
 }
 @media (min-width: 1080px) {
