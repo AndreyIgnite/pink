@@ -1,7 +1,8 @@
 .site-list__item {
   position: relative;
 }
-.site-list__item:first-child:before {
+.site-list__item:first-child::before {
+  @media (min-width: @desktop-width) {
   position: absolute;
   content: "";
   bottom: 0px;
@@ -9,4 +10,5 @@
   right: 28px;
   height: 2px;
   background-color: white;
+  }
 }
