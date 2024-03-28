@@ -1,9 +1,16 @@
 .main-nav--opened .main-nav__wrapper {
-  position: absolute;
-  z-index: 15;
-  top: 66px;
-  right: 0;
-  left: 0;
+  @media (max-width: @mobile-and-tablet-width-only) {
+    position: absolute;
+    z-index: 15;
+    right: 0;
+    left: 0;
+  }
+  @media (max-width: @mobile-width-only) {
+    top: 66px;
+  }
+  @media (min-width: @tablet-width) and (max-width: @mobile-and-tablet-width-only) {
+    top: 110px;
+  }
 }
 .main-nav--closed .main-nav__wrapper {
   @media (max-width: @mobile-and-tablet-width-only) {

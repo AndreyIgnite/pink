@@ -440,10 +440,11 @@ html {
   font-weight: 700;
   line-height: 1;
 }
-@media (min-width: 660px) {
-  .site-list a {
-    padding: 25px 117px 25px 116px;
-  }
+.site-list a:hover {
+  color: #d22856;
+}
+.site-list a:active {
+  color: rgba(210, 40, 86, 0.3);
 }
 .page-main {
   color: white;
@@ -558,20 +559,31 @@ html {
   align-items: center;
   padding-top: 40px;
 }
-.main-nav__toggler {
-  position: relative;
-  z-index: 10;
-  display: block;
-  width: 50px;
-  height: 24px;
-  align-self: center;
-  border: none;
-  background-color: transparent;
+@media (max-width: 939px) {
+  .main-nav__toggler {
+    position: relative;
+    z-index: 10;
+    display: block;
+    width: 50px;
+    height: 24px;
+    align-self: center;
+    border: none;
+    background-color: transparent;
+  }
+}
+@media (max-width: 939px) {
+  .main-nav--closed .main-nav__toggler:hover::before {
+    background-color: #d22856;
+    box-shadow: 0 9px 0 0 #d22856, 0 18px 0 0 #d22856;
+  }
+  .main-nav--closed .main-nav__toggler:active::before {
+    background-color: rgba(210, 40, 86, 0.3);
+    box-shadow: 0 9px 0 0 rgba(210, 40, 86, 0.3), 0 18px 0 0 rgba(210, 40, 86, 0.3);
+  }
 }
 @media (max-width: 939px) {
   .main-nav--closed .main-nav__toggler::before {
     position: absolute;
-    top: 21px;
     top: 0;
     left: 0;
     right: 0;
@@ -582,13 +594,41 @@ html {
     background-color: white;
     box-shadow: 0 9px 0 0 #ffffff, 0 18px 0 0 #ffffff;
   }
+  .main-nav--opened .main-nav__toggler::before,
+  .main-nav--opened .main-nav__toggler::after {
+    content: "";
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 49%;
+    height: 2px;
+    width: 26px;
+    background-color: white;
+  }
+  .main-nav--opened .main-nav__toggler::after {
+    transform: rotate(45deg);
+  }
+  .main-nav--opened .main-nav__toggler::before {
+    transform: rotate(-45deg);
+  }
 }
-.main-nav--opened .main-nav__wrapper {
-  position: absolute;
-  z-index: 15;
-  top: 66px;
-  right: 0;
-  left: 0;
+@media (max-width: 939px) {
+  .main-nav--opened .main-nav__wrapper {
+    position: absolute;
+    z-index: 15;
+    right: 0;
+    left: 0;
+  }
+}
+@media (max-width: 659px) {
+  .main-nav--opened .main-nav__wrapper {
+    top: 66px;
+  }
+}
+@media (min-width: 660px) and (max-width: 939px) {
+  .main-nav--opened .main-nav__wrapper {
+    top: 110px;
+  }
 }
 @media (max-width: 939px) {
   .main-nav--closed .main-nav__wrapper {
