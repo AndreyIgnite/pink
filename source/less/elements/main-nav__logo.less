@@ -20,12 +20,22 @@
 }
 
 .main-nav--opened .main-nav__logo {
-  
 }
 
 @media (min-width: 1080px) {
   .main-nav__logo {
     width: 147px;
     background-image: url(../img/logotype-white-desktop.svg);
+  }
+}
+.main-nav--no-js .main-nav__logo {
+  @media (max-width: @mobile-and-tablet-width-only) {
+    padding: 0;
+    position: absolute;
+    top: 22px;
+    left: 20px;
+  }
+  @media (min-width: @tablet-width) and (max-width: @mobile-and-tablet-width-only) {
+    top: 27px;
   }
 }
