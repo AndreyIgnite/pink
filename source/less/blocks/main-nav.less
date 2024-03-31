@@ -7,8 +7,9 @@
     min-height: 66px;
     color: white;
   }
-  @media (min-width: @tablet-width) and (max-width: @mobile-and-tablet-width-only) {
+  @media (min-width: @tablet-width) {
     min-height: 110px;
+    padding: 0 4%;
   }
 }
 .main-nav--opened {
@@ -17,14 +18,7 @@
     border-bottom: 1px solid black;
   }
 }
-@media (min-width: 1080px) {
-  .main-nav {
-    padding: 0;
-    width: 100%;
-    max-width: 940px;
-    margin: 0 auto;
-  }
-}
+
 .main-nav--no-js {
   @media (max-width: @mobile-and-tablet-width-only) {
     display: block;
@@ -33,5 +27,16 @@
   }
   @media (min-width: @tablet-width) and (max-width: @mobile-and-tablet-width-only) {
     padding-top: 110px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: 87%;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 0;
+    display: flex;
   }
 }
