@@ -3,7 +3,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: @download__title + 29px + 23px;
+  top: @download__title + 40px + 23px;
   height: @download__main-img;
   width: 320px;
   margin: 0 auto;
@@ -20,18 +20,17 @@
     bottom: 0;
     left: auto;
     transform: none;
-    right: 00px;
+    right: 0;
     height: 545px;
     width: 660px;
     margin: 0;
   }
 }
-@media (min-width: 1080px) {
+@media (min-width: @desktop-width) {
   .download__main-img {
     height: 645px;
     width: 920px;
     background-image: url(../img/phone-dekstop.png);
     background-position: left;
-    left: 16px;
   }
 }

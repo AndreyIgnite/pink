@@ -382,7 +382,7 @@ html {
 @media (min-width: 1080px) {
   .page-body {
     background-image: url(../img/back-desktop.jpg);
-    background-size: auto;
+    background-size: 2630px;
   }
 }
 @media (max-width: 1079px) {
@@ -514,8 +514,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 271px;
-  padding: 28px 0 25px;
+  padding-top: 28px;
   background-color: #1d2631;
 }
 @media (min-width: 660px) {
@@ -719,46 +718,42 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 46px 0 50px;
+  text-align: center;
+  padding-top: 46px;
   margin: 0 auto;
-  width: 280px;
   height: 100%;
 }
 @media (min-width: 660px) {
+  .advantages__intro br {
+    display: none;
+  }
   .adventages__header-wrapper {
     width: 100%;
     padding: 0;
   }
-  .adventages__header-wrapper h2 {
-    line-height: 48px;
-  }
 }
 @media (min-width: 1080px) {
   .adventages__header-wrapper {
-    max-width: 1400px;
-    justify-content: space-around;
+    width: 87%;
+    max-width: 1300px;
   }
 }
 .adventages__header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 250px;
   margin: 0 auto;
   padding: 0 20px;
 }
 @media (min-width: 660px) {
   .adventages__header {
-    height: auto;
     padding-top: 58px;
   }
 }
 @media (min-width: 1080px) {
   .adventages__header {
-    height: 317px;
     padding: 0;
-    padding-top: 66px;
-    padding-bottom: 63px;
+    padding-top: 77px;
   }
 }
 .advantages__intro {
@@ -768,24 +763,24 @@ html {
   font-style: normal;
   font-weight: 300;
   line-height: 28.8px;
+  margin-bottom: 29px;
 }
 @media (min-width: 660px) {
   .advantages__intro {
+    margin-bottom: 10px;
     font-size: 40px;
     line-height: 1;
   }
 }
 @media (min-width: 1080px) {
-  .advantages__intro,
-  br {
+  .advantages__intro {
+    margin-bottom: 10px;
     font-size: 50px;
     line-height: 68.09px;
   }
-  br {
-    display: none;
-  }
 }
 .advantages__offer-product {
+  margin-bottom: 70px;
   color: #283645;
   text-align: center;
   font-size: 24px;
@@ -795,18 +790,15 @@ html {
 }
 @media (min-width: 660px) {
   .advantages__offer-product {
-    max-width: 550px;
-    margin: 0 auto;
     font-size: 40px;
-    line-height: 1;
+    line-height: 54.47px;
   }
 }
 @media (min-width: 1080px) {
   .advantages__offer-product {
-    max-width: 550px;
-    margin: 0 auto;
+    margin-bottom: 72px;
     font-size: 50px;
-    line-height: 1;
+    line-height: 54.47px;
   }
 }
 .advantages__list-wrapper {
@@ -815,12 +807,14 @@ html {
   flex-direction: column;
   align-items: center;
   padding: 135px 20px 0;
-  margin-top: -80px;
+  margin-top: -73px;
   background-image: url(../img/grey_background.svg);
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
   color: #283645;
+  outline: 2px solid #2c16a5;
+  outline-offset: -2px;
 }
 @media (min-width: 660px) {
   .advantages__list-wrapper {
@@ -852,7 +846,6 @@ html {
   .advantages__list {
     margin: 0;
     width: 100%;
-    height: 250px;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -879,10 +872,10 @@ html {
   .advantages__container {
     background-image: none;
     flex-direction: column;
-    height: 715px;
-    width: 940px;
+    width: 87%;
+    max-width: 1300px;
     padding: 0;
-    margin-bottom: -99px;
+    margin-bottom: 59px;
   }
 }
 .advantages__pic-wrapper-dekstop {
@@ -892,7 +885,6 @@ html {
   .advantages__pic-wrapper-dekstop {
     display: flex;
     justify-content: space-between;
-    height: 301px;
     width: 100%;
   }
 }
@@ -923,17 +915,16 @@ html {
     display: flex;
     padding: 0 20px;
     padding-top: 54px;
-    height: 330px;
     width: 100%;
   }
 }
 @media (min-width: 1080px) {
   .advantages__effect-24 {
+    width: 87%;
+    max-width: 1300px;
     background-color: #f2f2f2;
     padding: 0;
     padding-top: 17px;
-    width: 940px;
-    height: 429px;
   }
 }
 @media (min-width: 660px) {
@@ -987,6 +978,7 @@ html {
   .advantages__24-about {
     padding-top: 75px;
     align-self: start;
+    margin-left: 71px;
   }
 }
 .advantages__24-about h2 {
@@ -1041,7 +1033,6 @@ html {
 @media (min-width: 1080px) {
   .advantages__item {
     width: 300px;
-    height: 250px;
     margin: 0;
     padding: 59px 24px 0;
   }
@@ -1137,7 +1128,7 @@ html {
 }
 .download__title {
   margin: 0;
-  margin-bottom: 308px;
+  margin-bottom: 320px;
   min-height: 58px;
   text-align: center;
   font-family: inherit;
@@ -1150,14 +1141,14 @@ html {
   .download__title {
     margin: 0 auto 39px;
     width: 240px;
-    line-height: 48px;
+    line-height: 1.05;
     font-size: 40px;
   }
 }
 @media (min-width: 1080px) {
   .download__title {
     margin-bottom: 51px;
-    line-height: 68.09px;
+    line-height: 60px;
     font-size: 50px;
   }
 }
@@ -1166,19 +1157,16 @@ html {
   z-index: 10;
   display: flex;
   flex-direction: column;
-  height: 667px;
   padding-top: 29px;
 }
 @media (min-width: 660px) {
   .download__wrapper {
-    height: 619px;
     width: 300px;
     padding-top: 102px;
   }
 }
 @media (min-width: 1080px) {
   .download__wrapper {
-    height: 743px;
     padding-top: 114px;
   }
 }
@@ -1187,7 +1175,7 @@ html {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 110px;
+  top: 121px;
   height: 286px;
   width: 320px;
   margin: 0 auto;
@@ -1204,7 +1192,7 @@ html {
     bottom: 0;
     left: auto;
     transform: none;
-    right: 00px;
+    right: 0;
     height: 545px;
     width: 660px;
     margin: 0;
@@ -1216,7 +1204,6 @@ html {
     width: 920px;
     background-image: url(../img/phone-dekstop.png);
     background-position: left;
-    left: 16px;
   }
 }
 .download__header-screen {
@@ -1255,7 +1242,6 @@ html {
   justify-content: space-around;
   align-items: center;
   align-self: center;
-  height: 56px;
   width: 238px;
   margin-bottom: 28px;
 }
@@ -1281,12 +1267,24 @@ html {
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
+  margin-bottom: 38px;
 }
 @media (min-width: 660px) {
   .links__subscribe-for-platforms {
     width: 100%;
     font-size: 18px;
     font-weight: 300;
+    margin-bottom: 108px;
+    line-height: 24px;
+  }
+}
+@media (min-width: 1080px) {
+  .links__subscribe-for-platforms {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 119px;
+    line-height: 24px;
   }
 }
 .links__button {
