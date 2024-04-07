@@ -571,10 +571,18 @@ html {
   margin-top: -46px;
 }
 .slider-review {
+  padding-top: 50px;
   max-width: 280px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+}
+@media (min-width: 660px) {
+  .slider-review {
+    max-width: none;
+    width: 97%;
+    padding-top: 109px;
+  }
 }
 .page_footer {
   width: auto;
@@ -912,7 +920,7 @@ html {
 @media (min-width: 660px) {
   .advantages__effect-24 {
     display: flex;
-    padding: 0 20px;
+    padding: 0 4%;
     padding-top: 54px;
     width: 100%;
   }
@@ -1325,19 +1333,39 @@ html {
   font-weight: 400;
   line-height: 30px;
 }
-.reviews__wrapper {
-  padding: 50px 0 0;
+.reviews__button {
+  width: 22px;
+  height: 41px;
+  display: block;
+  border: none;
+  position: absolute;
+  background-color: transparent;
+  top: 50%;
 }
 @media (max-width: 1079px) {
   .reviews__button {
     display: none;
   }
 }
+.reviews__button--prev {
+  left: 0;
+  background-image: url(../../img/left_arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.reviews__button--next {
+  background-image: url(../../img/left_arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  right: 0;
+  transform: rotate(180deg);
+}
 .slider-review__list {
   display: flex;
-  transition: all 1s;
 }
-.slider-review__toggle {
+.slider-review__dot {
   display: block;
   width: 6px;
   height: 6px;
@@ -1345,10 +1373,16 @@ html {
   border-radius: 50%;
   background-color: rgba(40, 54, 69, 0.3);
 }
-.slider-review__toggle:not(:last-child) {
+.slider-review__dot:hover {
+  background-color: rgba(40, 54, 69, 0.5);
+}
+.slider-review__dot:active {
+  background-color: rgba(40, 54, 69, 0.1);
+}
+.slider-review__dot:not(:last-child) {
   margin-right: 19px;
 }
-.slider-review__toggle--current {
+.slider-review__dot--current {
   background-color: transparent;
   outline: 3px solid #283645;
 }

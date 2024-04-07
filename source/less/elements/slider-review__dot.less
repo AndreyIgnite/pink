@@ -1,0 +1,22 @@
+.slider-review__dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border: none;
+  border-radius: 50%;
+  background-color: fade(rgba(40, 54, 69, 1), 30%);
+}
+.slider-review__dot:hover {
+  background-color: fade(rgba(40, 54, 69, 1), 50%);
+}
+.slider-review__dot:active {
+  background-color: fade(rgba(40, 54, 69, 1), 10%);
+}
+
+.slider-review__dot:not(:last-child) {
+  margin-right: 19px;
+}
+.slider-review__dot--current {
+  background-color: transparent;
+  outline: 3px solid rgba(40, 54, 69, 1);
+}
