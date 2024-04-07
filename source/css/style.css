@@ -573,6 +573,7 @@ html {
 .slider-review {
   padding-top: 50px;
   max-width: 280px;
+  min-height: 394px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -582,6 +583,7 @@ html {
     max-width: none;
     width: 97%;
     padding-top: 109px;
+    min-height: 475px;
   }
 }
 .page_footer {
@@ -1334,6 +1336,7 @@ html {
   line-height: 30px;
 }
 .reviews__button {
+  z-index: 100;
   width: 22px;
   height: 41px;
   display: block;
@@ -1341,8 +1344,9 @@ html {
   position: absolute;
   background-color: transparent;
   top: 50%;
+  cursor: pointer;
 }
-@media (max-width: 1079px) {
+@media (max-width: 659px) {
   .reviews__button {
     display: none;
   }
@@ -1364,6 +1368,7 @@ html {
 }
 .slider-review__list {
   display: flex;
+  transition: all 1s;
 }
 .slider-review__dot {
   display: block;

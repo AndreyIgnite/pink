@@ -16,6 +16,7 @@ function showSlider() {
   sliderWidth = document.querySelector('.slider-review').offsetWidth;
   sliderList.style.width = sliderWidth * sliderReviews.length + 'px';
   sliderReviews.forEach(item => item.style.width = sliderWidth + 'px')
+  rollSlider()
 }
 showSlider()
 
@@ -24,6 +25,7 @@ function nextSlide() {
   if (sliderCount >= sliderReviews.length) {
     sliderCount = 0;
   }
+  rollSlider()
   console.log(sliderCount)
 }
 
@@ -32,5 +34,10 @@ function prevSlide() {
   if (sliderCount < 0) {
     sliderCount = sliderReviews.length - 1;
   }
+  rollSlider()
   console.log(sliderCount)
+}
+
+function rollSlider() {
+  sliderList.style.transform = `translateX(${-sliderCount * sliderWidth}px)`
 }
