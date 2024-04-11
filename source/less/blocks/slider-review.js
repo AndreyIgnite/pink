@@ -57,7 +57,7 @@ let touchSurface = document.querySelector('.slider-review')
 let startTime;
 let elapsedTime
 let threshhold = 150;
-let allowedtime = 200;
+let allowedtime = 600;
 let distX;
 let distY
 let startX;
@@ -78,23 +78,37 @@ touchSurface.addEventListener('touchmove', function(e) {
 }, false)
 
 touchSurface.addEventListener('touchend', function(e) {
+  e.preventDefault()
   let event = e.changedTouches[0];
   distX = event.pageX - startX;
   distY = event.pageY - startY;
   elapsedTime = new Date().getTime() - startTime;
-  console.log(elapsedTime)
-  let resultSwipe = (elapsedTime <= allowedtime && distX <= -threshhold && Math.abs(distY) <= 100);
-  swipeRight(resultSwipe)
-  e.preventDefault()
+  console.log(distX);
+  let resultSwipe;
+  if (elapsedTime <= allowedtime && distX <= -threshhold && Math.abs(distY) <= 100) {
+    resultSwipe = 'left';
+    swipe(resultSwipe);
+  }
+  if (elapsedTime <= allowedtime && distX >= threshhold && Math.abs(distY) <= 100) {
+    resultSwipe = 'right'
+    swipe(resultSwipe)
+  };
+
 }, false)
 
-function swipeRight(swipe) {
-  if(swipe) {
-    sliderCount++;
+function swipe(swipe) {
+  if(swipe == 'left') {
+    sliderCount++
     if (sliderCount >= sliderReviews.length) {
       sliderCount = 0;
     }
-    rollSlider(sliderCount);
+    rollSlider(sliderCount)
   }
-
+  if (swipe=='right') {
+    sliderCount--;
+    if (sliderCount < 0) {
+      sliderCount = sliderReviews.length - 1;
+    }
+    rollSlider(sliderCount)
+  }
 }
