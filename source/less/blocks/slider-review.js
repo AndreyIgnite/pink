@@ -13,13 +13,8 @@ sliderBtnNext.addEventListener('click', nextSlide);
 sliderBtnPrev.addEventListener('click', prevSlide);
 sliderDots.forEach((item, index) => {
   item.addEventListener('click', () => {
-    if(!(item.classList.contains('slider-review__dot--current'))) {
       sliderCount = index;
-      rollSlider();
-      document.querySelector('.slider-review__dot--current').classList.remove('slider-review__dot--current')
-      sliderDots[index].classList.add('slider-review__dot--current')
-    }
-
+      rollSlider(sliderCount)
   })
 })
 
@@ -27,7 +22,7 @@ function showSlider() {
   sliderWidth = document.querySelector('.slider-review').offsetWidth;
   sliderList.style.width = sliderWidth * sliderReviews.length + 'px';
   sliderReviews.forEach(item => item.style.width = sliderWidth + 'px')
-  rollSlider()
+  rollSlider(sliderCount)
 }
 showSlider()
 
@@ -37,8 +32,7 @@ function nextSlide() {
   if (sliderCount >= sliderReviews.length) {
     sliderCount = 0;
   }
-  switchDot()
-  rollSlider()
+  rollSlider(sliderCount)
 }
 
 function prevSlide() {
@@ -46,15 +40,61 @@ function prevSlide() {
   if (sliderCount < 0) {
     sliderCount = sliderReviews.length - 1;
   }
-  switchDot()
-  rollSlider()
+  rollSlider(sliderCount)
 }
 
-function rollSlider() {
+function rollSlider(index) {
+  switchDot(index)
   sliderList.style.transform = `translateX(${-sliderCount * sliderWidth}px)`
 }
 
-function switchDot() {
-  document.querySelector('.slider-review__dot--current').classList.remove('slider-review__dot--current')
-  sliderDots[sliderCount].classList.add('slider-review__dot--current')
+function switchDot(index) {
+  sliderDots.forEach((item) => item.classList.remove('slider-review__dot--current'))
+  sliderDots[index].classList.add('slider-review__dot--current')
+}
+
+let touchSurface = document.querySelector('.slider-review')
+let startTime;
+let elapsedTime
+let threshhold = 150;
+let allowedtime = 200;
+let distX;
+let distY
+let startX;
+let startY;
+
+touchSurface.addEventListener('touchstart', function(e) {
+  let event = e.changedTouches[0];
+  distX = 0;
+  distY = 0;
+  startX = event.pageX;
+  startY = event.pageY;
+  startTime = new Date().getTime();
+  e.preventDefault();
+}, false)
+
+touchSurface.addEventListener('touchmove', function(e) {
+  e.preventDefault();
+}, false)
+
+touchSurface.addEventListener('touchend', function(e) {
+  let event = e.changedTouches[0];
+  distX = event.pageX - startX;
+  distY = event.pageY - startY;
+  elapsedTime = new Date().getTime() - startTime;
+  console.log(elapsedTime)
+  let resultSwipe = (elapsedTime <= allowedtime && distX <= -threshhold && Math.abs(distY) <= 100);
+  swipeRight(resultSwipe)
+  e.preventDefault()
+}, false)
+
+function swipeRight(swipe) {
+  if(swipe) {
+    sliderCount++;
+    if (sliderCount >= sliderReviews.length) {
+      sliderCount = 0;
+    }
+    rollSlider(sliderCount);
+  }
+
 }
