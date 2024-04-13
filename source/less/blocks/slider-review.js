@@ -44,8 +44,9 @@ function prevSlide() {
 }
 
 function rollSlider(index) {
-  switchDot(index)
+  switchDot(sliderCount);
   sliderList.style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
+  console.log(sliderCount);
 }
 
 function switchDot(index) {
@@ -65,25 +66,39 @@ touchSurface.addEventListener('touchstart', function(e) {
   let event = e.changedTouches[0];
   startX = event.pageX;
   dragndropSlideShit = 0;
-  console.log(startX);
-  console.log(sliderCount + 'слайд');
   currentSlidePosition = sliderWidth * -sliderCount;
-  console.log(currentSlidePosition + ' px')
   e.preventDefault();
 }, false)
 
 touchSurface.addEventListener('touchmove', function(e) {
   let event = e.changedTouches[0];
   dragndropSlideShit = event.pageX - startX;
-  dragndropSlidePosition = currentSlidePosition + dragndropSlideShit
-  console.log(dragndropSlidePosition  + ' px');
+  dragndropSlidePosition = currentSlidePosition + dragndropSlideShit;
   sliderList.style.transform = `translateX(${dragndropSlidePosition}px)`;
   e.preventDefault();
 }, false)
 
 touchSurface.addEventListener('touchend', function(e) {
   sliderList.style.transition = 'all 0.6s';
-  if (Math.abs(dragndropSlideShit) < sliderWidth/3) {
+  if (Math.abs(dragndropSlideShit) < sliderWidth / 3) {
+    rollSlider(sliderCount);
+  }
+  if ((dragndropSlideShit < -sliderWidth / 3) && !((sliderCount==sliderReviews.length - 1))) {
+    sliderCount++;
+    if (sliderCount >= sliderReviews.length) {
+      sliderCount = 0;
+    }
+    rollSlider(sliderCount);
+  } else {
+    rollSlider(sliderCount)
+  }
+  if ((dragndropSlideShit > sliderWidth / 3) && !(sliderCount==0))  {
+    sliderCount--;
+    if (sliderCount < 0) {
+      sliderCount = sliderReviews.length - 1;
+    }
+    rollSlider(sliderCount)
+  } else {
     rollSlider(sliderCount)
   }
 }, false)
