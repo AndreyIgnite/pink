@@ -45,7 +45,7 @@ function prevSlide() {
 
 function rollSlider(index) {
   switchDot(index)
-  sliderList.style.transform = `translateX(${-sliderCount * sliderWidth}px)`
+  sliderList.style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
 }
 
 function switchDot(index) {
@@ -53,62 +53,41 @@ function switchDot(index) {
   sliderDots[index].classList.add('slider-review__dot--current')
 }
 
-let touchSurface = document.querySelector('.slider-review')
-let startTime;
-let elapsedTime
-let threshhold = 150;
-let allowedtime = 600;
-let distX;
-let distY
-let startX;
-let startY;
+let touchSurface = document.querySelector('.slider-review'),
+distX,
+startX,
+dragndropSlidePosition,
+dragndropSlideShit,
+currentSlidePosition;
 
 touchSurface.addEventListener('touchstart', function(e) {
+  sliderList.style.transition = 'all 0s';
   let event = e.changedTouches[0];
-  distX = 0;
-  distY = 0;
   startX = event.pageX;
-  startY = event.pageY;
-  startTime = new Date().getTime();
+  dragndropSlideShit = 0;
+  console.log(startX);
+  console.log(sliderCount + 'слайд');
+  currentSlidePosition = sliderWidth * -sliderCount;
+  console.log(currentSlidePosition + ' px')
   e.preventDefault();
 }, false)
 
 touchSurface.addEventListener('touchmove', function(e) {
+  let event = e.changedTouches[0];
+  dragndropSlideShit = event.pageX - startX;
+  dragndropSlidePosition = currentSlidePosition + dragndropSlideShit
+  console.log(dragndropSlidePosition  + ' px');
+  sliderList.style.transform = `translateX(${dragndropSlidePosition}px)`;
   e.preventDefault();
 }, false)
 
 touchSurface.addEventListener('touchend', function(e) {
-  e.preventDefault()
-  let event = e.changedTouches[0];
-  distX = event.pageX - startX;
-  distY = event.pageY - startY;
-  elapsedTime = new Date().getTime() - startTime;
-  console.log(distX);
-  let resultSwipe;
-  if (elapsedTime <= allowedtime && distX <= -threshhold && Math.abs(distY) <= 100) {
-    resultSwipe = 'left';
-    swipe(resultSwipe);
+  sliderList.style.transition = 'all 0.6s';
+  if (Math.abs(dragndropSlideShit) < sliderWidth/3) {
+    rollSlider(sliderCount)
   }
-  if (elapsedTime <= allowedtime && distX >= threshhold && Math.abs(distY) <= 100) {
-    resultSwipe = 'right'
-    swipe(resultSwipe)
-  };
-
 }, false)
 
 function swipe(swipe) {
-  if(swipe == 'left') {
-    sliderCount++
-    if (sliderCount >= sliderReviews.length) {
-      sliderCount = 0;
-    }
-    rollSlider(sliderCount)
-  }
-  if (swipe=='right') {
-    sliderCount--;
-    if (sliderCount < 0) {
-      sliderCount = sliderReviews.length - 1;
-    }
-    rollSlider(sliderCount)
-  }
+
 }
