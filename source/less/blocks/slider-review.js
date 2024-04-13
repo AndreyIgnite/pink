@@ -9,6 +9,7 @@ let sliderCount = 0;
 let sliderWidth;
 
 window.addEventListener('resize', showSlider);
+sliderBtnNext.addEventListener('touchstart', nextSlide);
 sliderBtnNext.addEventListener('click', nextSlide);
 sliderBtnPrev.addEventListener('click', prevSlide);
 sliderDots.forEach((item, index) => {
@@ -83,7 +84,7 @@ touchSurface.addEventListener('touchmove', function(e) {
 }, false)
 
 touchSurface.addEventListener('touchend', function(e) {
-  sliderList.style.transition = 'all 0.2s';
+  sliderList.style.transition = 'all 0.4s';
   if (Math.abs(dragndropSlideShit) < sliderWidth / 7.1) {
     rollSlider(sliderCount);
   }
