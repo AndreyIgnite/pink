@@ -83,7 +83,7 @@ touchSurface.addEventListener('touchmove', function(e) {
 }, false)
 
 touchSurface.addEventListener('touchend', function(e) {
-  sliderList.style.transition = 'all 0.6s';
+  sliderList.style.transition = 'all 0.2s';
   if (Math.abs(dragndropSlideShit) < sliderWidth / 7.5) {
     rollSlider(sliderCount);
   }
