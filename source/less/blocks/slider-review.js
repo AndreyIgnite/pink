@@ -46,7 +46,6 @@ function prevSlide() {
 function rollSlider(index) {
   switchDot(sliderCount);
   sliderList.style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
-  console.log(sliderCount);
 }
 
 function switchDot(index) {
@@ -56,7 +55,9 @@ function switchDot(index) {
 
 let touchSurface = document.querySelector('.slider-review'),
 distX,
+dustY,
 startX,
+startY,
 dragndropSlidePosition,
 dragndropSlideShit,
 currentSlidePosition;
@@ -65,6 +66,7 @@ touchSurface.addEventListener('touchstart', function(e) {
   sliderList.style.transition = 'all 0s';
   let event = e.changedTouches[0];
   startX = event.pageX;
+  startY = event.pageY;
   dragndropSlideShit = 0;
   currentSlidePosition = sliderWidth * -sliderCount;
   e.preventDefault();
@@ -74,16 +76,18 @@ touchSurface.addEventListener('touchmove', function(e) {
   let event = e.changedTouches[0];
   dragndropSlideShit = event.pageX - startX;
   dragndropSlidePosition = currentSlidePosition + dragndropSlideShit;
+  if ((event.pageY - startY) <= 100) {
   sliderList.style.transform = `translateX(${dragndropSlidePosition}px)`;
+  }
   e.preventDefault();
 }, false)
 
 touchSurface.addEventListener('touchend', function(e) {
   sliderList.style.transition = 'all 0.6s';
-  if (Math.abs(dragndropSlideShit) < sliderWidth / 3) {
+  if (Math.abs(dragndropSlideShit) < sliderWidth / 7.5) {
     rollSlider(sliderCount);
   }
-  if ((dragndropSlideShit < -sliderWidth / 3) && !((sliderCount==sliderReviews.length - 1))) {
+  if ((dragndropSlideShit < -sliderWidth / 7) && !((sliderCount==sliderReviews.length - 1))) {
     sliderCount++;
     if (sliderCount >= sliderReviews.length) {
       sliderCount = 0;
@@ -92,7 +96,7 @@ touchSurface.addEventListener('touchend', function(e) {
   } else {
     rollSlider(sliderCount)
   }
-  if ((dragndropSlideShit > sliderWidth / 3) && !(sliderCount==0))  {
+  if ((dragndropSlideShit > sliderWidth / 7.2) && !(sliderCount==0))  {
     sliderCount--;
     if (sliderCount < 0) {
       sliderCount = sliderReviews.length - 1;
