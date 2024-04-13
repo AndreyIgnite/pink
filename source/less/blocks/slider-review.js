@@ -84,7 +84,7 @@ touchSurface.addEventListener('touchmove', function(e) {
 
 touchSurface.addEventListener('touchend', function(e) {
   sliderList.style.transition = 'all 0.2s';
-  if (Math.abs(dragndropSlideShit) < sliderWidth / 7.5) {
+  if (Math.abs(dragndropSlideShit) < sliderWidth / 7.1) {
     rollSlider(sliderCount);
   }
   if ((dragndropSlideShit < -sliderWidth / 7) && !((sliderCount==sliderReviews.length - 1))) {
@@ -96,7 +96,7 @@ touchSurface.addEventListener('touchend', function(e) {
   } else {
     rollSlider(sliderCount)
   }
-  if ((dragndropSlideShit > sliderWidth / 7.2) && !(sliderCount==0))  {
+  if ((dragndropSlideShit > sliderWidth / 7) && !(sliderCount==0))  {
     sliderCount--;
     if (sliderCount < 0) {
       sliderCount = sliderReviews.length - 1;
