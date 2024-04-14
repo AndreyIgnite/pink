@@ -5,7 +5,13 @@
   min-height: 394px;
 }
 .reviews {
-  @media (min-width: 660px) {
-  min-height: 221px;
+  @media (min-width: @tablet-width) {
+    min-height: 221px;
+  }
+}
+
+.reviews {
+  @media (min-width: @desktop-width) {
+    padding-top: 72px;
   }
 }

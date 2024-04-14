@@ -2,11 +2,14 @@
   padding-top: 50px;
   margin: 0 auto;
   overflow: hidden;
-}
-.slider-review {
-  @media (min-width: 660px) {
-    max-width: none;
-    width: 97%;
+  @media (min-width: @tablet-width) {
+    width: 94%;
     padding-top: 109px;
+  }
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    width: 87%;
+    max-width: 1300px;
+    position: relative;
   }
 }
