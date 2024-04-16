@@ -36,7 +36,6 @@ function switchDot(index) { //переключатель пагинации
   sliderDots[index].classList.add("toggles__dot--current"); //ебашим на нужную
 }
 window.addEventListener('load', function () {
-  console.log('done')
   window.addEventListener("resize", function () { //пересчитываем ширину для меняется ширина экрана
     showSlider(sliderCount);
   });
@@ -65,14 +64,12 @@ window.addEventListener('load', function () {
       let event = e.changedTouches[0];
       startX = event.pageX;
       dragndropSlideShit = 0;
-      e.preventDefault();
     }, false);
   touchSurface.addEventListener("touchmove", function (e) {
       let event = e.changedTouches[0];
       dragndropSlideShit = event.pageX - startX;
       dragndropSlidePosition = currentSlidePosition + dragndropSlideShit;
       sliderList.style.transform = `translateX(${dragndropSlidePosition}px)`;
-      e.preventDefault();
     }, false);
   touchSurface.addEventListener("touchend", function (e) {
       sliderList.style.transition = "all 0.4s";

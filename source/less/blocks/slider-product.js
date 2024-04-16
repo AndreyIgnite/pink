@@ -1,5 +1,4 @@
-let slider_List = document.querySelector(".slider__list"); //обертка слайдера
-console.log(slider_List);
+let slider_List = document.querySelector(".slider__list"); //обертка слайдераconsole.log(slider_List);
 let slider_Products = document.querySelectorAll(".slider__item"); //массив со слайдами
 let touchSurface_2 = document.querySelector(".slider__wrapper"); //зона свайпа
 let sliderCount_2 = 0; //счетчик слайдов, индикатор текущего слайда
@@ -20,7 +19,7 @@ function showSlider_2() { //функция пересчета ширины сл�
 showSlider_2()
 
 function rollSlider_2(index) { //ролл ленты(обёртки) слайдера в опредёлнную позицию
-  slider_List.style.transform = `translateX(${-sliderCount_2 * sliderWidth_2}px)`; //в зависимости от индикатора едем на опреденный слайд
+  slider_List.style.transform = `translateX(${-index * sliderWidth_2}px)`; //в зависимости от индикатора едем на опреденный слайд
   let shift = (100 - slider_Area) / 2;
   shift = shift + index * 2 * shift;
   slider_List.style.padding = `0 0 0 ${shift}%`;
