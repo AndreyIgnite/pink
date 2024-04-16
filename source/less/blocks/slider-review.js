@@ -21,21 +21,13 @@ function showSlider(index) { //функция пересчета ширины с
   rollSlider(index); //двигаем ленту чтобы слайд с номеров index оказался напротив ровно видимой области
 }
 function nextSlide(index) {
-  sliderCount++;
-  if (sliderCount >= sliderReviews.length) {
-    sliderCount = 0;
-  }
-  rollSlider(index);
+
 }
 function prevSlide(index) {
-  sliderCount--;
-  if (sliderCount < 0) {
-    sliderCount = sliderReviews.length - 1;
-  }
-  rollSlider(index);
+
 }
 function rollSlider(index) { //ролл ленты(обёртки) слайдера в опредёлнную позицию
-  sliderList.style.transform = `translateX(${-sliderCount * sliderWidth}px)`; //в зависимости от индикатора едем на опреденный слайд
+  sliderList.style.transform = `translateX(${-index * sliderWidth}px)`; //в зависимости от индикатора едем на опреденный слайд
   switchDot(index); //переключаем пагинацию
   currentSlidePosition = sliderWidth * -sliderCount; //
 }
@@ -49,10 +41,18 @@ window.addEventListener('load', function () {
     showSlider(sliderCount);
   });
   sliderBtnNext.addEventListener("click", function () {
-    nextSlide(sliderCount);
+    sliderCount++;
+    if (sliderCount >= sliderReviews.length) {
+      sliderCount = 0;
+    }
+    rollSlider(sliderCount);
   });
   sliderBtnPrev.addEventListener("click", function () {
-    prevSlide(sliderCount);
+    sliderCount--;
+    if (sliderCount < 0) {
+    sliderCount = sliderReviews.length - 1;
+    }
+    rollSlider(sliderCount);
   });
   sliderDots.forEach((item, index) => {
     item.addEventListener("click", () => {

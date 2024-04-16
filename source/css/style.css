@@ -574,7 +574,6 @@ html {
   }
 }
 .slider {
-  width: auto;
   background-color: white;
   color: #283645;
   font-family: "Open Sans", sans-serif;
@@ -1347,6 +1346,9 @@ html {
 .slider__item {
   display: flex;
   flex-direction: column;
+  border-right: 1px solid;
+  border-left: 1px solid;
+  border-color: #F2F2F2;
 }
 .reviews__name {
   color: #000;
@@ -1472,6 +1474,11 @@ html {
 }
 .slider__list {
   display: flex;
+  transition: all 1s;
+}
+.slider__wrapper {
+  overflow: hidden;
+  margin: 0 auto;
 }
 .toggles__dot {
   display: block;
@@ -1541,8 +1548,6 @@ html {
   }
 }
 .product__item {
-  width: 86%;
-  margin: 0 auto;
   background-color: white;
 }
 .product__wrapper {
