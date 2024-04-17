@@ -1,9 +1,28 @@
 .product__head {
-  height: 94px;
+  position: relative;
   padding-top: 19px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #283645;
   color: white;
+}
+.product__head--hit {
+  background-image: url(../img/hit_mobile.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top left;
+}
+.product__head--hit::before {
+  display: block;
+  position: absolute;
+  top: 23px;
+  left: 14px;
+  content: "хит";
+  transform: rotate(-45deg);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
 }

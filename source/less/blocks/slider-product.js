@@ -1,6 +1,6 @@
-let slider_List = document.querySelector(".slider__list"); //обертка слайдераconsole.log(slider_List);
-let slider_Products = document.querySelectorAll(".slider__item"); //массив со слайдами
-let touchSurface_2 = document.querySelector(".slider__wrapper"); //зона свайпа
+let slider_List = document.querySelector(".slider-product__list"); //обертка слайдераconsole.log(slider_List);
+let slider_Products = document.querySelectorAll(".slider-product__item"); //массив со слайдами
+let touchSurface_2 = document.querySelector(".slider-product__wrapper"); //зона свайпа
 let sliderCount_2 = 0; //счетчик слайдов, индикатор текущего слайда
 let sliderWidth_2; //ширина видимой части слайдера, ширина одного слайда
 let startX_2; //начальная точка касания, для тачпадов
@@ -20,10 +20,32 @@ showSlider_2()
 
 function rollSlider_2(index) { //ролл ленты(обёртки) слайдера в опредёлнную позицию
   slider_List.style.transform = `translateX(${-index * sliderWidth_2}px)`; //в зависимости от индикатора едем на опреденный слайд
+  currentSlidePosition_2 = sliderWidth_2 * -sliderCount_2;
   let shift = (100 - slider_Area) / 2;
   shift = shift + index * 2 * shift;
   slider_List.style.padding = `0 0 0 ${shift}%`;
-
 }
 
 window.addEventListener('resize', showSlider_2)
+touchSurface_2.addEventListener("touchstart", function (e) {
+  slider_List.style.transition = "all 0s";
+  let event = e.changedTouches[0];
+  startX_2 = event.pageX;
+  dragndropSlideShit_2 = 0;
+}, false);
+touchSurface_2.addEventListener("touchmove", function (e) {
+  let event = e.changedTouches[0];
+  dragndropSlideShit_2 = event.pageX - startX_2;
+  dragndropSlidePosition_2 = currentSlidePosition_2 + dragndropSlideShit_2;
+  slider_List.style.transform = `translateX(${dragndropSlidePosition_2}px)`;
+}, false);
+touchSurface_2.addEventListener("touchend", function (e) {
+  slider_List.style.transition = "all 0.4s";
+  if (dragndropSlideShit_2 < -sliderWidth_2 / TRIGGER_OFFSET && !(sliderCount_2 == slider_Products.length - 1)) {
+    sliderCount_2++;
+  }
+  if (dragndropSlideShit_2 > sliderWidth_2 / TRIGGER_OFFSET && !(sliderCount_2 == 0)) {
+    sliderCount_2--;
+  }
+  rollSlider_2(sliderCount_2);
+}, false);

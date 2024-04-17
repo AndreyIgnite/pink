@@ -573,7 +573,7 @@ html {
     padding-top: 72px;
   }
 }
-.slider {
+.slider-product {
   background-color: white;
   color: #283645;
   font-family: "Open Sans", sans-serif;
@@ -1343,7 +1343,7 @@ html {
     margin-bottom: 67px;
   }
 }
-.slider__item {
+.slider-product__item {
   display: flex;
   flex-direction: column;
   border-right: 1px solid;
@@ -1472,11 +1472,11 @@ html {
     display: none;
   }
 }
-.slider__list {
+.slider-product__list {
   display: flex;
   transition: all 1s;
 }
-.slider__wrapper {
+.slider-product__wrapper {
   overflow: hidden;
   margin: 0 auto;
 }
@@ -1558,13 +1558,32 @@ html {
   padding-top: 160px;
 }
 .product__head {
-  height: 94px;
+  position: relative;
   padding-top: 19px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #283645;
   color: white;
+}
+.product__head--hit {
+  background-image: url(../img/hit_mobile.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top left;
+}
+.product__head--hit::before {
+  display: block;
+  position: absolute;
+  top: 23px;
+  left: 14px;
+  content: "хит";
+  transform: rotate(-45deg);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
 }
 .product__title {
   margin: 0;
@@ -1576,10 +1595,11 @@ html {
   text-transform: uppercase;
 }
 .product__price {
+  margin-bottom: 35px;
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
-  line-height: 20px;
+  line-height: 1;
   text-transform: uppercase;
 }
 .product__properties-list {
@@ -1593,11 +1613,30 @@ html {
   line-height: 30px;
 }
 .product__properties-item {
+  position: relative;
   display: flex;
   align-items: center;
-  padding-left: 20px;
-  height: 59px;
-  line-height: 20px;
+  padding: 24px 20px 25px;
+  border-bottom: 2px solid;
+  border-color: #F2F2F2;
+  line-height: 1;
+}
+.product__properties-item::after {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  right: 2px;
+  display: block;
+  width: 31px;
+  height: 27px;
+  content: "";
+  background-image: url(../../img/no.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.product__properties-item--yes::after {
+  height: 21px;
+  background-image: url(../../img/yes.svg);
 }
 .contacts__feedback {
   margin-bottom: 45px;
