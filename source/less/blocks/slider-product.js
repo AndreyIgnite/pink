@@ -1,13 +1,14 @@
 let slider_List = document.querySelector(".slider-product__list"); //обертка слайдераconsole.log(slider_List);
 let slider_Products = document.querySelectorAll(".slider-product__item"); //массив со слайдами
 let touchSurface_2 = document.querySelector(".slider-product__wrapper"); //зона свайпа
+let sliderDots_2 = document.querySelectorAll(".products__dot"); //массив с пагинациями
 let sliderCount_2 = 0; //счетчик слайдов, индикатор текущего слайда
 let sliderWidth_2; //ширина видимой части слайдера, ширина одного слайда
 let startX_2; //начальная точка касания, для тачпадов
 let dragndropSlidePosition_2; //позиция ленты слайдеров после оттаскивания слайда при свайпе на произвольное расстояние в px для translateX
 let dragndropSlideShit_2; //величина сдвига
 let currentSlidePosition_2; // текущая позиция ленты слайдера, (величина кратна sliderCount)
-const slider_Area = 88;
+const slider_Area = 92;
 //let shift = 6;
 
 function showSlider_2() { //функция пересчета ширины слайдера под экран
@@ -20,10 +21,16 @@ showSlider_2()
 
 function rollSlider_2(index) { //ролл ленты(обёртки) слайдера в опредёлнную позицию
   slider_List.style.transform = `translateX(${-index * sliderWidth_2}px)`; //в зависимости от индикатора едем на опреденный слайд
+  switchDot_2(sliderCount_2);
   currentSlidePosition_2 = sliderWidth_2 * -sliderCount_2;
   let shift = (100 - slider_Area) / 2;
   shift = shift + index * 2 * shift;
   slider_List.style.padding = `0 0 0 ${shift}%`;
+}
+
+function switchDot_2(index) { //переключатель пагинации
+  sliderDots_2.forEach((item) => item.classList.remove("toggles__dot--current")); //убираем текущую пагинацию
+  sliderDots_2[index].classList.add("toggles__dot--current"); //ебашим на нужную
 }
 
 window.addEventListener('resize', showSlider_2)
