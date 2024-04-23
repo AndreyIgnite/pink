@@ -64,12 +64,16 @@ window.addEventListener('load', function () {
       let event = e.changedTouches[0];
       startX = event.pageX;
       dragndropSlideShit = 0;
+      //e.preventDefault();
+      e.stopPropagation();
     }, false);
   touchSurface.addEventListener("touchmove", function (e) {
       let event = e.changedTouches[0];
       dragndropSlideShit = event.pageX - startX;
       dragndropSlidePosition = currentSlidePosition + dragndropSlideShit;
       sliderList.style.transform = `translateX(${dragndropSlidePosition}px)`;
+      //e.preventDefault();
+      e.stopPropagation();
     }, false);
   touchSurface.addEventListener("touchend", function (e) {
       sliderList.style.transition = "all 0.4s";
@@ -80,5 +84,7 @@ window.addEventListener('load', function () {
         sliderCount--;
       }
       rollSlider(sliderCount);
+      e.stopPropagation();
+      //e.preventDefault();
     }, false);
 })

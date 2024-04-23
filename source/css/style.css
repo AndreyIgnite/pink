@@ -1447,6 +1447,7 @@ html {
 @media (min-width: 1080px) {
   .slider-review__grade {
     font-size: 18px;
+    line-height: 30px;
   }
 }
 .slider-review__list {

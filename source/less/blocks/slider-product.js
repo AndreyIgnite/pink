@@ -6,10 +6,13 @@
   let sliderCount_2 = 0; //счетчик слайдов, индикатор текущего слайда
   let sliderWidth_2; //ширина видимой части слайдера, ширина одного слайда
   let startX_2; //начальная точка касания, для тачпадов
+  let startY_2;
   let dragndropSlidePosition_2; //позиция ленты слайдеров после оттаскивания слайда при свайпе на произвольное расстояние в px для translateX
+  let dragSlideY;
   let dragndropSlideShit_2; //величина сдвига
   let currentSlidePosition_2; // текущая позиция ленты слайдера, (величина кратна sliderCount)
   const slider_Area = 92;
+  let isSkip = false;
   //let shift = 6;
 
   function showSlider_2() { //функция пересчета ширины слайдера под экран
@@ -35,20 +38,34 @@
   }
 
   window.addEventListener('resize', showSlider_2)
-  touchSurface_2.addEventListener("touchstart", function (e) {
-    slider_List.style.transition = "all 0s";
-    let event = e.changedTouches[0];
-    startX_2 = event.pageX;
-    dragndropSlideShit_2 = 0;
-  }, false);
   window.addEventListener('load', function () {
+    touchSurface_2.addEventListener("touchstart", function (e) {
+      slider_List.style.transition = "all 0s";
+      let event = e.changedTouches[0];
+      startY_2 = event.pageY;
+      startX_2 = event.pageX;
+      dragndropSlideShit_2 = 0;
+      console.log(dragndropSlideShit_2);
+    });
+
     touchSurface_2.addEventListener("touchmove", function (e) {
       let event = e.changedTouches[0];
       dragndropSlideShit_2 = event.pageX - startX_2;
-      dragndropSlidePosition_2 = currentSlidePosition_2 + dragndropSlideShit_2;
-      slider_List.style.transform = `translateX(${dragndropSlidePosition_2}px)`;
-    }, false);
+      dragSlideY = event.pageY;
+      if (Math.abs(dragndropSlideShit_2) > 10) {
+        if(e.cancelable) {
+        e.preventDefault();
+        dragndropSlidePosition_2 = currentSlidePosition_2 + dragndropSlideShit_2;
+        slider_List.style.transform = `translateX(${dragndropSlidePosition_2}px)`;
+        }
+      }
+      else {
+        isSkip = true;
+        return
+      }
+    });
     touchSurface_2.addEventListener("touchend", function (e) {
+      if(isSkip) {
       slider_List.style.transition = "all 0.4s";
       if (dragndropSlideShit_2 < -sliderWidth_2 / TRIGGER_OFFSET && !(sliderCount_2 == slider_Products.length - 1)) {
         sliderCount_2++;
@@ -57,6 +74,7 @@
         sliderCount_2--;
       }
       rollSlider_2(sliderCount_2);
-    }, false);
+      }
+    });
   })
   }
