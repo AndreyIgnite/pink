@@ -57,7 +57,7 @@
       let event = e.changedTouches[0];
       dragndropSlideShit_2 = event.pageX - startX_2;
       dragSlideY = event.pageY - startY_2;
-      if (Math.abs(dragndropSlideShit_2) < 10 && Math.abs(dragSlideY) > 20) {
+      if (Math.abs(dragndropSlideShit_2) < 8 && Math.abs(dragSlideY) > 15) {
         isSkip = true;
         console.log(isSkip)
         return

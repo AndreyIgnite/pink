@@ -1583,6 +1583,12 @@ html {
     padding-bottom: 70px;
   }
 }
+@media (min-width: 1080px) {
+  .product__wrapper {
+    padding-top: 215px;
+    padding-bottom: 98px;
+  }
+}
 .product__toggles {
   position: absolute;
   bottom: 49px;
