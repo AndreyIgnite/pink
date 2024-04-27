@@ -1,4 +1,3 @@
-  if (document.body.clientWidth < 660) {
   let slider_List = document.querySelector(".slider-product__list"); //обертка слайдераconsole.log(slider_List);
   let slider_Products = document.querySelectorAll(".slider-product__item"); //массив со слайдами
   let touchSurface_2 = document.querySelector(".slider-product__wrapper"); //зона свайпа
@@ -40,33 +39,35 @@
   window.addEventListener('resize', showSlider_2)
   window.addEventListener('load', function () {
     touchSurface_2.addEventListener("touchstart", function (e) {
+      isSkip = false;
       slider_List.style.transition = "all 0s";
       let event = e.changedTouches[0];
       startY_2 = event.pageY;
       startX_2 = event.pageX;
       dragndropSlideShit_2 = 0;
-      console.log(dragndropSlideShit_2);
+      dragSlideY = 0;
     });
 
     touchSurface_2.addEventListener("touchmove", function (e) {
       let event = e.changedTouches[0];
       dragndropSlideShit_2 = event.pageX - startX_2;
-      dragSlideY = event.pageY;
-      if (Math.abs(dragndropSlideShit_2) > 10) {
-        if(e.cancelable) {
-        e.preventDefault();
-        dragndropSlidePosition_2 = currentSlidePosition_2 + dragndropSlideShit_2;
-        slider_List.style.transform = `translateX(${dragndropSlidePosition_2}px)`;
-        }
+      dragSlideY = event.pageY - startY_2;
+      if (Math.abs(dragndropSlideShit_2) < 10 && Math.abs(dragSlideY) > 20) {
+        isSkip = true;
+        console.log(isSkip)
+        return
       }
       else {
-        isSkip = true;
-        return
+        if(e.cancelable) {
+          e.preventDefault();
+          dragndropSlidePosition_2 = currentSlidePosition_2 + dragndropSlideShit_2;
+          slider_List.style.transform = `translateX(${dragndropSlidePosition_2}px)`;
+          }
       }
     });
     touchSurface_2.addEventListener("touchend", function (e) {
-      if(isSkip) {
       slider_List.style.transition = "all 0.4s";
+      if (!isSkip) {
       if (dragndropSlideShit_2 < -sliderWidth_2 / TRIGGER_OFFSET && !(sliderCount_2 == slider_Products.length - 1)) {
         sliderCount_2++;
       }
@@ -74,7 +75,6 @@
         sliderCount_2--;
       }
       rollSlider_2(sliderCount_2);
-      }
+    }
     });
   })
-  }
