@@ -36,7 +36,7 @@
     sliderDots_2[index].classList.add("toggles__dot--current"); //ебашим на нужную
   }
 
-  const mediaQuery = window.matchMedia('(max-width: 660px)')
+  const mediaQuery = window.matchMedia('(max-width: 659px)')
   console.log(mediaQuery.matches)
   if (mediaQuery.matches) {
 
