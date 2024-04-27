@@ -20,7 +20,7 @@
     slider_Products.forEach((item) => (item.style.width = slider_Area / 100 * sliderWidth_2 + "px")); //даём каждому слайду ширину видимой области, чтобы слайды ровно уместились в обертку
     rollSlider_2(sliderCount_2);
   }
-  showSlider_2()
+
 
   function rollSlider_2(index) { //ролл ленты(обёртки) слайдера в опредёлнную позицию
     slider_List.style.transform = `translateX(${-index * sliderWidth_2}px)`; //в зависимости от индикатора едем на опреденный слайд
@@ -36,6 +36,11 @@
     sliderDots_2[index].classList.add("toggles__dot--current"); //ебашим на нужную
   }
 
+  const mediaQuery = window.matchMedia('(max-width: 660px)')
+  console.log(mediaQuery.matches)
+  if (mediaQuery.matches) {
+
+  showSlider_2();
   window.addEventListener('resize', showSlider_2)
   window.addEventListener('load', function () {
     touchSurface_2.addEventListener("touchstart", function (e) {
@@ -78,3 +83,4 @@
     }
     });
   })
+}
