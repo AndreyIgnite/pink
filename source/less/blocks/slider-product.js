@@ -1,3 +1,4 @@
+const TRIGGER_OFFSET = 7; //порог срабатывания свайпа, 1/7 от ширины слайда
   let slider_List = document.querySelector(".slider-product__list"); //обертка слайдераconsole.log(slider_List);
   let slider_Products = document.querySelectorAll(".slider-product__item"); //массив со слайдами
   let touchSurface_2 = document.querySelector(".slider-product__wrapper"); //зона свайпа
@@ -12,6 +13,8 @@
   let currentSlidePosition_2; // текущая позиция ленты слайдера, (величина кратна sliderCount)
   const slider_Area = 92;
   let isSkip = false;
+  let startTime = 0;
+
   //let shift = 6;
 
   function showSlider_2() { //функция пересчета ширины слайдера под экран
@@ -47,6 +50,7 @@
       isSkip = false;
       slider_List.style.transition = "all 0s";
       let event = e.changedTouches[0];
+      startTime = new Date().getTime;
       startY_2 = event.pageY;
       startX_2 = event.pageX;
       dragndropSlideShit_2 = 0;
@@ -57,7 +61,7 @@
       let event = e.changedTouches[0];
       dragndropSlideShit_2 = event.pageX - startX_2;
       dragSlideY = event.pageY - startY_2;
-      if (Math.abs(dragndropSlideShit_2) < Math.abs(dragSlideY)) {
+      if (Math.abs(dragndropSlidePosition_2) < 5 && Math.abs(dragndropSlideShit_2) < Math.abs(dragSlideY)) {
         isSkip = true;
         console.log(isSkip)
         return
@@ -71,6 +75,8 @@
 
     });
     touchSurface_2.addEventListener("touchend", function (e) {
+      let event = e.changedTouches[0];
+      console.log(event)
       slider_List.style.transition = "all 0.4s";
       if (!isSkip) {
       if (dragndropSlideShit_2 < -sliderWidth_2 / TRIGGER_OFFSET && !(sliderCount_2 == slider_Products.length - 1)) {

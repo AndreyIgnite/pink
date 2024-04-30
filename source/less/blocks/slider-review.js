@@ -1,4 +1,4 @@
-const TRIGGER_OFFSET = 7; //порог срабатывания свайпа, 1/7 от ширины слайда
+
 let sliderList = document.querySelector(".slider-review__list"), //обертка слайдера
 sliderReviews = document.querySelectorAll(".slider-review__item"), //массив со слайдами
 sliderDots = document.querySelectorAll(".reviews__dot"), //массив с пагинациями
