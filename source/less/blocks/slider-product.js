@@ -57,18 +57,17 @@
       let event = e.changedTouches[0];
       dragndropSlideShit_2 = event.pageX - startX_2;
       dragSlideY = event.pageY - startY_2;
-      if (Math.abs(dragndropSlideShit_2) < 8 && Math.abs(dragSlideY) > 15) {
+      if (Math.abs(dragndropSlideShit_2) < 5 && Math.abs(dragSlideY) > 2) {
         isSkip = true;
         console.log(isSkip)
         return
       }
-      else {
         if(e.cancelable) {
           e.preventDefault();
           dragndropSlidePosition_2 = currentSlidePosition_2 + dragndropSlideShit_2;
           slider_List.style.transform = `translateX(${dragndropSlidePosition_2}px)`;
           }
-      }
+
     });
     touchSurface_2.addEventListener("touchend", function (e) {
       slider_List.style.transition = "all 0.4s";
