@@ -40,7 +40,6 @@ const TRIGGER_OFFSET = 7; //порог срабатывания свайпа, 1/
   }
 
   const mediaQuery = window.matchMedia('(max-width: 659px)')
-  console.log(mediaQuery.matches)
   if (mediaQuery.matches) {
 
   showSlider_2();

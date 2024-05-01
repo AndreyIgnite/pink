@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pink</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="favicon.ico">
     <!-- <link rel="stylesheet" href="../source/css/reset.css"> -->
@@ -209,8 +210,8 @@
           </div>
         </section> -->
         <section class="reviews swiper">
-          <div class="swiper-wrapper">
-            <blockquote class="swiper-slide reviews__item slider-review__item">
+          <div class="reviews__list swiper-wrapper">
+            <blockquote class="swiper-slide reviews__item">
               <svg width="79" height="63" viewBox="0 0 79 63" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M35.1468 6.97257L30.8388 0C28.3886 1.48142 0 12.0588 0 39.1293C0 46.2698 0.341426 63 18.9793 63C30.2162 63 32.9778 52.8473 32.9778 49.5783C32.9778 27.8508 11.5081 35.5838 11.5081 35.5838C11.5081 17.7771 31.3911 9.06631 35.1468 6.97257Z"/>
                 <path d="M79 6.97257L74.7322 0C72.302 1.48142 43.8833 12.0588 43.8833 39.1293C43.8833 46.2698 44.2247 63 62.8726 63C74.0995 63 76.8611 52.8473 76.8611 49.5783C76.8611 27.8508 55.3914 35.5838 55.3914 35.5838C55.3914 17.7771 75.3146 9.06631 79 6.97257Z"/>
@@ -223,7 +224,7 @@
               </p>
               <p class="reviews__grade slider-review__grade">25 лет, водитель трамвая</p>
             </blockquote>
-            <blockquote class="swiper-slide slider-review__item">
+            <blockquote class="swiper-slide reviews__item">
               <svg width="79" height="63" viewBox="0 0 79 63" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M35.1468 6.97257L30.8388 0C28.3886 1.48142 0 12.0588 0 39.1293C0 46.2698 0.341426 63 18.9793 63C30.2162 63 32.9778 52.8473 32.9778 49.5783C32.9778 27.8508 11.5081 35.5838 11.5081 35.5838C11.5081 17.7771 31.3911 9.06631 35.1468 6.97257Z"/>
                 <path d="M79 6.97257L74.7322 0C72.302 1.48142 43.8833 12.0588 43.8833 39.1293C43.8833 46.2698 44.2247 63 62.8726 63C74.0995 63 76.8611 52.8473 76.8611 49.5783C76.8611 27.8508 55.3914 35.5838 55.3914 35.5838C55.3914 17.7771 75.3146 9.06631 79 6.97257Z"/>
@@ -236,7 +237,7 @@
               </p>
               <p class="slider-review__grade">28 лет, менеджер</p>
             </blockquote>
-            <blockquote class="swiper-slide slider-review__item">
+            <blockquote class="swiper-slide reviews__item">
               <svg width="79" height="63" viewBox="0 0 79 63" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M35.1468 6.97257L30.8388 0C28.3886 1.48142 0 12.0588 0 39.1293C0 46.2698 0.341426 63 18.9793 63C30.2162 63 32.9778 52.8473 32.9778 49.5783C32.9778 27.8508 11.5081 35.5838 11.5081 35.5838C11.5081 17.7771 31.3911 9.06631 35.1468 6.97257Z"/>
                 <path d="M79 6.97257L74.7322 0C72.302 1.48142 43.8833 12.0588 43.8833 39.1293C43.8833 46.2698 44.2247 63 62.8726 63C74.0995 63 76.8611 52.8473 76.8611 49.5783C76.8611 27.8508 55.3914 35.5838 55.3914 35.5838C55.3914 17.7771 75.3146 9.06631 79 6.97257Z"/>
@@ -250,13 +251,15 @@
               <p class="reviews__grade slider-review__grade">30 лет, дизайнер</p>
             </blockquote>
           </div>
-          <div class="swiper-pagination"></div>
-          <button class="reviews__button reviews__button--prev">
+          <div class="swiper-button-prev reviews__button"></div>
+          <div class="swiper-button-next reviews__button"></div>
+          <div class="reviews__toggles swiper-pagination"></div>
+          <!-- <button class="reviews__button reviews__button--prev">
             <span class="visually-hidden">Предыдущий отзыв</span>
           </button>
           <button class="reviews__button reviews__button--next">
             <span class="visually-hidden">Следующий отзыв</span>
-          </button>
+          </button> -->
         </section>
         <section class="product">
           <div class="product__wrapper slider-product">
@@ -459,9 +462,10 @@
       </footer>
     </div>
   </body>
-  <script src="js/swiper.js"></script>
+  <!-- <script src="js/swiper.js"></script> -->
   <script src="less/elements/main-nav__toggler.js"></script>
   <!-- <script src="less/blocks/slider-review.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="less/blocks/slider-product.js"></script>
   <script src="js/main.js"></script>
 </html>

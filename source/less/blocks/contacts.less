@@ -1,5 +1,5 @@
 .contacts {
-  margin-bottom: -52px;
+  margin-bottom: -70px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -11,8 +11,12 @@
   background-position-y: bottom;
   background-size: contain;
   font-family: "Open Sans", sans-serif;
+  @media (min-width: @tablet-width) {
+    margin-bottom: -110px;
+    padding-bottom: 50px;
+    background-image: url(../img/tablet_white_footer.svg);
+  }
 }
-
 .contacts__phone-number, .contacts__e-mail_link, .contacts__adress {
   font-size: 24px;
   font-weight: 300;
