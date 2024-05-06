@@ -5,8 +5,31 @@
 @mobile-and-tablet-width-only: 1079px;
 @tablet-width: 660px;
 @desktop-width: 1080px;
+@m: #D22856;
+
+//mixins
 
 .centerX() {
   left: 50%;
   transform: translateX(-50%);
+}
+
+.containerDesktop() {
+  width: 94%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.triangle(@_; @size; @color) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: @size;
+  border-color: @color;
+}
+
+.triangle(right-top; @size; @color) {
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-style: none;
 }
