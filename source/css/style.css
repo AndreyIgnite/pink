@@ -491,6 +491,40 @@ html {
 .page-main {
   color: white;
 }
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  padding-top: 36px;
+}
+@media (min-width: 660px) {
+  .header-inner {
+    padding-top: 81px;
+  }
+}
+@media (min-width: 1080px) {
+  .header-inner {
+    padding-top: 74px;
+  }
+}
+.header-inner h1 {
+  margin: 0;
+  margin-bottom: 84px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+}
+@media (min-width: 660px) {
+  .header-inner h1 {
+    font-size: 50px;
+    margin-bottom: 143px;
+  }
+}
+@media (min-width: 1080px) {
+  .header-inner h1 {
+    margin-bottom: 104px;
+  }
+}
 .download {
   position: relative;
 }
@@ -1310,6 +1344,61 @@ html {
     background-image: url(../img/screen-dekstop.png);
   }
 }
+.header-inner__describe {
+  background-color: #ffffff;
+  padding-top: 54px;
+}
+@media (min-width: 660px) {
+  .header-inner__describe {
+    padding-top: 100px;
+  }
+}
+.header-inner__text {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  text-align: center;
+  color: #283645;
+  background-color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+}
+@media (min-width: 660px) {
+  .header-inner__text {
+    width: 94%;
+    margin-bottom: 85px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 1080px) {
+  .header-inner__text {
+    margin-bottom: 97px;
+  }
+}
+.header-inner__text br:first-child {
+  display: none;
+}
+@media (min-width: 660px) {
+  .header-inner__text br:first-child {
+    display: block;
+  }
+}
+@media (min-width: 1080px) {
+  .header-inner__text br:first-child {
+    display: none;
+  }
+}
+@media (min-width: 660px) {
+  .header-inner__text br:last-child {
+    display: none;
+  }
+}
+@media (min-width: 1080px) {
+  .header-inner__text br:last-child {
+    display: block;
+  }
+}
 .links__wrapper {
   display: flex;
   justify-content: space-around;
@@ -1986,6 +2075,10 @@ html {
     margin: 0;
     width: 147px;
     align-self: baseline;
+  }
+}
+@media (min-width: 1080px) {
+  .social__logo {
     background-image: url(../img/logotype-blue-desktop.svg);
   }
 }
