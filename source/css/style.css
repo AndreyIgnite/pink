@@ -492,8 +492,14 @@ html {
 .page-main {
   color: white;
 }
+.download-post {
+  background-color: #f2f2f2;
+  padding-top: 20px;
+  padding-bottom: 41px;
+}
 .do-it__title {
-  margin: 0;
+  width: 87%;
+  margin: 0 auto;
   text-align: center;
   padding-top: 49px;
   padding-bottom: 52px;
@@ -1353,6 +1359,23 @@ html {
     width: 230px;
     background-image: url(../img/screen-dekstop.png);
   }
+}
+.download-post__wrapper {
+  width: 87%;
+  margin: 0 auto;
+}
+.download-post__form img {
+  width: 100%;
+}
+.form__options {
+  display: flex;
+  flex-direction: column;
+}
+.form__options-list {
+  display: flex;
+}
+.form__options-list li {
+  height: 44px;
 }
 .header-inner__describe {
   background-color: #ffffff;
