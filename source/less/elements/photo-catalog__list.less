@@ -1,3 +1,10 @@
 .photo-catalog__list {
+  color: rgba(40, 54, 69, 1);
   background-color: white;
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: @desktop-width) {
+  }
 }
