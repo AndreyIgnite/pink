@@ -1698,7 +1698,7 @@ html {
 @media (min-width: 660px) {
   .slider-product__wrapper {
     overflow: visible;
-    width: 87%;
+    width: 94%;
     max-width: 1300px;
     margin: 0 auto;
     display: flex;
@@ -1779,6 +1779,16 @@ html {
   padding-bottom: 0;
   background-color: #f2f2f2;
 }
+@media (min-width: 660px) {
+  .photo-catalog__review {
+    width: 100%;
+  }
+}
+@media (min-width: 660px) {
+  .photo-catalog__item--daily-pan .photo-catalog__review {
+    width: 94%;
+  }
+}
 .photo-catalog__review cite {
   font-size: 14px;
   font-weight: 700;
@@ -1804,6 +1814,16 @@ html {
   padding: 25px 17px;
   background-color: #f2f2f2;
 }
+@media (min-width: 660px) {
+  .photo-catalog__like {
+    width: 100%;
+  }
+}
+@media (min-width: 660px) {
+  .photo-catalog__item--daily-pan .photo-catalog__like {
+    width: 94%;
+  }
+}
 .photo-catalog__like button {
   border: none;
   width: 13px;
@@ -1825,25 +1845,50 @@ html {
 .photo-catalog__item {
   position: relative;
   display: flex;
-  align-items: center;
   flex-direction: column;
+}
+@media (min-width: 660px) {
+  .photo-catalog__item {
+    background-color: #f2f2f2;
+    min-height: 455px;
+  }
 }
 .photo-catalog__item:not(:last-child) {
   margin-bottom: 20px;
 }
+@media (min-width: 660px) {
+  .photo-catalog__item {
+    margin-bottom: 20px;
+  }
+}
 .photo-catalog__img-wrapper {
+  display: block;
   width: 87%;
+  margin: 0 auto;
 }
 @media (min-width: 660px) {
   .photo-catalog__img-wrapper {
     width: 100%;
   }
 }
+.photo-catalog__item--daily-pan {
+  grid-column: 1 / -1;
+}
+.photo-catalog__img-wrapper img {
+  width: 100%;
+}
 .photo-catalog__item--daily-pan .photo-catalog__img-wrapper {
   width: 100%;
 }
+@media (min-width: 660px) {
+  .photo-catalog__item--daily-pan .photo-catalog__img-wrapper {
+    position: relative;
+    width: 100%;
+  }
+}
 .photo-catalog__item--daily-pan::before {
   position: absolute;
+  z-index: 10;
   padding: 13px 19px 14px;
   top: 0;
   right: 6.5%;
@@ -1856,14 +1901,24 @@ html {
   width: 140px;
   background-color: #d22856;
 }
+@media (min-width: 660px) {
+  .photo-catalog__item--daily-pan::before {
+    top: 57px;
+    right: 3%;
+  }
+}
 .photo-catalog__list {
   color: #283645;
   background-color: white;
 }
 @media (min-width: 660px) {
   .photo-catalog__list {
+    position: relative;
     display: grid;
+    column-gap: 3%;
     grid-template-columns: repeat(2, 1fr);
+    width: 94%;
+    margin: 0 auto;
   }
 }
 @media (min-width: 660px) {
