@@ -1,17 +1,17 @@
 .photo-catalog__like {
   display: flex;
   align-items: center;
-  width: 87%;
-  margin: 0 auto;
-  padding: 25px 17px;
+  width: auto;
+  padding: 0;
   background-color: rgba(242, 242, 242, 1);
   @media (min-width: @tablet-width) {
-    width: 100%;
+    width: auto;
+    justify-content: space-between;
   }
 }
 .photo-catalog__item--daily-pan .photo-catalog__like {
   @media (min-width: @tablet-width) {
-    width: 94%;
+
   }
 }
 .photo-catalog__like button {
@@ -24,12 +24,24 @@
   background-size: auto;
   background-position: center;
   cursor: pointer;
-
+  @media (min-width: @tablet-width) {
+    order: 0;
+    margin: 0;
+  }
 }
+
 .photo-catalog__like p {
   color: rgba(210, 40, 86, 1);
   text-transform: uppercase;
   font-size: 12px;
   line-height: 1;
   font-weight: 400;
+  @media (min-width: @tablet-width) {
+    order: -1;
+  }
+}
+.photo-catalog__item--daily-pan .photo-catalog__like p {
+  @media (min-width: @tablet-width) {
+    margin-right: 16px;
+  }
 }

@@ -1,17 +1,22 @@
 .photo-catalog__review {
-  width: 87%;
-  margin: 0 auto;
-  padding: 26px 17px;
-  padding-right: 0;
-  padding-bottom: 0;
+  width: auto;
+  margin: 0 20px;
+  padding: 26px 17px 26px;
   background-color: rgba(242, 242, 242, 1);
   @media (min-width: @tablet-width) {
     width: 100%;
   }
+  @media (min-width: @tablet-width) {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
 }
 .photo-catalog__item--daily-pan .photo-catalog__review {
   @media (min-width: @tablet-width) {
-    width: 94%;
+    width: auto;
+    margin: 0 20px;
+    padding: 30px 30px 32px;
   }
 }
 
@@ -22,7 +27,7 @@
   font-style: normal;
   text-decoration: none;
 }
-.photo-catalog__review span {
+.photo-catalog__last-vist {
   color: rgba(40, 54, 69, 1);
   text-transform: uppercase;
   font-weight: 300;
@@ -30,6 +35,3 @@
   line-height: 1;
 }
 
-.photo-catalog__review p {
-  padding-top: 13px;
-}
