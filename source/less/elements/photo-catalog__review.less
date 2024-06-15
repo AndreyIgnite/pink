@@ -1,4 +1,6 @@
 .photo-catalog__review {
+  display: flex;
+  flex-direction: column;
   width: auto;
   margin: 0 20px;
   padding: 26px 17px 26px;
@@ -8,9 +10,14 @@
   }
   @media (min-width: @tablet-width) {
     width: auto;
+    flex-grow: 1;
     margin: 0;
-    padding: 0;
+    padding: 30px 30px 31px;
   }
+}
+.photo-catalog__review div {
+  display: flex;
+  align-items: center;
 }
 .photo-catalog__item--daily-pan .photo-catalog__review {
   @media (min-width: @tablet-width) {
@@ -21,6 +28,7 @@
 }
 
 .photo-catalog__review cite {
+  margin-right: 3px;
   font-size: 14px;
   font-weight: 700;
   line-height: 1;

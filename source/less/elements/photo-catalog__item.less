@@ -13,8 +13,11 @@
   .photo-catalog__item:nth-child(even) {
     margin-left: 20px;
   }
-  .photo-catalog__item:not(:first-child):nth-child(odd) {
+  .photo-catalog__item:nth-child(odd) {
     margin-right: 20px;
+  }
+  .photo-catalog__item {
+    margin-bottom: 20px;
   }
 }
 
@@ -26,40 +29,9 @@
     margin: 0;
   }
 }
-.photo-catalog__item--daily-pan {
-  @media (min-width: @tablet-width) {
-    grid-column: 1 / -1;
-    background-color: white;
-  }
-}
+
+
+
 .photo-catalog__img-wrapper img {
   width: 100%;
-}
-.photo-catalog__item--daily-pan .photo-catalog__img-wrapper {
-  width: 100%;
-  margin: 0 auto;
-  @media (min-width: @tablet-width) {
-    position: relative;
-    width: 100%;
-  }
-}
-
-.photo-catalog__item--daily-pan::before {
-  position: absolute;
-  z-index: 10;
-  padding: 13px 19px 14px;
-  top: 0;
-  right: 6.5%;
-  content: "панорама дня";
-  text-transform: uppercase;
-  display: block;
-  text-align: center;
-  color: white;
-  font-size: 12px;
-  width: 140px;
-  background-color: rgba(210, 40, 86, 1);
-  @media (min-width: @tablet-width) {
-    top: 57px;
-    right: 3%;
-  }
 }
