@@ -369,26 +369,36 @@ html {
   min-width: 320px;
   height: 100%;
   margin: 0 auto;
-  background-image: url(../img/back-mobile-2.jpg);
+  background-image: url(../img/background/back-mobile.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% auto;
   background-position: top;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .page-body {
+    background-image: url(../img/background/back-mobile@2x.jpg);
+  }
 }
 @media (min-width: 660px) {
   .page-body {
-    background-image: url(../img/back-tablet.jpg);
-    background-size: 1300px;
+    background-image: url(../img/background/back-tablet.jpg);
+    background-size: 100% auto;
+  }
+}
+@media (min-width: 660px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 660px) and (min-resolution: 2dppx) {
+  .page-body {
+    background-image: url(../img/background/back-tablet@2x.jpg);
   }
 }
 @media (min-width: 1080px) {
   .page-body {
-    background-image: url(../img/back-desktop.jpg);
-    background-size: 2630px;
+    background-image: url(../img/background/back-desktop.jpg);
+    background-size: auto;
   }
 }
 @media (max-width: 1079px) {
   .page-body--no-js {
-    background-image: url(../img/back-desktop.jpg);
+    background-image: url(../img/background/back-desktop.jpg);
     background-size: 3500px;
   }
 }
@@ -1272,7 +1282,7 @@ html {
 @media (min-width: 1080px) {
   .download__title {
     margin-bottom: 51px;
-    line-height: 60px;
+    line-height: 56px;
     font-size: 50px;
   }
 }
@@ -1303,14 +1313,20 @@ html {
   height: 286px;
   width: 320px;
   margin: 0 auto;
-  background-image: url(../img/phone.png);
+  background-image: url(../img/hand-phone/phone.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .download__main-img {
+    background-image: url(../img/hand-phone/phone@2x.png);
+    background-size: 320px auto;
+  }
+}
 @media (min-width: 660px) {
   .download__main-img {
-    background-image: url(../img/phone-tablet.png);
+    background-image: url(../img/hand-phone/phone-tablet.png);
     position: absolute;
     top: auto;
     bottom: 0;
@@ -1320,6 +1336,12 @@ html {
     height: 545px;
     width: 660px;
     margin: 0;
+  }
+}
+@media (min-width: 660px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 660px) and (min-resolution: 2dppx) {
+  .download__main-img {
+    background-image: url(../img/hand-phone/phone-tablet@2x.png);
+    background-size: 660px auto;
   }
 }
 @media (min-width: 1080px) {
@@ -1336,9 +1358,15 @@ html {
   left: 104px;
   height: 197px;
   width: 111px;
-  background-image: url(../img/screen.png);
-  background-repeat: no-repeat;
+  background-image: url(../img/hand-phone/screen.jpg);
   background-size: auto;
+  background-repeat: no-repeat;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .download__header-screen {
+    background-image: url(../img/hand-phone/screen@2x.jpg);
+    background-size: 111px;
+  }
 }
 @media (min-width: 660px) {
   .download__header-screen {
@@ -1348,7 +1376,13 @@ html {
     right: 94px;
     height: 346px;
     width: 195px;
-    background-image: url(../img/screen-tablet.png);
+    background-image: url(../img/hand-phone/screen-tablet.jpg);
+  }
+}
+@media (min-width: 660px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 660px) and (min-resolution: 2dppx) {
+  .download__header-screen {
+    background-image: url(../img/hand-phone/screen-tablet@2x.jpg);
+    background-size: 195px;
   }
 }
 @media (min-width: 1080px) {

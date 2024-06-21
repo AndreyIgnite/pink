@@ -5,28 +5,35 @@ html {
   min-width: 320px;
   height: 100%;
   margin: 0 auto;
-  background-image: url(../img/back-mobile-2.jpg);
+  //background-color: rgba(32, 53, 72, 1);
+  background-image: url(../img/background/back-mobile.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% auto;
   background-position: top;
+  @media (min-resolution: 2dppx) {
+    background-image: url(../img/background/back-mobile@2x.jpg);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .page-body {
-    background-image: url(../img/back-tablet.jpg);
-    background-size: 1300px;
+    background-image: url(../img/background/back-tablet.jpg);
+    background-size: 100% auto;
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/background/back-tablet@2x.jpg);
+    }
   }
 }
 
 @media (min-width: 1080px) {
   .page-body {
-    background-image: url(../img/back-desktop.jpg);
-    background-size: 2630px;
+    background-image: url(../img/background/back-desktop.jpg);
+    background-size: auto;
   }
 }
 @media (max-width: @mobile-and-tablet-width-only) {
   .page-body--no-js {
-    background-image: url(../img/back-desktop.jpg);
+    background-image: url(../img/background/back-desktop.jpg);
     background-size: 3500px;
   }
 }

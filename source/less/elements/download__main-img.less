@@ -7,14 +7,22 @@
   height: @download__main-img;
   width: 320px;
   margin: 0 auto;
-  background-image: url(../img/phone.png);
+  background-image: url(../img/hand-phone/phone.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
+  @media (min-resolution: 2dppx) {
+    background-image: url(../img/hand-phone/phone@2x.png);
+    background-size: 320px auto;
+  }
 }
 @media (min-width: @tablet-width) {
   .download__main-img {
-    background-image: url(../img/phone-tablet.png);
+    background-image: url(../img/hand-phone/phone-tablet.png);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/hand-phone/phone-tablet@2x.png);
+      background-size: 660px auto;
+    }
     position: absolute;
     top: auto;
     bottom: 0;
