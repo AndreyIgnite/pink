@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Фотографии</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="favicon.ico">
+    <link rel="stylesheet" href="favicon.svg" type="image/svg+xml">
     <!-- <link rel="stylesheet" href="../source/css/reset.css"> -->
   </head>
   <body>
@@ -173,7 +173,8 @@
               <picture class="photo-catalog__img-wrapper">
                 <source media="(min-width: 660px)" srcset="img/posts-pic/photo-6-tablet.jpg">
                 <source media="(min-width: 1080px)" srcset="img/panorama/panorama-desktop.jpg">
-                <img class="photo-catalog__img" src="img/posts-pic/photo-6-mobile.jpg" alt="Фото автора">
+                <img class="photo-catalog__img"
+                  src="img/posts-pic/photo-6-mobile.jpg" alt="Фото автора">
               </picture>
               <blockquote class="photo-catalog__review">
                 <div>
@@ -197,7 +198,10 @@
         <section class="download-post">
           <div class="download-post__wrapper">
             <form class="download-post__form form" action="">
-              <img src="img/download-pic/photo-download-mobile.jpg" alt="">
+              <img
+                srcset="img/download-pic/photo-download-mobile.jpg,
+                        img/download-pic/photo-download-mobile@2x.jpg 2x"
+                src="img/download-pic/photo-download-mobile.jpg" alt="">
               <div class="form__options">
                 <ul class="form__options-list">
                   <li class="form__item form--сrop">

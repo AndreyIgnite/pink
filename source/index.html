@@ -13,7 +13,13 @@
     <div class="page-body page-body--no-js">
       <header class="page-header">
         <nav class="main-nav main-nav--no-js main-nav--closed">
-          <a class="main-nav__logo" href="index.html"> </a>
+          <a class="main-nav__logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1080px)" srcset="img/logo/logotype-white-desktop.svg">
+              <source media="(min-width: 660px)" srcset="img/logo/logotype-white-tablet.svg">
+              <img src="img/logo/logo-mobile.svg" width="74" height="23"/>
+            </picture>
+          </a>
           <button class="main-nav__toggler" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
