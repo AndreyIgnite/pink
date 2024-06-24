@@ -19,9 +19,10 @@
 @media (min-width: @tablet-width) {
   .download__main-img {
     background-image: url(../img/hand-phone/phone-tablet.png);
+    background-size: 660px auto;
     @media (min-resolution: 2dppx) {
       background-image: url(../img/hand-phone/phone-tablet@2x.png);
-      background-size: 660px auto;
+
     }
     position: absolute;
     top: auto;
@@ -38,7 +39,11 @@
   .download__main-img {
     height: 645px;
     width: 920px;
-    background-image: url(../img/phone-dekstop.png);
+    background-image: url(../img/hand-phone/phone-desktop.png);
+    background-size: 1050px auto;
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/hand-phone/phone-desktop@2x.png);
+    }
     background-position: left;
   }
 }
