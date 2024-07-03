@@ -2,22 +2,20 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
   @media (min-width: @tablet-width) {
     min-height: 455px;
   }
 }
-.photo-catalog__item:not(:last-child) {
-  margin-bottom: 20px;
-}
 @media (min-width: @tablet-width) {
+  .photo-catalog__item {
+    margin-bottom: 0;
+  }
   .photo-catalog__item:nth-child(even) {
     margin-left: 20px;
   }
   .photo-catalog__item:nth-child(odd) {
     margin-right: 20px;
-  }
-  .photo-catalog__item {
-    margin-bottom: 20px;
   }
 }
 
