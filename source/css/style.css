@@ -1821,7 +1821,12 @@ html {
     top: 27px;
   }
 }
+.photo-catalog__author {
+  display: flex;
+  align-items: center;
+}
 .photo-catalog__review {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: auto;
@@ -1841,10 +1846,6 @@ html {
     margin: 0;
     padding: 30px 30px 31px;
   }
-}
-.photo-catalog__review div {
-  display: flex;
-  align-items: center;
 }
 @media (min-width: 660px) {
   .photo-catalog__item--daily-pan .photo-catalog__review {
@@ -2445,6 +2446,11 @@ html {
   .photo-catalog__item--daily-pan:nth-child(even) {
     margin-right: 0;
     margin-left: 0;
+  }
+  .photo-catalog__item--daily-pan .photo-catalog__like {
+    position: absolute;
+    top: 30px;
+    right: 30px;
   }
 }
 .photo-catalog__item--daily-pan .photo-catalog__img-wrapper {

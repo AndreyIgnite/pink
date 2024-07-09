@@ -1,4 +1,5 @@
 .photo-catalog__review {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: auto;
@@ -12,13 +13,10 @@
     width: auto;
     flex-grow: 1;
     margin: 0;
-    padding: 30px 30px 31px;
+    padding: @top-margin-panorama 30px 31px;
   }
 }
-.photo-catalog__review div {
-  display: flex;
-  align-items: center;
-}
+
 .photo-catalog__item--daily-pan .photo-catalog__review {
   @media (min-width: @tablet-width) {
     width: auto;
