@@ -1020,14 +1020,14 @@ html {
   align-items: center;
   height: 301px;
   box-shadow: inset 0px -9px 14px -17px #3f3f3f;
-  background-image: url(../../img/hello-phone/iphone-3.png);
+  background-image: url(../img/hello-phone/iphone-3.png);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 186px auto;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .card__pic {
-    background-image: url(../../img/hello-phone/iphone-3@2x.png);
+    background-image: url(../img/hello-phone/iphone-3@2x.png);
   }
 }
 .card__screen {
@@ -1425,13 +1425,13 @@ html {
     right: 120px;
     height: 408px;
     width: 230px;
-    background-image: url(../../img/hand-phone/screen-desktop.jpg);
+    background-image: url(../img/hand-phone/screen-desktop.jpg);
     background-size: 230px auto;
   }
 }
 @media (min-width: 1080px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1080px) and (min-resolution: 2dppx) {
   .download__header-screen {
-    background-image: url(../../img/hand-phone/screen-desktop@2x.jpg);
+    background-image: url(../img/hand-phone/screen-desktop@2x.jpg);
   }
 }
 .download-post__wrapper {
