@@ -518,6 +518,13 @@ html {
   font-weight: 400;
   line-height: 28px;
 }
+@media (min-width: 660px) {
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
 .header-inner {
   display: flex;
   flex-direction: column;
@@ -1438,13 +1445,19 @@ html {
   width: 100%;
   margin: 0 auto;
 }
-.download-post__form img {
-  width: 87%;
-  margin: 0 auto;
+@media (min-width: 660px) {
+  .form {
+    margin: 0 20px;
+  }
 }
 .form__options {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 660px) {
+  .form__options {
+    margin: 0 13px;
+  }
 }
 .form__options-list {
   display: flex;
@@ -1499,6 +1512,16 @@ html {
 .form__button:disabled {
   color: rgba(40, 54, 69, 0.1);
   border-color: rgba(40, 54, 69, 0.1);
+}
+.form__photo-to-load {
+  width: 87%;
+  margin: 0 auto;
+}
+@media (min-width: 660px) {
+  .form__photo-to-load {
+    display: inline-block;
+    width: 100%;
+  }
 }
 .header-inner__describe {
   background-color: #ffffff;
