@@ -508,7 +508,13 @@ html {
   padding-top: 20px;
   padding-bottom: 41px;
 }
-.do-it__title {
+@media (min-width: 660px) {
+  .download-post {
+    padding-top: 57px;
+    padding-bottom: 54px;
+  }
+}
+.do-it_title {
   width: 87%;
   margin: 0 auto;
   text-align: center;
@@ -517,6 +523,11 @@ html {
   font-size: 14px;
   font-weight: 400;
   line-height: 28px;
+}
+@media (min-width: 660px) {
+  .do-it_title {
+    font-size: 18px;
+  }
 }
 @media (min-width: 660px) {
   .form {
@@ -1456,7 +1467,7 @@ html {
 }
 @media (min-width: 660px) {
   .form__options {
-    margin: 0 13px;
+    margin: 0 13px 0 27px;
   }
 }
 .form__options-list {
@@ -1469,6 +1480,14 @@ html {
   padding-top: 42px;
   padding-bottom: 39px;
 }
+@media (min-width: 660px) {
+  .form__options-list {
+    flex-direction: column;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+}
 .form__options-list li {
   height: 44px;
 }
@@ -1479,23 +1498,44 @@ html {
   display: flex;
   align-items: center;
 }
+@media (min-width: 660px) {
+  .form__item {
+    width: 100%;
+    padding-bottom: 34px;
+    margin-bottom: 38px;
+    border-bottom: 1px solid rgba(40, 54, 69, 0.1);
+  }
+}
+@media (min-width: 660px) {
+  .form__item svg {
+    margin-right: 29px;
+  }
+}
 .form__range {
   padding-bottom: 34px;
   margin-bottom: 38px;
+}
+@media (min-width: 660px) {
+  .form__range {
+    display: none;
+  }
+}
+.range {
   border-bottom: 1px solid rgba(40, 54, 69, 0.1);
 }
-.form__range-scale {
+.range__range-scale {
   position: relative;
   width: 75%;
-  height: 2px;
   margin: 0 auto;
+}
+.scale {
+  height: 2px;
   background-color: #283645;
 }
-.form__button-value {
+.scale__button-value {
   display: block;
   position: absolute;
   top: -5px;
-  left: 80%;
   width: 14px;
   height: 14px;
   background-color: #ffffff;
@@ -1521,6 +1561,15 @@ html {
   .form__photo-to-load {
     display: inline-block;
     width: 100%;
+  }
+}
+.form__scale {
+  flex-grow: 1;
+  position: relative;
+}
+@media (max-width: 659px) {
+  .form__scale {
+    display: none;
   }
 }
 .header-inner__describe {
