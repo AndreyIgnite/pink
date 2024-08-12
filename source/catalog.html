@@ -51,8 +51,8 @@
           </div>
         </header>
         <section class="photo-catalog">
-          <div class="photo-catalog__list">
-            <div class="photo-catalog__item photo-catalog__item--daily-pan">
+          <div class="photo-catalog__daily-panorama-list">
+            <div class="photo-catalog__item">
               <div class="photo-catalog__img-wrapper">
                 <picture>
                   <source media="(min-width: 1080px)" srcset="img/posts-pic/panorama-desktop.jpg 1x">
@@ -77,132 +77,136 @@
                   </div>
               </blockquote>
             </div>
-            <div class="photo-catalog__item">
-              <div class="photo-catalog__img-wrapper">
-                <picture>
-                  <source media="(min-width: 1080px)" srcset="">
-                  <source media="(min-width: 660px)" srcset="img/posts-pic/photo-1-tablet.jpg, img/posts-pic/photo-1-tablet@2x.jpg 2x">
-                  <img class="photo-catalog__img" src="img/posts-pic/photo-1-mobile.jpg" srcset="img/posts-pic/photo-1-mobile@2x.jpg 2x" alt="Фото автора">
-                </picture>
-              </div>
-              <blockquote class="photo-catalog__review">
-                <div class="photo-catalog__author">
-                  <cite>Левон</cite>
-                  <span class="photo-catalog__last-vist">(<span class="photo-catalog__value">5</span><span class="photo-catalog__min-hours"> часов</span> назад)</span>
+          </div>
+          <div class="photo-catalog__list">
+            <div class="photo-catalog__wrapper">
+              <div class="photo-catalog__item">
+                <div class="photo-catalog__img-wrapper">
+                  <picture>
+                    <source media="(min-width: 1080px)" srcset="">
+                    <source media="(min-width: 660px)" srcset="img/posts-pic/photo-1-tablet.jpg, img/posts-pic/photo-1-tablet@2x.jpg 2x">
+                    <img class="photo-catalog__img" src="img/posts-pic/photo-1-mobile.jpg" srcset="img/posts-pic/photo-1-mobile@2x.jpg 2x" alt="Фото автора">
+                  </picture>
                 </div>
-                  <p class="photo-catalog__text">
-                    Вчера он на луну летал, сегодня в руки к нам попал.
-                  </p>
-                  <div class="photo-catalog__like">
-                    <button class="photo-catalog__button"></button>
-                    <p>Нравится: <span class="photo-catalog__value">345</span></p>
+                <blockquote class="photo-catalog__review">
+                  <div class="photo-catalog__author">
+                    <cite>Левон</cite>
+                    <span class="photo-catalog__last-vist">(<span class="photo-catalog__value">5</span><span class="photo-catalog__min-hours"> часов</span> назад)</span>
                   </div>
-              </blockquote>
-            </div>
-            <div class="photo-catalog__item">
-              <div class="photo-catalog__img-wrapper">
-                <picture>
-                  <source media="(min-width: 660px)" srcset="img/posts-pic/photo-2-tablet.jpg, img/posts-pic/photo-2-tablet@2x.jpg 2x">
-                  <img class="photo-catalog__img" src="img/posts-pic/photo-2-mobile.jpg" srcset="img/posts-pic/photo-2-mobile@2x.jpg 2x" alt="Фото автора">
-                </picture>
+                    <p class="photo-catalog__text">
+                      Вчера он на луну летал, сегодня в руки к нам попал.
+                    </p>
+                    <div class="photo-catalog__like">
+                      <button class="photo-catalog__button"></button>
+                      <p>Нравится: <span class="photo-catalog__value">345</span></p>
+                    </div>
+                </blockquote>
               </div>
-              <blockquote class="photo-catalog__review">
-                <div class="photo-catalog__author">
-                  <cite>Антон</cite>
-                  <span class="photo-catalog__last-vist">(<span class="photo-catalog__value">12</span><span class="photo-catalog__min-hours"> часов</span> назад)</span>
+              <div class="photo-catalog__item">
+                <div class="photo-catalog__img-wrapper">
+                  <picture>
+                    <source media="(min-width: 660px)" srcset="img/posts-pic/photo-2-tablet.jpg, img/posts-pic/photo-2-tablet@2x.jpg 2x">
+                    <img class="photo-catalog__img" src="img/posts-pic/photo-2-mobile.jpg" srcset="img/posts-pic/photo-2-mobile@2x.jpg 2x" alt="Фото автора">
+                  </picture>
                 </div>
-                  <p class="photo-catalog__text">
-                    Соседи будут рады!
-                  </p>
-                  <div class="photo-catalog__like">
-                    <button class="photo-catalog__button"></button>
-                    <p>Нравится: <span class="photo-catalog__value">666</span></p>
+                <blockquote class="photo-catalog__review">
+                  <div class="photo-catalog__author">
+                    <cite>Антон</cite>
+                    <span class="photo-catalog__last-vist">(<span class="photo-catalog__value">12</span><span class="photo-catalog__min-hours"> часов</span> назад)</span>
                   </div>
-              </blockquote>
-            </div>
-            <div class="photo-catalog__item ">
-              <div class="photo-catalog__img-wrapper">
-                <picture>
-                  <source media="(min-width: 660px)" srcset="img/posts-pic/photo-3-tablet.jpg, img/posts-pic/photo-3-tablet@2x.jpg 2x">
-                  <img class="photo-catalog__img" src="img/posts-pic/photo-3-mobile.jpg" srcset="img/posts-pic/photo-3-mobile@2x.jpg 2x" alt="Фото автора">
-                </picture>
+                    <p class="photo-catalog__text">
+                      Соседи будут рады!
+                    </p>
+                    <div class="photo-catalog__like">
+                      <button class="photo-catalog__button"></button>
+                      <p>Нравится: <span class="photo-catalog__value">666</span></p>
+                    </div>
+                </blockquote>
               </div>
-              <blockquote class="photo-catalog__review">
-                <div class="photo-catalog__author">
-                  <cite>Борис</cite>
-                  <span class="photo-catalog__last-vist">(<span class="photo-catalog__value">20</span><span class="photo-catalog__min-hours"> часов</span> назад)</span>
+              <div class="photo-catalog__item">
+                <div class="photo-catalog__img-wrapper">
+                  <picture>
+                    <source media="(min-width: 660px)" srcset="img/posts-pic/photo-3-tablet.jpg, img/posts-pic/photo-3-tablet@2x.jpg 2x">
+                    <img class="photo-catalog__img" src="img/posts-pic/photo-3-mobile.jpg" srcset="img/posts-pic/photo-3-mobile@2x.jpg 2x" alt="Фото автора">
+                  </picture>
                 </div>
-                  <p class="photo-catalog__text">
-                    Здесь могла быть ваша цитата о высоком и вечном.
-                  </p>
-                  <div class="photo-catalog__like">
-                    <button class="photo-catalog__button"></button>
-                    <p>Нравится: <span class="photo-catalog__value">215</span></p>
+                <blockquote class="photo-catalog__review">
+                  <div class="photo-catalog__author">
+                    <cite>Борис</cite>
+                    <span class="photo-catalog__last-vist">(<span class="photo-catalog__value">20</span><span class="photo-catalog__min-hours"> часов</span> назад)</span>
                   </div>
-              </blockquote>
-            </div>
-            <div class="photo-catalog__item">
-              <div class="photo-catalog__img-wrapper">
-                <picture>
-                  <source media="(min-width: 660px)" srcset="img/posts-pic/photo-4-tablet.jpg, img/posts-pic/photo-4-tablet@2x.jpg 2x">
-                  <img class="photo-catalog__img" src="img/posts-pic/photo-4-mobile.jpg" srcset="img/posts-pic/photo-4-mobile@2x.jpg 2x" alt="Фото автора">
-                </picture>
+                    <p class="photo-catalog__text">
+                      Здесь могла быть ваша цитата о высоком и вечном.
+                    </p>
+                    <div class="photo-catalog__like">
+                      <button class="photo-catalog__button"></button>
+                      <p>Нравится: <span class="photo-catalog__value">215</span></p>
+                    </div>
+                </blockquote>
               </div>
-              <blockquote class="photo-catalog__review">
-                <div class="photo-catalog__author">
-                  <cite>Сергей</cite>
-                  <span class="photo-catalog__last-vist">(<span class="photo-catalog__value">25</span><span class="photo-catalog__min-hours"> часов</span> назад)</span>
+              <div class="photo-catalog__item">
+                <div class="photo-catalog__img-wrapper">
+                  <picture>
+                    <source media="(min-width: 660px)" srcset="img/posts-pic/photo-4-tablet.jpg, img/posts-pic/photo-4-tablet@2x.jpg 2x">
+                    <img class="photo-catalog__img" src="img/posts-pic/photo-4-mobile.jpg" srcset="img/posts-pic/photo-4-mobile@2x.jpg 2x" alt="Фото автора">
+                  </picture>
                 </div>
-                  <p class="photo-catalog__text">
-                    Самая кубанская в мире!
-                  </p>
-                  <div class="photo-catalog__like">
-                    <button class="photo-catalog__button"></button>
-                    <p>Нравится: <span class="photo-catalog__value">4</span></p>
+                <blockquote class="photo-catalog__review">
+                  <div class="photo-catalog__author">
+                    <cite>Сергей</cite>
+                    <span class="photo-catalog__last-vist">(<span class="photo-catalog__value">25</span><span class="photo-catalog__min-hours"> часов</span> назад)</span>
                   </div>
-              </blockquote>
-            </div>
-            <div class="photo-catalog__item">
-              <div class="photo-catalog__img-wrapper">
-                <picture>
-                  <source media="(min-width: 660px)" srcset="img/posts-pic/photo-5-tablet.jpg, img/posts-pic/photo-5-tablet@2x.jpg 2x">
-                  <img class="photo-catalog__img" src="img/posts-pic/photo-5-mobile.jpg" srcset="img/posts-pic/photo-5-mobile@2x.jpg 2x" alt="Фото автора">
-                </picture>
+                    <p class="photo-catalog__text">
+                      Самая кубанская в мире!
+                    </p>
+                    <div class="photo-catalog__like">
+                      <button class="photo-catalog__button"></button>
+                      <p>Нравится: <span class="photo-catalog__value">4</span></p>
+                    </div>
+                </blockquote>
               </div>
-              <blockquote class="photo-catalog__review">
-                <div class="photo-catalog__author">
-                  <cite>Максим</cite>
-                  <span class="photo-catalog__last-vist">(<span class="photo-catalog__value">40</span><span class="photo-catalog__min-hours"> часов</span> назад)</span>
+              <div class="photo-catalog__item">
+                <div class="photo-catalog__img-wrapper">
+                  <picture>
+                    <source media="(min-width: 660px)" srcset="img/posts-pic/photo-5-tablet.jpg, img/posts-pic/photo-5-tablet@2x.jpg 2x">
+                    <img class="photo-catalog__img" src="img/posts-pic/photo-5-mobile.jpg" srcset="img/posts-pic/photo-5-mobile@2x.jpg 2x" alt="Фото автора">
+                  </picture>
                 </div>
-                  <p class="photo-catalog__text">
-                    Где снег-то?
-                  </p>
-                  <div class="photo-catalog__like">
-                    <button class="photo-catalog__button"></button>
-                    <p>Нравится: <span class="photo-catalog__value">150</span></p>
+                <blockquote class="photo-catalog__review">
+                  <div class="photo-catalog__author">
+                    <cite>Максим</cite>
+                    <span class="photo-catalog__last-vist">(<span class="photo-catalog__value">40</span><span class="photo-catalog__min-hours"> часов</span> назад)</span>
                   </div>
-              </blockquote>
-            </div>
-            <div class="photo-catalog__item">
-              <div class="photo-catalog__img-wrapper">
-                <picture>
-                  <source media="(min-width: 660px)" srcset="img/posts-pic/photo-6-tablet.jpg, img/posts-pic/photo-6-tablet@2x.jpg 2x">
-                  <img class="photo-catalog__img" src="img/posts-pic/photo-6-mobile.jpg" srcset="img/posts-pic/photo-6-mobile@2x.jpg 2x" alt="Фото автора">
-                </picture>
+                    <p class="photo-catalog__text">
+                      Где снег-то?
+                    </p>
+                    <div class="photo-catalog__like">
+                      <button class="photo-catalog__button"></button>
+                      <p>Нравится: <span class="photo-catalog__value">150</span></p>
+                    </div>
+                </blockquote>
               </div>
-              <blockquote class="photo-catalog__review">
-                <div class="photo-catalog__author">
-                  <cite>Надежда</cite>
-                  <span class="photo-catalog__last-vist">(<span class="photo-catalog__value">45</span><span class="photo-catalog__min-hours"> часов</span> назад)</span>
+              <div class="photo-catalog__item">
+                <div class="photo-catalog__img-wrapper">
+                  <picture>
+                    <source media="(min-width: 660px)" srcset="img/posts-pic/photo-6-tablet.jpg, img/posts-pic/photo-6-tablet@2x.jpg 2x">
+                    <img class="photo-catalog__img" src="img/posts-pic/photo-6-mobile.jpg" srcset="img/posts-pic/photo-6-mobile@2x.jpg 2x" alt="Фото автора">
+                  </picture>
                 </div>
-                  <p class="photo-catalog__text">
-                    Всем GM и взаимные лайки!
-                  </p>
-                  <div class="photo-catalog__like">
-                    <button class="photo-catalog__button"></button>
-                    <p class>Нравится: <span class="photo-catalog__value">2560</span></p>
+                <blockquote class="photo-catalog__review">
+                  <div class="photo-catalog__author">
+                    <cite>Надежда</cite>
+                    <span class="photo-catalog__last-vist">(<span class="photo-catalog__value">45</span><span class="photo-catalog__min-hours"> часов</span> назад)</span>
                   </div>
-              </blockquote>
+                    <p class="photo-catalog__text">
+                      Всем GM и взаимные лайки!
+                    </p>
+                    <div class="photo-catalog__like">
+                      <button class="photo-catalog__button"></button>
+                      <p class>Нравится: <span class="photo-catalog__value">2560</span></p>
+                    </div>
+                </blockquote>
+              </div>
             </div>
           </div>
         </section>

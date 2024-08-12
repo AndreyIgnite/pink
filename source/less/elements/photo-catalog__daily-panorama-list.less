@@ -1,0 +1,25 @@
+.photo-catalog__daily-panorama-list {
+  padding-bottom: 19px;
+  color: rgba(40, 54, 69, 1);
+  background-color: rgba(256, 256, 256, 1);
+}
+
+.photo-catalog__daily-panorama-list .photo-catalog__review {
+  margin: 0 20px;
+  @media (min-width: @tablet-width) {
+    width: auto;
+    margin: 0 20px;
+    padding: 30px 30px 32px;
+  }
+}
+@media (min-width: @tablet-width) {
+  .photo-catalog__daily-panorama-list .photo-catalog__like {
+    position: absolute;
+    top: @top-margin-panorama;
+    right: @right-margin-panorama;
+  }
+  .photo-catalog__daily-panorama-list .photo-catalog__like p {
+    margin-right: 16px;
+  }
+}
+
