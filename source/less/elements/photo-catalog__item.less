@@ -8,10 +8,11 @@
 }
 .photo-catalog__item:not(:last-child) {
   margin-bottom: 20px;
+  @media (min-width: @tablet-width) and (max-width: 1079px) {
+    margin: 0;
+  }
 }
-@media (min-width: @tablet-width) and (max-width: 1079px) {
 
-}
 @media (min-width: @desktop-width) {
   .photo-catalog__item {
     margin: 0;

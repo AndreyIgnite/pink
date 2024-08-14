@@ -515,8 +515,8 @@ html {
   }
 }
 .do-it_title {
-  width: 87%;
-  margin: 0 auto;
+  width: auto;
+  margin: 0 20px;
   text-align: center;
   padding-top: 49px;
   padding-bottom: 52px;
@@ -609,26 +609,13 @@ html {
   color: white;
   border: 3px solid white;
   border-radius: 29px;
-  height: 55px;
   align-self: center;
-  width: 87.5%;
   background-color: transparent;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 18px;
-}
-@media (min-width: 660px) {
-  .button {
-    width: 100%;
-  }
-}
-@media (min-width: 1080px) {
-  .button {
-    height: 56px;
-    font-size: 21px;
-  }
 }
 .advantages {
   background-color: white;
@@ -1453,8 +1440,8 @@ html {
   }
 }
 .download-post__wrapper {
-  width: 100%;
-  margin: 0 auto;
+  width: auto;
+  margin: 0 20px;
 }
 @media (min-width: 660px) {
   .form {
@@ -1474,9 +1461,8 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 87%;
+  width: 206px;
   margin: 0 auto;
-  padding: 0 13%;
   padding-top: 42px;
   padding-bottom: 39px;
 }
@@ -1525,7 +1511,7 @@ html {
 }
 .range__range-scale {
   position: relative;
-  width: 75%;
+  width: 85%;
   margin: 0 auto;
 }
 .scale {
@@ -1543,8 +1529,21 @@ html {
   border-radius: 50%;
 }
 .form__button {
+  width: 100%;
+  height: 55px;
   color: #d22856;
   border-color: #d22856;
+}
+@media (min-width: 660px) {
+  .form__button {
+    width: 100%;
+  }
+}
+@media (min-width: 1080px) {
+  .form__button {
+    height: 56px;
+    font-size: 21px;
+  }
 }
 .form__button:first-of-type {
   margin-bottom: 12px;
@@ -1554,7 +1553,7 @@ html {
   border-color: rgba(40, 54, 69, 0.1);
 }
 .form__photo-to-load {
-  width: 87%;
+  width: 100%;
   margin: 0 auto;
 }
 @media (min-width: 660px) {
@@ -1898,6 +1897,9 @@ html {
   color: #283645;
   background-color: #ffffff;
 }
+.photo-catalog__daily-panorama-list .photo-catalog__item:not(:last-child) {
+  margin-bottom: 20px;
+}
 .photo-catalog__daily-panorama-list .photo-catalog__review {
   margin: 0 20px;
 }
@@ -1916,6 +1918,27 @@ html {
   }
   .photo-catalog__daily-panorama-list .photo-catalog__like p {
     margin-right: 16px;
+  }
+}
+.photo-catalog__daily-panorama-list .photo-catalog__item::before {
+  position: absolute;
+  z-index: 10;
+  padding: 13px 19px 14px;
+  top: 0;
+  right: 6.5%;
+  content: "панорама дня";
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  width: 140px;
+  background-color: #d22856;
+}
+@media (min-width: 660px) {
+  .photo-catalog__daily-panorama-list .photo-catalog__item::before {
+    top: 57px;
+    right: 3%;
   }
 }
 .photo-catalog__author {
@@ -2019,6 +2042,11 @@ html {
 }
 .photo-catalog__item:not(:last-child) {
   margin-bottom: 20px;
+}
+@media (min-width: 660px) and (max-width: 1079px) {
+  .photo-catalog__item:not(:last-child) {
+    margin: 0;
+  }
 }
 @media (min-width: 1080px) {
   .photo-catalog__item {
@@ -2529,58 +2557,6 @@ html {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .card__screen--color-hello {
     background-image: url(../img/hello-phone/iphone-screen-3@2x.jpg);
-  }
-}
-@media (min-width: 660px) {
-  .photo-catalog__item--daily-pan {
-    grid-column: 1 / -1;
-    order: -1;
-    margin-bottom: 30px;
-    background-color: white;
-  }
-  .photo-catalog__item--daily-pan:nth-child(odd) {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  .photo-catalog__item--daily-pan:nth-child(even) {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  .photo-catalog__item--daily-pan .photo-catalog__like {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-  }
-}
-.photo-catalog__item--daily-pan .photo-catalog__img-wrapper {
-  width: 100%;
-  margin: 0 auto;
-}
-@media (min-width: 660px) {
-  .photo-catalog__item--daily-pan .photo-catalog__img-wrapper {
-    position: relative;
-    width: 100%;
-  }
-}
-.photo-catalog__item--daily-pan::before {
-  position: absolute;
-  z-index: 10;
-  padding: 13px 19px 14px;
-  top: 0;
-  right: 6.5%;
-  content: "панорама дня";
-  text-transform: uppercase;
-  display: block;
-  text-align: center;
-  color: white;
-  font-size: 12px;
-  width: 140px;
-  background-color: #d22856;
-}
-@media (min-width: 660px) {
-  .photo-catalog__item--daily-pan::before {
-    top: 57px;
-    right: 3%;
   }
 }
 body {
