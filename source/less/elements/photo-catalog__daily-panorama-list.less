@@ -1,10 +1,21 @@
 .photo-catalog__daily-panorama-list {
-  padding-bottom: 19px;
+  margin-bottom: 19px;
   color: rgba(40, 54, 69, 1);
   background-color: rgba(256, 256, 256, 1);
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 50px;
+  }
 }
-.photo-catalog__daily-panorama-list .photo-catalog__item:not(:last-child) {
-  margin-bottom: 20px;
+.photo-catalog__wrapper-daily-panorama {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.photo-catalog__daily-panorama-list img {
+  width: 100%;
 }
 
 .photo-catalog__daily-panorama-list .photo-catalog__review {
@@ -13,6 +24,11 @@
     width: auto;
     margin: 0 20px;
     padding: 30px 30px 32px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 87%;
+    margin: 0 auto;
+    padding: 31px 27px 31px;
   }
 }
 @media (min-width: @tablet-width) {
@@ -25,20 +41,24 @@
     margin-right: 16px;
   }
 }
+@media (min-width: @desktop-width) {
+
+}
 .photo-catalog__daily-panorama-list .photo-catalog__item::before {
   position: absolute;
-  z-index: 10;
-  padding: 13px 19px 14px;
   top: 0;
   right: 6.5%;
-  content: "панорама дня";
-  text-transform: uppercase;
+  z-index: 10;
   display: block;
-  text-align: center;
-  color: white;
-  font-size: 12px;
   width: 140px;
+  padding: 13px 19px 14px;
+  color: white;
+  content: "панорама дня";
   background-color: rgba(210, 40, 86, 1);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1;
   @media (min-width: @tablet-width) {
     top: 57px;
     right: 3%;

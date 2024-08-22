@@ -8,21 +8,13 @@
 }
 .photo-catalog__item:not(:last-child) {
   margin-bottom: 20px;
-  @media (min-width: @tablet-width) and (max-width: 1079px) {
+  @media (min-width: @tablet-width) {
     margin: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .photo-catalog__item {
-    margin: 0;
-  }
-  .photo-catalog__item:nth-child(3n - 1) {
-    margin-left: 130px;
-  }
-  .photo-catalog__item:nth-child(2) {
-    margin-right: 130px;
-  }
+
 }
 
 .photo-catalog__img-wrapper {
