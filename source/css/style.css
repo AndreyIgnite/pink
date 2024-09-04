@@ -1498,9 +1498,6 @@ html {
 .form__options-list li {
   height: 44px;
 }
-.form__options-list svg {
-  fill: #d22856;
-}
 .form__item {
   display: flex;
   align-items: center;
@@ -1517,6 +1514,13 @@ html {
   .form__item svg {
     margin-right: 29px;
   }
+}
+.form__icon {
+  opacity: 30%;
+}
+.form__icon-active {
+  fill: #D22856;
+  opacity: 100%;
 }
 .form__range {
   padding-bottom: 34px;
@@ -1669,7 +1673,7 @@ html {
   display: block;
   height: 56px;
   width: 47px;
-  background-position: bottom;
+  background-position: center bottom;
 }
 .links__subscribe-for-platforms {
   width: 280px;
