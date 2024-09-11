@@ -450,7 +450,7 @@ html {
 @media (min-width: 1080px) {
   .main-nav {
     width: 87%;
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
     background-color: transparent;
     padding: 0;
@@ -516,8 +516,10 @@ html {
 }
 @media (min-width: 1080px) {
   .download-post {
-    width: 100%;
     margin: 0 auto;
+    max-width: calc(1300px * 0.87);
+    width: 87%;
+    padding: 57px 60px 57px 80px;
   }
 }
 .do-it_title {
@@ -539,6 +541,9 @@ html {
 }
 @media (min-width: 1080px) {
   .do-it_title {
+    margin: 0 auto;
+    max-width: calc(1300px * 0.87);
+    width: 87%;
     padding-top: 67px;
     padding-bottom: 75px;
   }
@@ -548,6 +553,12 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+  }
+}
+@media (min-width: 1080px) {
+  .form {
+    grid-template-columns: repeat(80, 1fr);
+    gap: 0;
   }
 }
 .header-inner {
@@ -598,7 +609,7 @@ html {
 @media (min-width: 1080px) {
   .download {
     width: 87%;
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0;
   }
@@ -653,7 +664,7 @@ html {
     padding-top: 72px;
     margin-bottom: 0;
     width: 87%;
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
   }
 }
@@ -675,7 +686,7 @@ html {
   .slider-review {
     padding-top: 0;
     width: 87%;
-    max-width: 1100px;
+    max-width: 1300px;
     position: relative;
   }
 }
@@ -881,7 +892,7 @@ html {
 @media (min-width: 1080px) {
   .adventages__header-wrapper {
     width: 87%;
-    max-width: 1100px;
+    max-width: 1300px;
   }
 }
 .adventages__header {
@@ -1017,7 +1028,7 @@ html {
     background-image: none;
     flex-direction: column;
     width: 87%;
-    max-width: 1100px;
+    max-width: 1300px;
     padding: 0;
     margin-bottom: 59px;
   }
@@ -1070,7 +1081,7 @@ html {
 @media (min-width: 1080px) {
   .advantages__effect-24 {
     width: 87%;
-    max-width: 1100px;
+    max-width: 1300px;
     background-color: #f2f2f2;
     padding: 0;
     padding-top: 17px;
@@ -1463,12 +1474,6 @@ html {
     margin: 0 auto;
   }
 }
-@media (min-width: 1080px) {
-  .download-post__form {
-    width: 87%;
-    margin: 0 auto;
-  }
-}
 .form__options {
   display: flex;
   flex-direction: column;
@@ -1476,6 +1481,12 @@ html {
 @media (min-width: 660px) {
   .form__options {
     margin-left: 25px;
+  }
+}
+@media (min-width: 1080px) {
+  .form__options {
+    grid-column: 40 / -1;
+    margin: 0;
   }
 }
 .form__options-list {
@@ -1493,7 +1504,7 @@ html {
     width: auto;
     margin: 0;
     padding: 0;
-    margin-bottom: 67px;
+    margin-bottom: 64px;
   }
 }
 @media (min-width: 660px) {
@@ -1509,6 +1520,9 @@ html {
   }
   .form__item:first-child {
     padding-top: 9px;
+  }
+  .form__item:last-child {
+    margin-bottom: 0;
   }
 }
 .form__icon-wrapper {
@@ -1616,11 +1630,17 @@ html {
   }
 }
 .form__button:first-of-type {
-  margin-bottom: 12px;
+  margin-top: auto;
+  margin-bottom: 24px;
 }
 .form__button:disabled {
   color: rgba(40, 54, 69, 0.1);
   border-color: rgba(40, 54, 69, 0.1);
+}
+@media (min-width: 1080px) {
+  .form__photo-to-load-wrapper {
+    grid-column: 1 / 31;
+  }
 }
 .form__photo-to-load {
   width: 100%;
@@ -1900,7 +1920,7 @@ html {
   .slider-product__wrapper {
     overflow: visible;
     width: 94%;
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
     display: flex;
   }
@@ -2040,7 +2060,7 @@ html {
   align-self: flex-end;
   color: #d22856;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1;
   font-weight: 400;
 }
@@ -2152,7 +2172,13 @@ html {
 @media (min-width: 660px) {
   .photo-catalog__daily-panorama-list .photo-catalog__item::before {
     top: 57px;
-    right: 3%;
+    right: 20px;
+  }
+}
+@media (min-width: 1080px) {
+  .photo-catalog__daily-panorama-list .photo-catalog__item::before {
+    top: 54px;
+    right: 6.5%;
   }
 }
 .photo-catalog__list {
@@ -2493,7 +2519,7 @@ html {
 @media (min-width: 1080px) {
   .page_footer__social {
     width: 87%;
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 74px 0 75px;
   }
