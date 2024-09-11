@@ -1475,7 +1475,7 @@ html {
 }
 @media (min-width: 660px) {
   .form__options {
-    margin: 0 13px 0 27px;
+    margin-left: 25px;
   }
 }
 .form__options-list {
@@ -1493,30 +1493,74 @@ html {
     width: auto;
     margin: 0;
     padding: 0;
+    margin-bottom: 67px;
   }
-}
-.form__options-list li {
-  height: 44px;
-}
-.form__item {
-  display: flex;
-  align-items: center;
 }
 @media (min-width: 660px) {
   .form__item {
+    display: flex;
+    align-items: center;
     width: 100%;
-    padding-bottom: 34px;
-    margin-bottom: 38px;
+    padding-right: 18px;
+    padding-left: 3px;
+    padding-bottom: 24px;
+    margin-bottom: 27px;
     border-bottom: 1px solid rgba(40, 54, 69, 0.1);
   }
+  .form__item:first-child {
+    padding-top: 9px;
+  }
+}
+.form__icon-wrapper {
+  display: flex;
+  align-items: center;
+  width: 48px;
+  height: 44px;
 }
 @media (min-width: 660px) {
-  .form__item svg {
+  .form__icon-wrapper {
+    justify-content: center;
+    width: 24px;
+    height: 22px;
     margin-right: 29px;
+  }
+}
+@media (min-width: 1080px) {
+  .form__icon-wrapper {
+    width: 48px;
+    height: 44px;
   }
 }
 .form__icon {
   opacity: 30%;
+}
+@media (min-width: 660px) {
+  #crop-pic {
+    width: 22px;
+    height: 22px;
+  }
+  #fill-pic {
+    width: 24px;
+    height: 22px;
+  }
+  #bright-pic {
+    width: 16px;
+    height: 16px;
+  }
+}
+@media (min-width: 1080px) {
+  #crop-pic {
+    width: 44px;
+    height: 44px;
+  }
+  #fill-pic {
+    width: 48px;
+    height: 43px;
+  }
+  #bright-pic {
+    width: 32px;
+    height: 32px;
+  }
 }
 .form__icon-active {
   fill: #D22856;
@@ -1561,7 +1605,8 @@ html {
 }
 @media (min-width: 660px) {
   .form__button {
-    width: 100%;
+    width: 95%;
+    margin-right: auto;
   }
 }
 @media (min-width: 1080px) {
@@ -1922,6 +1967,7 @@ html {
 .photo-catalog__author {
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
 }
 .photo-catalog__review {
   position: relative;
@@ -2141,12 +2187,11 @@ html {
 .photo-catalog__text {
   line-height: 26px;
   margin-bottom: 25px;
-  padding-top: 5px;
   font-size: 14px;
 }
 @media (min-width: 660px) {
   .photo-catalog__text {
-    margin-bottom: 0;
+    margin-bottom: 18px;
   }
 }
 @media (min-width: 660px) {
