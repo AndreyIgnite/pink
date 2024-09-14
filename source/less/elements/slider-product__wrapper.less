@@ -1,13 +1,14 @@
 .slider-product__wrapper {
   overflow: hidden;
   margin: 0 auto;
-}
-@media (min-width: @tablet-width) {
-  .slider-product__wrapper {
+  @media (min-width: @tablet-width) {
     overflow: visible;
     width: 94%;
     max-width: @max-width;
     margin: 0 auto;
     display: flex;
+  }
+  @media (min-width: @desktop-width) {
+    width: 87%;
   }
 }

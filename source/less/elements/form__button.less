@@ -7,16 +7,22 @@
     width: 95%;
     margin-right: auto;
   }
-  @media (min-width: 1080px) {
-    height: 56px;
+  @media (min-width: @desktop-width) {
     font-size: 21px;
   }
 }
+
 .form__button:first-of-type {
-  margin-top: auto;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 24px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 .form__button:disabled {
   color: rgba(40, 54, 69, 0.1);
   border-color: rgba(40, 54, 69, 0.1);
+  
 }

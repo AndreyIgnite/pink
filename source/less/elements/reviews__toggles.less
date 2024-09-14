@@ -24,6 +24,12 @@
 .reviews .swiper-pagination-bullet-active {
   outline: 3px solid rgba(40, 54, 69, 1);
 }
+.swiper-pagination-bullet:hover {
+  --swiper-pagination-bullet-inactive-opacity: 0.6;
+}
+.swiper-pagination-bullet:active {
+  --swiper-pagination-bullet-inactive-opacity: 0.1;
+}
 
 .reviews__toggles {
   @media (min-width: @tablet-width) {
