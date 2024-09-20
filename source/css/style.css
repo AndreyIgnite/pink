@@ -364,8 +364,6 @@ a {
 }
 html {
   height: 100%;
-  outline: 5px solid red;
-  outline-offset: -5px;
 }
 .page-body {
   display: flex;
@@ -710,6 +708,21 @@ html {
   .toggles {
     display: none;
   }
+}
+.registration {
+  background-color: white;
+  color: #283645;
+}
+.header-form {
+  color: #FFFFFF;
+  background-color: transparent;
+  padding: 36px 46px 51px;
+}
+.header-form h2 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
 }
 .page_footer {
   color: #283645;
@@ -2483,6 +2496,27 @@ html {
   .product__properties-no-mobile p {
     font-size: 18px;
   }
+}
+.registration__bonus {
+  margin: 0 20px;
+  text-align: center;
+  padding-top: 54px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+}
+.registration__user-name-list {
+  margin: 0 20px;
+}
+.registration__user-name-item {
+  display: flex;
+  flex-direction: column;
+}
+.registration__label {
+  padding-left: 21px;
+}
+.registration__field {
+  padding: 23px 20px;
 }
 .contacts__feedback {
   margin-bottom: 45px;
