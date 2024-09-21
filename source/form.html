@@ -48,23 +48,77 @@
         </header>
         <section class="registration">
           <form class="registration__form" action="post">
-            <h3 class="registration__bonus">
-              Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-            </h3>
-            <ul class="registration__user-name-list">
-              <li class="registration__user-name-item">
-                <label class="registration__label" for="first-name">Фамилия:</label>
-                <input class="registration__field" type="text" id="first-name" placeholder="Укажите фамилию *">
-              </li>
-              <li class="registration__user-name-item">
-                <label class="registration__label" for="second-name">Имя:</label>
-                <input class="registration__field" type="text" id="second-name" placeholder="Укажите ваше имя *">
-              </li>
-              <li class="registration__user-name-item">
-                <label class="registration__label" for="third-name">Отчество:</label>
-                <input class="registration__field" type="text" id="third-name" placeholder="Ну и отчество тоже*">
-              </li>
-            </ul>
+            <div class="registration__user-name">
+              <h3 class="registration__user-name-bonus">
+                Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+              </h3>
+              <ul class="registration__user-name-list contacts-list">
+                <li class="registration__user-name-item">
+                  <label class="registration__user-name-label" for="first-name">Фамилия:</label>
+                  <input class="registration__user-name-field" type="text" id="first-name" placeholder="Укажите фамилию *">
+                </li>
+                <li class="registration__user-name-item">
+                  <label class="registration__user-name-label" for="second-name">Имя:</label>
+                  <input class="registration__user-name-field" type="text" id="second-name" placeholder="Введите ваше имя *">
+                </li>
+                <li class="registration__user-name-item">
+                  <label class="registration__user-name-label" for="third-name">Отчество:</label>
+                  <input class="registration__user-name-field" type="text" id="third-name" placeholder="Ну и отчество тоже*">
+                </li>
+              </ul>
+            </div>
+            <div class="registration__achievement">
+              <h3 class="registration__achievement-text red_title_in_form">
+                Ваши безбашенные достижения в путешествии
+              </h3>
+              <ul class="registration__achievement-list">
+                <li class="registration__achievement-item">
+                  <label class="registration__achievement-checkbox" for="1">
+                    <input class="registration__achievement-checkbox-field visually-hidden" type="checkbox" checked name="selfie_with_shark" id="1">
+                    <span class="registration__achievement-checkbox-control"></span>
+                    <span class="registration__achievement-checkbox-title">Сделал селфи с акулой</span>
+                  </label>
+                </li>
+                <li class="registration__achievement-item">
+                  <label class="registration__achievement-checkbox" for="2">
+                    <input class="registration__achievement-checkbox-field visually-hidden" type="checkbox" checked name="burned_on_the_beach" id="2">
+                    <span class="registration__achievement-checkbox-control"></span>
+                    <span class="registration__achievement-checkbox-title">Обгорел на пляже</span>
+                  </label>
+                </li>
+                <li class="registration__achievement-item">
+                  <label class="registration__achievement-checkbox" for="3">
+                    <input class="registration__achievement-checkbox-field visually-hidden" type="checkbox" name="seen_chuk" id="3">
+                    <span class="registration__achievement-checkbox-control"></span>
+                    <span class="registration__achievement-checkbox-title">Видел Чака Норриса</span>
+                  </label>
+                </li>
+                <li class="registration__achievement-item">
+                  <label class="registration__achievement-checkbox" for="4">
+                    <input class="registration__achievement-checkbox-field visually-hidden" type="checkbox" name="bought_souvenir" id="4">
+                    <span class="registration__achievement-checkbox-control"></span>
+                    <span class="registration__achievement-checkbox-title">Накупил сувениров</span>
+                  </label>
+                </li>
+                <li class="registration__achievement-item">
+                  <label class="registration__achievement-checkbox" for="5">
+                    <input class="registration__achievement-checkbox-field visually-hidden" type="checkbox" checked name="hold_tower" id="5">
+                    <span class="registration__achievement-checkbox-control"></span>
+                    <span class="registration__achievement-checkbox-title">Удержал башню</span>
+                  </label>
+                </li>
+                <li class="registration__achievement-item">
+                  <label class="registration__achievement-checkbox" for="6">
+                    <input class="registration__achievement-checkbox-field visually-hidden" type="checkbox" name="break_hotel" id="6">
+                    <span class="registration__achievement-checkbox-control"></span>
+                    <span class="registration__achievement-checkbox-title">Разгромил отель</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="registration__address">
+
+            </div>
           </form>
         </section>
       </main>

@@ -710,15 +710,29 @@ html {
   }
 }
 .registration {
+  padding-bottom: 44px;
   background-color: white;
   color: #283645;
+}
+.red_title_in_form {
+  text-align: center;
+  text-transform: uppercase;
+  color: #D22856;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
 }
 .header-form {
   color: #FFFFFF;
   background-color: transparent;
-  padding: 36px 46px 51px;
+  padding: 36px 0 51px;
 }
 .header-form h2 {
+  width: 72%;
+  max-width: 228px;
+  margin: 0 auto;
   text-align: center;
   font-weight: 300;
   font-size: 24px;
@@ -2497,26 +2511,94 @@ html {
     font-size: 18px;
   }
 }
-.registration__bonus {
+.registration__user-name {
   margin: 0 20px;
-  text-align: center;
   padding-top: 54px;
+  padding-bottom: 44px;
+}
+.registration__user-name-bonus {
+  margin: 0 auto;
+  margin-bottom: 55px;
+  text-align: center;
+  width: 280px;
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
 }
-.registration__user-name-list {
-  margin: 0 20px;
-}
 .registration__user-name-item {
   display: flex;
   flex-direction: column;
+  margin-bottom: 29px;
 }
-.registration__label {
+.registration__user-name-item:last-child {
+  margin-bottom: 0px;
+}
+.registration__user-name-label {
   padding-left: 21px;
+  margin-bottom: 17px;
+  color: #D22856;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
 }
-.registration__field {
+.registration__user-name-field {
   padding: 23px 20px;
+  border: none;
+  border: 2px solid #E5E5E5;
+  border-radius: 6px;
+}
+.registration__achievement {
+  padding-top: 42px;
+  padding-bottom: 44px;
+  color: #283645;
+  background-color: #F2F2F2;
+}
+.registration__achievement-text {
+  margin: 0 auto;
+  margin-bottom: 44px;
+  width: 68%;
+  max-width: 218px;
+  background-color: transparent;
+}
+.registration__achievement-list {
+  margin: 0 22px;
+}
+.registration__achievement-item {
+  margin-bottom: 44px;
+}
+.registration__achievement-item:last-child {
+  margin-bottom: 0;
+}
+.registration__achievement-checkbox {
+  position: relative;
+}
+.registration__achievement-checkbox-field[type="checkbox"]:checked + .registration__achievement-checkbox-control::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 22px;
+  height: 16px;
+  background-image: url(../img/checked-form.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.registration__achievement-checkbox-control {
+  position: absolute;
+  top: 2px;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+}
+.registration__achievement-checkbox-title {
+  display: block;
+  padding: 10px 0 10px 57px;
 }
 .contacts__feedback {
   margin-bottom: 45px;
