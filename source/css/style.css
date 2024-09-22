@@ -2525,15 +2525,18 @@ html {
   font-size: 14px;
   line-height: 30px;
 }
-.registration__user-name-item {
+.registration__user-name-list {
+  padding: 0 2px;
+}
+.contacts-list__item {
   display: flex;
   flex-direction: column;
   margin-bottom: 29px;
 }
-.registration__user-name-item:last-child {
+.contacts-list__item:last-child {
   margin-bottom: 0px;
 }
-.registration__user-name-label {
+.contacts-list__label {
   padding-left: 21px;
   margin-bottom: 17px;
   color: #D22856;
@@ -2542,7 +2545,7 @@ html {
   font-size: 14px;
   line-height: 1;
 }
-.registration__user-name-field {
+.contacts-list__field {
   padding: 23px 20px;
   border: none;
   border: 2px solid #E5E5E5;
@@ -2599,6 +2602,13 @@ html {
 .registration__achievement-checkbox-title {
   display: block;
   padding: 10px 0 10px 57px;
+}
+.registration__address {
+  margin: 0 20px;
+}
+.registration__address-list {
+  padding: 0 2px;
+  padding-top: 42px;
 }
 .contacts__feedback {
   margin-bottom: 45px;
