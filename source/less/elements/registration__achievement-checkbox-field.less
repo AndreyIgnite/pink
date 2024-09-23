@@ -1,4 +1,4 @@
-.registration__achievement-checkbox-field[type="checkbox"]:checked +
+.registration__achievement:nth-child(2) .registration__achievement-checkbox-field[type="checkbox"]:checked +
 .registration__achievement-checkbox-control::after {
   content: "";
   position: absolute;
@@ -12,4 +12,19 @@
   background-image: url(../img/checked-form.svg);
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.registration__achievement:nth-child(4) .registration__achievement-checkbox-field[type="radio"]:checked +
+.registration__achievement-checkbox-control::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #D22856;
 }

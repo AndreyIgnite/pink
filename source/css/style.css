@@ -2549,7 +2549,7 @@ html {
   padding: 23px 20px;
   border: none;
   border: 2px solid #E5E5E5;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 .registration__achievement {
   padding-top: 42px;
@@ -2576,7 +2576,7 @@ html {
 .registration__achievement-checkbox {
   position: relative;
 }
-.registration__achievement-checkbox-field[type="checkbox"]:checked + .registration__achievement-checkbox-control::after {
+.registration__achievement:nth-child(2) .registration__achievement-checkbox-field[type="checkbox"]:checked + .registration__achievement-checkbox-control::after {
   content: "";
   position: absolute;
   top: 0;
@@ -2590,7 +2590,20 @@ html {
   background-position: center;
   background-repeat: no-repeat;
 }
-.registration__achievement-checkbox-control {
+.registration__achievement:nth-child(4) .registration__achievement-checkbox-field[type="radio"]:checked + .registration__achievement-checkbox-control::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #D22856;
+}
+.registration__achievement:nth-child(2) .registration__achievement-checkbox-control {
   position: absolute;
   top: 2px;
   width: 35px;
@@ -2599,9 +2612,23 @@ html {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
+.registration__achievement:nth-child(4) .registration__achievement-checkbox-control {
+  position: absolute;
+  top: 2px;
+  width: 37px;
+  height: 37px;
+  background-color: white;
+  border: 2px solid #E5E5E5;
+  border-radius: 50%;
+}
 .registration__achievement-checkbox-title {
   display: block;
+}
+.registration__achievement:nth-child(2) .registration__achievement-checkbox-title {
   padding: 10px 0 10px 57px;
+}
+.registration__achievement:nth-child(4) .registration__achievement-checkbox-title {
+  padding: 10px 0 10px 68px;
 }
 .registration__address {
   margin: 0 20px;
@@ -2609,6 +2636,7 @@ html {
 .registration__address-list {
   padding: 0 2px;
   padding-top: 42px;
+  padding-bottom: 44px;
 }
 .contacts__feedback {
   margin-bottom: 45px;

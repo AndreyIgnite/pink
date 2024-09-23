@@ -55,15 +55,15 @@
               <ul class="registration__user-name-list contacts-list">
                 <li class="contacts-list__item">
                   <label class="contacts-list__label" for="first-name">Фамилия:</label>
-                  <input class="contacts-list__field" type="text" id="first-name" placeholder="Укажите фамилию *">
+                  <input class="contacts-list__field" type="text" name="surname" id="first-name" placeholder="Укажите фамилию *">
                 </li>
                 <li class="contacts-list__item">
                   <label class="contacts-list__label" for="second-name">Имя:</label>
-                  <input class="contacts-list__field" type="text" id="second-name" placeholder="Введите ваше имя *">
+                  <input class="contacts-list__field" type="text" name="name" id="second-name" placeholder="Введите ваше имя *">
                 </li>
                 <li class="contacts-list__item">
                   <label class="contacts-list__label" for="third-name">Отчество:</label>
-                  <input class="contacts-list__field" type="text" id="third-name" placeholder="Ну и отчество тоже*">
+                  <input class="contacts-list__field" type="text" name="middle-name" id="third-name" placeholder="Ну и отчество тоже*">
                 </li>
               </ul>
             </div>
@@ -121,6 +121,36 @@
                 <li class="contacts-list__item">
                   <label class="contacts-list__label" for="phone">Номер телефона</label>
                   <input class="contacts-list__field" type="tel" id="phone" name="phone_number" placeholder="Номер, пожалуйста">
+                </li>
+                <li class="contacts-list__item">
+                  <label class="contacts-list__label" for="phone">Адрес почты</label>
+                  <input class="contacts-list__field" type="tel" id="phone" name="e-mail" placeholder="Введите почту *">
+                </li>
+              </ul>
+            </div>
+            <div class="registration__achievement">
+              <h3 class="registration__achievement-text red_title_in_form">С каким приложением <br>путешествовали</h3>
+              <ul class="registration__achievement-list">
+                <li class="registration__achievement-item">
+                  <label class="registration__achievement-checkbox" for="iOS">
+                    <input class="registration__achievement-checkbox-field visually-hidden" type="radio" value="iOS" name="OS" id="iOS">
+                    <span class="registration__achievement-checkbox-control"></span>
+                    <span class="registration__achievement-checkbox-title">Pink для iOS</span>
+                  </label>
+                </li>
+                <li class="registration__achievement-item">
+                  <label class="registration__achievement-checkbox" for="android">
+                    <input class="registration__achievement-checkbox-field visually-hidden" type="radio" value="android" name="OS" id="android">
+                    <span class="registration__achievement-checkbox-control"></span>
+                    <span class="registration__achievement-checkbox-title">Pink на Android</span>
+                  </label>
+                </li>
+                <li class="registration__achievement-item">
+                  <label class="registration__achievement-checkbox" for="win_phone">
+                    <input class="registration__achievement-checkbox-field visually-hidden" type="radio" value="win_phone" name="OS" id="win_phone">
+                    <span class="registration__achievement-checkbox-control"></span>
+                    <span class="registration__achievement-checkbox-title">Windows Phone</span>
+                  </label>
                 </li>
               </ul>
             </div>
