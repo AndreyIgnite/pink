@@ -47,11 +47,11 @@
           </h2>
         </header>
         <section class="registration">
+          <h2 class="registration__user-name-bonus">
+            Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+          </h2>
           <form class="registration__form" action="post">
             <div class="registration__user-name">
-              <h3 class="registration__user-name-bonus">
-                Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-              </h3>
               <ul class="registration__user-name-list contacts-list">
                 <li class="contacts-list__item">
                   <label class="contacts-list__label" for="first-name">Фамилия:</label>
@@ -71,47 +71,47 @@
               <h3 class="registration__achievement-text red_title_in_form">
                 Ваши безбашенные достижения в путешествии
               </h3>
-              <ul class="registration__achievement-list">
-                <li class="registration__achievement-item">
-                  <label class="registration__achievement-checkbox" for="1">
-                    <input class="registration__achievement-checkbox-field visually-hidden" type="checkbox" checked name="selfie_with_shark" id="1">
-                    <span class="registration__achievement-checkbox-control"></span>
-                    <span class="registration__achievement-checkbox-title">Сделал селфи с акулой</span>
+              <ul class="registration__achievement-list select-list">
+                <li class="select-list__achievement-item">
+                  <label class="select-list__label" for="1">
+                    <input class="select-list__field_checkbox visually-hidden" type="checkbox" checked name="selfie_with_shark" id="1">
+                    <span class="select-list__control_checkbox"></span>
+                    <span class="select-list__title_checkbox">Сделал селфи с акулой</span>
                   </label>
                 </li>
-                <li class="registration__achievement-item">
-                  <label class="registration__achievement-checkbox" for="2">
-                    <input class="registration__achievement-checkbox-field visually-hidden" type="checkbox" checked name="burned_on_the_beach" id="2">
-                    <span class="registration__achievement-checkbox-control"></span>
-                    <span class="registration__achievement-checkbox-title">Обгорел на пляже</span>
+                <li class="registration__achievement-item select-list__achievement-item">
+                  <label class="select-list__label" for="2">
+                    <input class="checkbox-field select-list__field_checkbox visually-hidden" type="checkbox" checked name="burned_on_the_beach" id="2">
+                    <span class="select-list__control_checkbox"></span>
+                    <span class="select-list__title_checkbox">Обгорел на пляже</span>
                   </label>
                 </li>
-                <li class="registration__achievement-item">
-                  <label class="registration__achievement-checkbox" for="3">
-                    <input class="registration__achievement-checkbox-field visually-hidden" type="checkbox" name="seen_chuk" id="3">
-                    <span class="registration__achievement-checkbox-control"></span>
-                    <span class="registration__achievement-checkbox-title">Видел Чака Норриса</span>
+                <li class="registration__achievement-item select-list__achievement-item">
+                  <label class="checkbox select-list__label" for="3">
+                    <input class="select-list__field_checkbox visually-hidden" type="checkbox" name="seen_chuk" id="3">
+                    <span class="select-list__control_checkbox"></span>
+                    <span class="select-list__title_checkbox">Видел Чака Норриса</span>
                   </label>
                 </li>
-                <li class="registration__achievement-item">
-                  <label class="registration__achievement-checkbox" for="4">
-                    <input class="registration__achievement-checkbox-field visually-hidden" type="checkbox" name="bought_souvenir" id="4">
-                    <span class="registration__achievement-checkbox-control"></span>
-                    <span class="registration__achievement-checkbox-title">Накупил сувениров</span>
+                <li class="registration__achievement-item select-list__achievement-item">
+                  <label class="select-list__label" for="4">
+                    <input class="select-list__field_checkbox visually-hidden" type="checkbox" name="bought_souvenir" id="4">
+                    <span class="select-list__control_checkbox"></span>
+                    <span class="select-list__title_checkbox">Накупил сувениров</span>
                   </label>
                 </li>
-                <li class="registration__achievement-item">
-                  <label class="registration__achievement-checkbox" for="5">
-                    <input class="registration__achievement-checkbox-field visually-hidden" type="checkbox" checked name="hold_tower" id="5">
-                    <span class="registration__achievement-checkbox-control"></span>
-                    <span class="registration__achievement-checkbox-title">Удержал башню</span>
+                <li class="registration__achievement-item select-list__achievement-item">
+                  <label class="select-list__label" for="5">
+                    <input class="select-list__field_checkbox visually-hidden" type="checkbox" checked name="hold_tower" id="5">
+                    <span class="select-list__control_checkbox"></span>
+                    <span class="select-list__title_checkbox">Удержал башню</span>
                   </label>
                 </li>
-                <li class="registration__achievement-item">
-                  <label class="registration__achievement-checkbox" for="6">
-                    <input class="registration__achievement-checkbox-field visually-hidden" type="checkbox" name="break_hotel" id="6">
-                    <span class="registration__achievement-checkbox-control"></span>
-                    <span class="registration__achievement-checkbox-title">Разгромил отель</span>
+                <li class="registration__achievement-item select-list__achievement-item">
+                  <label class="select-list__label" for="6">
+                    <input class="select-list__field_checkbox visually-hidden" type="checkbox" name="break_hotel" id="6">
+                    <span class="select-list__control_checkbox"></span>
+                    <span class="select-list__title_checkbox">Разгромил отель</span>
                   </label>
                 </li>
               </ul>
@@ -128,28 +128,28 @@
                 </li>
               </ul>
             </div>
-            <div class="registration__achievement">
-              <h3 class="registration__achievement-text red_title_in_form">С каким приложением <br>путешествовали</h3>
-              <ul class="registration__achievement-list">
-                <li class="registration__achievement-item">
-                  <label class="registration__achievement-checkbox" for="iOS">
-                    <input class="registration__achievement-checkbox-field visually-hidden" type="radio" value="iOS" name="OS" id="iOS">
-                    <span class="registration__achievement-checkbox-control"></span>
-                    <span class="registration__achievement-checkbox-title">Pink для iOS</span>
+            <div class="registration__platphorm">
+              <h3 class="registration__platphorm-text red_title_in_form">С каким приложением <br>путешествовали</h3>
+              <ul class="registration__platphorm-list select-list">
+                <li class="select-list__achievement-item">
+                  <label class="select-list__label" for="iOS">
+                    <input class="select-list__field_radio visually-hidden" checked type="radio" value="iOS" name="OS" id="iOS">
+                    <span class="select-list__control_radio"></span>
+                    <span class="select-list__title_radio">Pink для iOS</span>
                   </label>
                 </li>
-                <li class="registration__achievement-item">
-                  <label class="registration__achievement-checkbox" for="android">
-                    <input class="registration__achievement-checkbox-field visually-hidden" type="radio" value="android" name="OS" id="android">
-                    <span class="registration__achievement-checkbox-control"></span>
-                    <span class="registration__achievement-checkbox-title">Pink на Android</span>
+                <li class="select-list__achievement-item">
+                  <label class="select-list__label" for="android">
+                    <input class="select-list__field_radio visually-hidden" type="radio" value="android" name="OS" id="android">
+                    <span class="select-list__control_radio"></span>
+                    <span class="select-list__title_radio">Pink на Android</span>
                   </label>
                 </li>
-                <li class="registration__achievement-item">
-                  <label class="registration__achievement-checkbox" for="win_phone">
-                    <input class="registration__achievement-checkbox-field visually-hidden" type="radio" value="win_phone" name="OS" id="win_phone">
-                    <span class="registration__achievement-checkbox-control"></span>
-                    <span class="registration__achievement-checkbox-title">Windows Phone</span>
+                <li class="registration__achievement-item select-list__achievement-item">
+                  <label class="registration__achievement-checkbox select-list__label" for="win_phone">
+                    <input class="select-list__field_radio visually-hidden" type="radio" value="win_phone" name="OS" id="win_phone">
+                    <span class="select-list__control_radio"></span>
+                    <span class="select-list__title_radio">Windows Phone</span>
                   </label>
                 </li>
               </ul>

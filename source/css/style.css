@@ -710,6 +710,7 @@ html {
   }
 }
 .registration {
+  padding-top: 54px;
   padding-bottom: 44px;
   background-color: white;
   color: #283645;
@@ -718,6 +719,7 @@ html {
   text-align: center;
   text-transform: uppercase;
   color: #D22856;
+  background-color: transparent;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -2511,9 +2513,12 @@ html {
     font-size: 18px;
   }
 }
+.registration__form {
+  display: flex;
+  flex-direction: column;
+}
 .registration__user-name {
   margin: 0 20px;
-  padding-top: 54px;
   padding-bottom: 44px;
 }
 .registration__user-name-bonus {
@@ -2562,19 +2567,86 @@ html {
   margin-bottom: 44px;
   width: 68%;
   max-width: 218px;
-  background-color: transparent;
 }
 .registration__achievement-list {
   margin: 0 22px;
 }
-.registration__achievement-item {
+.registration__platphorm {
+  padding-top: 42px;
+  padding-bottom: 44px;
+  color: #283645;
+  background-color: #F2F2F2;
+}
+.registration__platphorm-text {
+  margin: 0 auto;
+  margin-bottom: 44px;
+  width: 68%;
+  max-width: 218px;
+}
+.registration__platphorm-list {
+  margin: 0 22px;
+}
+.select-list__achievement-item {
   margin-bottom: 44px;
 }
-.registration__achievement-item:last-child {
+.select-list__achievement-item:last-child {
   margin-bottom: 0;
 }
-.registration__achievement-checkbox {
+.select-list__label {
   position: relative;
+}
+.select-list__field_checkbox[type="checkbox"]:checked + .select-list__control_checkbox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 22px;
+  height: 16px;
+  background-image: url(../img/checked-form.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.select-list__control_checkbox {
+  position: absolute;
+  top: 2px;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+}
+.select-list__title_checkbox {
+  display: block;
+  padding: 10px 0 10px 57px;
+}
+.select-list__field_radio[type="radio"]:checked + .select-list__control_radio::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #D22856;
+}
+.select-list__control_radio {
+  position: absolute;
+  top: 2px;
+  width: 37px;
+  height: 37px;
+  background-color: white;
+  border: 2px solid #E5E5E5;
+  border-radius: 50%;
+}
+.select-list__title_radio {
+  display: block;
+  padding: 10px 0 10px 68px;
 }
 .registration__achievement:nth-child(2) .registration__achievement-checkbox-field[type="checkbox"]:checked + .registration__achievement-checkbox-control::after {
   content: "";
@@ -2603,40 +2675,13 @@ html {
   border-radius: 50%;
   background-color: #D22856;
 }
-.registration__achievement:nth-child(2) .registration__achievement-checkbox-control {
-  position: absolute;
-  top: 2px;
-  width: 35px;
-  height: 35px;
-  background-color: white;
-  border: 2px solid #E5E5E5;
-  border-radius: 4px;
-}
-.registration__achievement:nth-child(4) .registration__achievement-checkbox-control {
-  position: absolute;
-  top: 2px;
-  width: 37px;
-  height: 37px;
-  background-color: white;
-  border: 2px solid #E5E5E5;
-  border-radius: 50%;
-}
-.registration__achievement-checkbox-title {
-  display: block;
-}
-.registration__achievement:nth-child(2) .registration__achievement-checkbox-title {
-  padding: 10px 0 10px 57px;
-}
-.registration__achievement:nth-child(4) .registration__achievement-checkbox-title {
-  padding: 10px 0 10px 68px;
-}
 .registration__address {
   margin: 0 20px;
+  padding-top: 42px;
+  padding-bottom: 44px;
 }
 .registration__address-list {
   padding: 0 2px;
-  padding-top: 42px;
-  padding-bottom: 44px;
 }
 .contacts__feedback {
   margin-bottom: 45px;
