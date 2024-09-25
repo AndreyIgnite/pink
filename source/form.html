@@ -55,11 +55,11 @@
               <ul class="registration__user-name-list contacts-list">
                 <li class="contacts-list__item">
                   <label class="contacts-list__label" for="first-name">Фамилия:</label>
-                  <input class="contacts-list__field" type="text" name="surname" id="first-name" placeholder="Укажите фамилию *">
+                  <input class="contacts-list__field" type="text" name="surname" id="first-name" required placeholder="Укажите фамилию *">
                 </li>
                 <li class="contacts-list__item">
                   <label class="contacts-list__label" for="second-name">Имя:</label>
-                  <input class="contacts-list__field" type="text" name="name" id="second-name" placeholder="Введите ваше имя *">
+                  <input class="contacts-list__field" type="text" name="name" id="second-name" required placeholder="Введите ваше имя *">
                 </li>
                 <li class="contacts-list__item">
                   <label class="contacts-list__label" for="third-name">Отчество:</label>
@@ -124,7 +124,7 @@
                 </li>
                 <li class="contacts-list__item">
                   <label class="contacts-list__label" for="e-mail">Адрес почты</label>
-                  <input class="contacts-list__field" type="email" id="phone" name="e-mail" placeholder="Введите почту *">
+                  <input class="contacts-list__field" type="email" id="phone" name="e-mail" required placeholder="Введите почту *">
                 </li>
               </ul>
             </div>
@@ -154,6 +154,14 @@
                 </li>
               </ul>
             </div>
+            <div class="registration__emotion">
+              <p class="registration__emotion-title red_title_in_form">Опишите свои эмоции</p>
+              <textarea class="registration__emotion-field" name="emotion" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </div>
+            <button class="registration__button" type="submit">Отправить форму</button>
+            <p class="registration__necessarily-area">
+              <span>*</span> — обязательные поля
+            </p>
           </form>
         </section>
       </main>

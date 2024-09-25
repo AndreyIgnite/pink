@@ -638,6 +638,7 @@ html {
   border-radius: 29px;
   align-self: center;
   background-color: transparent;
+  cursor: pointer;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -711,7 +712,7 @@ html {
 }
 .registration {
   padding-top: 54px;
-  padding-bottom: 44px;
+  padding-bottom: 26px;
   background-color: white;
   color: #283645;
 }
@@ -2682,6 +2683,50 @@ html {
 }
 .registration__address-list {
   padding: 0 2px;
+}
+.registration__emotion {
+  padding-top: 42px;
+  margin-bottom: 52px;
+}
+.registration__emotion-title {
+  text-align: center;
+  margin-bottom: 22px;
+}
+.registration__emotion-field {
+  display: block;
+  width: 86%;
+  margin: 0 auto;
+  min-height: 197px;
+  padding: 22px 25px 22px 20px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+}
+.registration__button {
+  min-height: 59px;
+  width: 86%;
+  margin: 0 auto;
+  margin-bottom: 46px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2AAB6D;
+  color: #FFFFFF;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+}
+.registration__necessarily-area {
+  width: 86%;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+}
+.registration__necessarily-area span {
+  color: #D22856;
 }
 .contacts__feedback {
   margin-bottom: 45px;
