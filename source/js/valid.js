@@ -37,8 +37,22 @@ form.addEventListener('submit', function(e) {
   if(validation(this)) {
     add_class(success_Popup);
   }
-  else add_class(error_Popup);
+  else {
+    let red_inputs = form.querySelectorAll('.contacts-list__field--required');
+    console.log(red_inputs);
+    red_inputs.forEach(item => {
+      if(item.value=="")
+      item.style.border = '2px solid #D22856';
+    })
+    add_class(error_Popup);
+  }
 })
 
+
 btn_Ok.addEventListener('click', close_popup.bind(error_Popup));
-btn_Close.addEventListener('click', close_popup.bind(success_Popup));
+btn_Close.addEventListener('click', function() {
+  this.classList.remove('modal--show')
+  form.querySelectorAll('.contacts-list__field--required').forEach(item => {
+    item.style.border = '2px solid #E5E5E5';
+  })
+}.bind(success_Popup));
