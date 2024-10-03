@@ -727,6 +727,19 @@ html {
   font-size: 14px;
   line-height: 18px;
 }
+.button-for-form {
+  display: block;
+  min-height: 59px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2AAB6D;
+  color: #FFFFFF;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+}
 .header-form {
   color: #FFFFFF;
   background-color: transparent;
@@ -2701,21 +2714,6 @@ html {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
-.registration__button {
-  min-height: 59px;
-  width: 86%;
-  margin: 0 auto;
-  margin-bottom: 46px;
-  border: none;
-  border-radius: 4px;
-  background-color: #2AAB6D;
-  color: #FFFFFF;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 30px;
-}
 .registration__necessarily-area {
   width: 86%;
   margin: 0 auto;
@@ -2727,6 +2725,18 @@ html {
 }
 .registration__necessarily-area span {
   color: #D22856;
+}
+.button-for-form__error {
+  width: 86%;
+}
+.button-for-form__transmit {
+  width: 86%;
+  margin: 0 auto;
+  margin-bottom: 39px;
+}
+.button-for-form__success {
+  width: 86%;
+  margin: 0 auto;
 }
 .contacts__feedback {
   margin-bottom: 45px;
@@ -2930,6 +2940,55 @@ html {
   display: block;
   height: 34px;
   width: 27px;
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding-top: 44px;
+  left: 0;
+  transform: translateY(-50%);
+  top: 50%;
+  background-color: #FFFFFF;
+  box-shadow: 0px 12px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.modal__title {
+  margin: 0;
+  margin-bottom: 30px;
+}
+.modal__text-error {
+  width: 87%;
+  text-align: center;
+  margin-bottom: 41px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.modal__error {
+  display: none;
+  height: 289px;
+}
+.modal__text-when-success {
+  width: 83%;
+  margin-bottom: 41px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.modal__wrapper-for-success {
+  padding-top: 52px;
+  padding-bottom: 52px;
+  width: 100%;
+  background-color: #F2F2F2;
+}
+.modal__success {
+  display: none;
+}
+.modal--show {
+  display: flex;
 }
 .reviews__button--prev {
   left: 0;

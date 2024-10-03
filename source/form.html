@@ -50,20 +50,20 @@
           <h2 class="registration__user-name-bonus">
             Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
           </h2>
-          <form class="registration__form" action="post">
+          <form class="registration__form" action="" id="registration">
             <div class="registration__user-name">
               <ul class="registration__user-name-list contacts-list">
                 <li class="contacts-list__item">
                   <label class="contacts-list__label" for="first-name">Фамилия:</label>
-                  <input class="contacts-list__field" type="text" name="surname" id="first-name" required placeholder="Укажите фамилию *">
+                  <input class="contacts-list__field contacts-list__field--required" type="text" name="surname" id="first-name" placeholder="Укажите фамилию *">
                 </li>
                 <li class="contacts-list__item">
                   <label class="contacts-list__label" for="second-name">Имя:</label>
-                  <input class="contacts-list__field" type="text" name="name" id="second-name" required placeholder="Введите ваше имя *">
+                  <input class="contacts-list__field contacts-list__field--required" type="text" name="name" id="second-name" placeholder="Введите ваше имя *">
                 </li>
                 <li class="contacts-list__item">
                   <label class="contacts-list__label" for="third-name">Отчество:</label>
-                  <input class="contacts-list__field" type="text" name="middle-name" id="third-name" placeholder="Ну и отчество тоже*">
+                  <input class="contacts-list__field" type="text" name="middle-name" id="third-name" placeholder="Ну и отчество тоже">
                 </li>
               </ul>
             </div>
@@ -124,7 +124,7 @@
                 </li>
                 <li class="contacts-list__item">
                   <label class="contacts-list__label" for="e-mail">Адрес почты</label>
-                  <input class="contacts-list__field" type="email" id="phone" name="e-mail" required placeholder="Введите почту *">
+                  <input class="contacts-list__field contacts-list__field--required" type="email" id="e-mail" name="e-mail" placeholder="Введите почту *">
                 </li>
               </ul>
             </div>
@@ -158,7 +158,7 @@
               <p class="registration__emotion-title red_title_in_form">Опишите свои эмоции</p>
               <textarea class="registration__emotion-field" name="emotion" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </div>
-            <button class="registration__button" type="submit">Отправить форму</button>
+            <button class="button-for-form button-for-form__transmit" type="submit" form="registration">Отправить форму</button>
             <p class="registration__necessarily-area">
               <span>*</span> — обязательные поля
             </p>
@@ -254,7 +254,22 @@
           </div>
         </div>
       </footer>
+      <div class="modal modal__error">
+        <h3 class="modal__title">Что-то пошло не так!</h3>
+        <p class="modal__text-error">Проверьте поля, выделенные красным,
+          скорее всего вы забыли их заполнить</p>
+          <button class="button-for-form button-for-form__error">OK</button>
+      </div>
+      <div class="modal modal__success">
+        <h3 class="modal__title">Ваша заявка отправлена</h3>
+        <p class="modal__text-when-success">Спасибо за ваше участие, ваша заявка <br>уже поступила к нам. В ближайшее <br>время мы рассмотрим ее и <br>оповестим вас.
+        </p>
+        <div class="modal__wrapper-for-success">
+          <button class="button-for-form button-for-form__success">Закрыть окно</button>
+        </div>
+      </div>
     </div>
   </body>
   <script src="less/elements/main-nav__toggler.js"></script>
+  <script defer src="js/valid.js"></script>
 </html>
