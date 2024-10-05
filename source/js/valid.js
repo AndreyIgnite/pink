@@ -10,17 +10,29 @@ const error_Popup = document.querySelector('.modal__error');
 const success_Popup = document.querySelector('.modal__success');
 const btn_Ok = document.querySelector('.button-for-form__error');
 const btn_Close = document.querySelector('.button-for-form__success');
+let reqInputs = document.querySelectorAll('.contacts-list__field--required')
 
 //Functions
 function validation(form) {
   let result = true;
   let inputs = form.querySelectorAll('.contacts-list__field--required');
   inputs.forEach(item => {
-    if(item.value=="") {
+    if(!Boolean(item.value)) {
+      item.style.border = '2px solid #D22856';
       result = false;
     }
   });
   return result
+}
+
+function checkValue(input) {
+  if(Boolean(input.value))
+    return true
+  else return false
+}
+
+function checkAllinputs() {
+
 }
 
 function close_popup() {
@@ -30,6 +42,8 @@ function close_popup() {
 function add_class(popup) {
   popup.classList.add('modal--show');
 }
+//Functions
+
 
 //main
 form.addEventListener('submit', function(e) {
@@ -38,21 +52,21 @@ form.addEventListener('submit', function(e) {
     add_class(success_Popup);
   }
   else {
-    let red_inputs = form.querySelectorAll('.contacts-list__field--required');
-    console.log(red_inputs);
-    red_inputs.forEach(item => {
-      if(item.value=="")
-      item.style.border = '2px solid #D22856';
-    })
     add_class(error_Popup);
   }
 })
 
+reqInputs.forEach(item => {
+  item.addEventListener('input', function() {
+    if(checkValue(item)==true)
+      item.style.border = '2px solid #E5E5E5';
+    else item.style.border = '2px solid #D22856';
+  })
+})
+
+
+
 
 btn_Ok.addEventListener('click', close_popup.bind(error_Popup));
-btn_Close.addEventListener('click', function() {
-  this.classList.remove('modal--show')
-  form.querySelectorAll('.contacts-list__field--required').forEach(item => {
-    item.style.border = '2px solid #E5E5E5';
-  })
-}.bind(success_Popup));
+btn_Close.addEventListener('click', close_popup.bind(success_Popup));
+
