@@ -5,6 +5,11 @@ const noDisplay = "none";
 
 //Elements
 
+const allInputs = document.querySelectorAll('.contacts-list__field');
+const inputSucces = '2px solid #E5E5E5';
+const inputError = '2px solid #D22856';
+const inputSucces_2 = '#FFFFFF'
+const inputError_2 = 'rgba(210, 40, 86, 0.33)';
 const form = document.getElementById('registration');
 const error_Popup = document.querySelector('.modal__error');
 const success_Popup = document.querySelector('.modal__success');
@@ -18,7 +23,8 @@ function validation(form) {
   let inputs = form.querySelectorAll('.contacts-list__field--required');
   inputs.forEach(item => {
     if(!Boolean(item.value)) {
-      item.style.border = '2px solid #D22856';
+      //item.style.border = inputError;
+      item.style.backgroundColor = inputError_2;
       result = false;
     }
   });
@@ -59,8 +65,12 @@ form.addEventListener('submit', function(e) {
 reqInputs.forEach(item => {
   item.addEventListener('input', function() {
     if(checkValue(item)==true)
-      item.style.border = '2px solid #E5E5E5';
-    else item.style.border = '2px solid #D22856';
+      //item.style.border = inputSucces;
+      item.style.backgroundColor = inputSucces_2
+    else {
+      //item.style.border = inputError;
+      item.style.backgroundColor = inputError_2;
+    }
   })
 })
 
@@ -68,5 +78,10 @@ reqInputs.forEach(item => {
 
 
 btn_Ok.addEventListener('click', close_popup.bind(error_Popup));
-btn_Close.addEventListener('click', close_popup.bind(success_Popup));
+btn_Close.addEventListener('click', function() {
+  success_Popup.classList.remove('modal--show');
+  allInputs.forEach(item => {
+    item.value = "";
+  })
+});
 
