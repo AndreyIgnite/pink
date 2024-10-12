@@ -502,6 +502,10 @@ html {
     line-height: 18px;
   }
 }
+.logo {
+  width: 74px;
+  height: 23px;
+}
 .page-main {
   color: white;
 }
@@ -923,6 +927,12 @@ html {
     height: 2px;
     background-color: white;
   }
+}
+.logo__glass-tablet {
+  display: none;
+}
+.logo__glass-desktop {
+  display: none;
 }
 .adventages__header-wrapper {
   display: flex;
@@ -1827,9 +1837,7 @@ html {
 }
 .links__platform {
   display: block;
-  height: 56px;
-  width: 47px;
-  background-position: center bottom;
+  height: auto;
 }
 .links__subscribe-for-platforms {
   width: 280px;
