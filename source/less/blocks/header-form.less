@@ -2,6 +2,9 @@
   color: #FFFFFF;
   background-color: transparent;
   padding: 36px 0 51px;
+  @media (min-width: @tablet-width) {
+    padding: 81px 0 74px;
+  }
 }
 
 .header-form h2 {
@@ -13,4 +16,10 @@
   font-weight: 300;
   font-size: 24px;
   line-height: 33px;
+  @media (min-width: @tablet-width) {
+    width: auto;
+    max-width: 620px;
+    font-size: 50px;
+    line-height: 68px;
+  }
 }

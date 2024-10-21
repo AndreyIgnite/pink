@@ -720,7 +720,13 @@ html {
   background-color: white;
   color: #283645;
 }
+@media (min-width: 660px) {
+  .registration {
+    padding-top: 100px;
+  }
+}
 .red_title_in_form {
+  margin: 0;
   text-align: center;
   text-transform: uppercase;
   color: #D22856;
@@ -749,6 +755,11 @@ html {
   background-color: transparent;
   padding: 36px 0 51px;
 }
+@media (min-width: 660px) {
+  .header-form {
+    padding: 81px 0 74px;
+  }
+}
 .header-form h2 {
   width: 72%;
   max-width: 228px;
@@ -757,6 +768,14 @@ html {
   font-weight: 300;
   font-size: 24px;
   line-height: 33px;
+}
+@media (min-width: 660px) {
+  .header-form h2 {
+    width: auto;
+    max-width: 620px;
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 .page_footer {
   color: #283645;
@@ -2543,6 +2562,12 @@ html {
   margin: 0 20px;
   padding-bottom: 44px;
 }
+@media (min-width: 660px) {
+  .registration__user-name {
+    padding-bottom: 70px;
+    order: -5;
+  }
+}
 .registration__user-name-bonus {
   margin: 0 auto;
   margin-bottom: 55px;
@@ -2551,6 +2576,22 @@ html {
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
+}
+@media (min-width: 660px) {
+  .registration__user-name-bonus {
+    margin-bottom: 82px;
+    max-width: 490px;
+    width: auto;
+    font-size: 18px;
+  }
+}
+.registration__user-name-bonus span {
+  display: none;
+}
+@media (min-width: 660px) {
+  .registration__user-name-bonus span {
+    display: block;
+  }
 }
 .registration__user-name-list {
   padding: 0 2px;
@@ -2572,6 +2613,19 @@ html {
   font-size: 14px;
   line-height: 1;
 }
+@media (min-width: 660px) {
+  .contacts-list__label {
+    padding: 0;
+    margin: 0;
+    margin-right: 20px;
+    order: 0;
+    padding: 22px 17px;
+  }
+}
+.contacts-list__input-wrapper {
+  display: flex;
+  order: -1;
+}
 .contacts-list__field {
   padding: 13px 20px;
   border: none;
@@ -2580,6 +2634,15 @@ html {
   font-size: 18px;
   font-weight: 400;
   line-height: 30px;
+}
+@media (min-width: 660px) {
+  .contacts-list__field {
+    order: -1;
+  }
+}
+.contacts-list__icon {
+  width: 59px;
+  height: 59px;
 }
 .registration__achievement {
   padding-top: 42px;
@@ -2602,20 +2665,58 @@ html {
   color: #283645;
   background-color: #F2F2F2;
 }
+@media (min-width: 660px) {
+  .registration__platphorm {
+    position: relative;
+    order: -4;
+    margin: 0 20px;
+    padding: 0;
+    padding: 54px 0 54px;
+    margin-bottom: 70px;
+    background-color: #FFFFFF;
+    border: 2px solid #E5E5E5;
+  }
+}
 .registration__platphorm-text {
   margin: 0 auto;
   margin-bottom: 44px;
   width: 68%;
   max-width: 218px;
 }
+@media (min-width: 660px) {
+  .registration__platphorm-text {
+    margin: 0;
+    padding: 0 25px 0;
+    width: max-content;
+    max-width: none;
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFFFFF;
+  }
+  .registration__platphorm-text br {
+    display: none;
+  }
+}
 .registration__platphorm-list {
   margin: 0 22px;
+}
+@media (min-width: 660px) {
+  .registration__platphorm-list {
+    margin: 0 60px;
+  }
 }
 .select-list__achievement-item {
   margin-bottom: 44px;
 }
 .select-list__achievement-item:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0px;
+}
+@media (min-width: 660px) {
+  .select-list__achievement-item {
+    margin-bottom: 38px;
+  }
 }
 .select-list__label {
   position: relative;
@@ -2700,13 +2801,50 @@ html {
   border-radius: 50%;
   background-color: #D22856;
 }
-.registration__address {
+.registration__contacts {
   margin: 0 20px;
   padding-top: 42px;
   padding-bottom: 44px;
 }
+@media (min-width: 660px) {
+  .registration__contacts {
+    position: relative;
+    order: -3;
+    margin: 0 20px;
+    padding: 0;
+    padding: 54px 0 54px;
+    margin-bottom: 70px;
+    background-color: #FFFFFF;
+    border: 2px solid #E5E5E5;
+  }
+}
+.registration__contacts-text {
+  display: none;
+}
+@media (min-width: 660px) {
+  .registration__contacts-text {
+    display: block;
+    margin: 0;
+    padding: 0 31px 0;
+    width: max-content;
+    max-width: none;
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFFFFF;
+  }
+  .registration__contacts-text br {
+    display: none;
+  }
+}
 .registration__address-list {
   padding: 0 2px;
+}
+@media (min-width: 660px) {
+  .registration__address-list {
+    margin: 0 60px;
+  }
 }
 .registration__emotion {
   padding-top: 42px;

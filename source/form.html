@@ -49,6 +49,9 @@
         <section class="registration">
           <h2 class="registration__user-name-bonus">
             Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+            <span>
+              Пожалуйста, заполните форму ниже:
+            </span>
           </h2>
           <form class="registration__form" action="" id="registration">
             <div class="registration__user-name">
@@ -68,9 +71,9 @@
               </ul>
             </div>
             <div class="registration__achievement">
-              <h3 class="registration__achievement-text red_title_in_form">
+              <span class="registration__achievement-text red_title_in_form">
                 Ваши безбашенные достижения в путешествии
-              </h3>
+              </span>
               <ul class="registration__achievement-list select-list">
                 <li class="select-list__achievement-item">
                   <label class="select-list__label" for="1">
@@ -116,11 +119,19 @@
                 </li>
               </ul>
             </div>
-            <div class="registration__address">
+            <div class="registration__contacts">
+              <span class="registration__contacts-text red_title_in_form">Контактная информация</span>
               <ul class="registration__address-list contacts-list">
                 <li class="contacts-list__item">
                   <label class="contacts-list__label" for="phone">Номер телефона</label>
-                  <input class="contacts-list__field" type="tel" id="phone" name="phone_number" placeholder="Номер, пожалуйста">
+                  <div class="contacts-list__input-wrapper">
+                    <input class="contacts-list__field" type="tel" id="phone" name="phone_number" placeholder="Номер, пожалуйста">
+                    <div class="contacts-list__icon">
+                      <svg width="20" height="19" viewBox="0 0 20 19" fill="black" xmlns="http://www.w3.org/2000/svg">
+                        <use xLink:href="img/sprite.svg#apple-icon"></use>
+                      </svg>
+                    </div>
+                  </div>
                 </li>
                 <li class="contacts-list__item">
                   <label class="contacts-list__label" for="e-mail">Адрес почты</label>
@@ -129,7 +140,7 @@
               </ul>
             </div>
             <div class="registration__platphorm">
-              <h3 class="registration__platphorm-text red_title_in_form">С каким приложением <br>путешествовали</h3>
+              <span class="registration__platphorm-text red_title_in_form">С каким приложением путешествовали</span>
               <ul class="registration__platphorm-list select-list">
                 <li class="select-list__achievement-item">
                   <label class="select-list__label" for="iOS">
