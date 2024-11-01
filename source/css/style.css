@@ -726,6 +726,7 @@ html {
   }
 }
 .red_title_in_form {
+  display: block;
   margin: 0;
   text-align: center;
   text-transform: uppercase;
@@ -2601,6 +2602,16 @@ html {
   flex-direction: column;
   margin-bottom: 29px;
 }
+@media (min-width: 660px) {
+  .registration__user-name .contacts-list__item {
+    flex-direction: row;
+    margin-bottom: 56px;
+  }
+  .registration__address-list .contacts-list__item {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+}
 .contacts-list__item:last-child {
   margin-bottom: 0px;
 }
@@ -2621,10 +2632,23 @@ html {
     order: 0;
     padding: 22px 17px;
   }
+  .registration__user-name-list .contacts-list__label {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .registration__address-list .contacts-list__label {
+    margin: 0;
+  }
 }
 .contacts-list__input-wrapper {
   display: flex;
-  order: -1;
+  flex-direction: column;
+}
+@media (min-width: 660px) {
+  .contacts-list__input-wrapper {
+    order: -1;
+    flex-direction: row;
+  }
 }
 .contacts-list__field {
   padding: 13px 20px;
@@ -2637,12 +2661,34 @@ html {
 }
 @media (min-width: 660px) {
   .contacts-list__field {
+    flex-grow: 1;
+  }
+  .contacts-list__input-wrapper .contacts-list__field {
     order: -1;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
   }
 }
 .contacts-list__icon {
-  width: 59px;
-  height: 59px;
+  display: none;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  border-radius: 0 4px 4px 0;
+  background-color: #E5E5E5;
+}
+@media (min-width: 660px) {
+  .contacts-list__icon {
+    display: block;
+  }
+}
+.contacts-list__icon svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 .registration__achievement {
   padding-top: 42px;
@@ -2650,14 +2696,43 @@ html {
   color: #283645;
   background-color: #F2F2F2;
 }
+@media (min-width: 660px) {
+  .registration__achievement {
+    position: relative;
+    margin: 0 22px;
+    background-color: #FFFFFF;
+    border: 2px solid #E5E5E5;
+    padding-top: 54px;
+    padding-bottom: 50px;
+    margin-bottom: 70px;
+  }
+}
 .registration__achievement-text {
   margin: 0 auto;
   margin-bottom: 44px;
   width: 68%;
   max-width: 218px;
 }
+@media (min-width: 660px) {
+  .registration__achievement-text {
+    position: absolute;
+    top: -11px;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: none;
+    padding: 0 31px 0;
+    background-color: #FFFFFF;
+  }
+}
 .registration__achievement-list {
   margin: 0 22px;
+}
+@media (min-width: 660px) {
+  .registration__achievement-list {
+    margin: 0 60px;
+  }
 }
 .registration__platphorm {
   padding-top: 42px;
@@ -2715,7 +2790,7 @@ html {
 }
 @media (min-width: 660px) {
   .select-list__achievement-item {
-    margin-bottom: 38px;
+    margin-bottom: 47px;
   }
 }
 .select-list__label {
@@ -2812,7 +2887,7 @@ html {
     order: -3;
     margin: 0 20px;
     padding: 0;
-    padding: 54px 0 54px;
+    padding: 54px 0 11px;
     margin-bottom: 70px;
     background-color: #FFFFFF;
     border: 2px solid #E5E5E5;
@@ -2850,9 +2925,30 @@ html {
   padding-top: 42px;
   margin-bottom: 52px;
 }
+@media (min-width: 660px) {
+  .registration__emotion {
+    position: relative;
+    margin: 0 22px;
+    margin-bottom: 70px;
+    padding-top: 47px;
+    padding-bottom: 53px;
+    background-color: #FFFFFF;
+    border: 2px solid #E5E5E5;
+  }
+}
 .registration__emotion-title {
   text-align: center;
   margin-bottom: 22px;
+}
+@media (min-width: 660px) {
+  .registration__emotion-title {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 31px 0;
+    background-color: #FFFFFF;
+  }
 }
 .registration__emotion-field {
   display: block;
@@ -2863,6 +2959,22 @@ html {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
+@media (min-width: 660px) {
+  .registration__emotion-field {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+.registration__button-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 660px) {
+  .registration__button-wrapper {
+    flex-direction: row;
+    margin: 0 22px;
+  }
+}
 .registration__necessarily-area {
   width: 86%;
   margin: 0 auto;
@@ -2871,6 +2983,12 @@ html {
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
+}
+@media (min-width: 660px) {
+  .registration__necessarily-area {
+    flex-grow: 320;
+    width: auto;
+  }
 }
 .registration__necessarily-area span {
   color: #D22856;
@@ -2882,6 +3000,13 @@ html {
   width: 86%;
   margin: 0 auto;
   margin-bottom: 39px;
+}
+@media (min-width: 660px) {
+  .button-for-form__transmit {
+    margin: 0;
+    flex-grow: 296;
+    width: auto;
+  }
 }
 .button-for-form__success {
   width: 86%;

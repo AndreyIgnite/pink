@@ -1,4 +1,20 @@
 .contacts-list__icon {
-  width: 59px;
-  height: 59px;
+  display: none;
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+  width: 60px;
+  height: 60px;
+  position: relative;
+  border-radius: 0 4px 4px 0;
+  background-color: #E5E5E5;
+}
+
+.contacts-list__icon svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }

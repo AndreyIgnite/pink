@@ -3,7 +3,14 @@
   flex-direction: column;
   margin-bottom: 29px;
   @media (min-width: @tablet-width) {
-    
+    .registration__user-name & {
+      flex-direction: row;
+      margin-bottom: 56px;
+    }
+    .registration__address-list & {
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
   }
 }
 .contacts-list__item:last-child {
