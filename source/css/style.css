@@ -2804,7 +2804,7 @@ html {
 }
 .registration__platphorm {
   padding-top: 42px;
-  padding-bottom: 44px;
+  padding-bottom: 42px;
   color: #283645;
   background-color: #F2F2F2;
 }
@@ -2822,7 +2822,7 @@ html {
 }
 .registration__platphorm-text {
   margin: 0 auto;
-  margin-bottom: 44px;
+  margin-bottom: 40px;
   width: 68%;
   max-width: 218px;
 }
@@ -2865,6 +2865,17 @@ html {
   .select-list__achievement-item {
     margin-bottom: 0;
     margin-right: 0;
+  }
+}
+.select-list__platphorm-item {
+  margin-bottom: 38px;
+}
+.select-list__platphorm-item:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 1080px) {
+  .select-list__platphorm-item {
+    margin-bottom: 39px;
   }
 }
 .select-list__label {
