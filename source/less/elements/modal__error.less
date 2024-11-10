@@ -1,4 +1,15 @@
 .modal__error {
+  padding-bottom: 52px;
   display: none;
-  height: 289px;
+  & br {
+    display: none;
+    @media (min-width: @tablet-width) {
+      display: block;
+      padding-bottom: 54px;
+    }
+    @media (min-width: @desktop-width) {
+      display: none;
+      padding-bottom: 52px;
+    }
+  }
 }

@@ -1,4 +1,16 @@
 .registration__form {
   display: flex;
   flex-direction: column;
+  @media (min-width: @desktop-width) {
+    & div {
+      margin: 0;
+    }
+    display: grid;
+    column-gap: 69px;
+    row-gap: 74px;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1300px;
+    width: 86.6%;
+    margin: 0 auto;
+  }
 }

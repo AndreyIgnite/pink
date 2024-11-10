@@ -1,6 +1,13 @@
 .registration__achievement-list {
   margin: 0 22px;
+  display: flex;
+  flex-direction: column;
   @media (min-width: @tablet-width) {
     margin: 0 60px;
+  }
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 47px;
   }
 }

@@ -12,10 +12,18 @@
     width: auto;
     font-size: 18px;
   }
+  @media (min-width: @desktop-width) {
+    max-width: none;
+    width: 63%;
+  }
 }
 .registration__user-name-bonus span {
   display: none;
   @media (min-width: @tablet-width) {
     display: block;
+  }
+  @media (min-width: @desktop-width) {
+    display: inline;
+
   }
 }
