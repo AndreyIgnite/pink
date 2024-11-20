@@ -1,4 +1,21 @@
-.logo {
-  width: 74px;
-  height: 23px;
+.logo-mobile, .logo-tablet, .logo-desktop {
+  display: none;
+}
+
+.logo-mobile {
+  @media (max-width: 659px) {
+    display: block;
+  }
+}
+
+.logo-tablet {
+  @media (min-width: @tablet-width) and (max-width: 1079px) {
+    display: block;
+  }
+}
+
+.logo-desktop {
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }

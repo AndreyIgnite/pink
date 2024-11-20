@@ -1,5 +1,6 @@
 .site-list__item {
   position: relative;
+  color: white;
 }
 .site-list__item--selected::before {
   @media (min-width: @desktop-width) {
@@ -11,4 +12,11 @@
   height: 2px;
   background-color: white;
   }
+}
+.site-list__item:hover a {
+  color: #D22856;
+}
+.site-list__item:active a {
+  color: inherit;
+  opacity: 30%;
 }

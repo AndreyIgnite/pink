@@ -5,6 +5,7 @@
   height: 23px;
   align-self: center;
   box-sizing: content-box;
+  color: white;
   @media (min-width: @tablet-width) {
     width: 145px;
     height: 40px;
@@ -12,6 +13,16 @@
     padding-top: 27px;
   }
 }
+
+.main-nav__logo:hover .logo-tablet {
+  fill: #D22856;
+}
+.main-nav__logo:active .logo-tablet {
+  fill: currentColor;
+  opacity: 30%;
+}
+
+
 .main-nav__logo img {
   width: 100%;
   height: 100%;
