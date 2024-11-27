@@ -1672,6 +1672,11 @@ html {
     padding-right: 30px;
   }
 }
+@media (max-width: 659px) {
+  .form__item:hover svg {
+    opacity: 50%;
+  }
+}
 .form__icon-wrapper {
   display: flex;
   align-items: center;
@@ -1709,6 +1714,10 @@ html {
     width: 16px;
     height: 16px;
   }
+  .form__icon {
+    fill: #D22856;
+    opacity: 100%;
+  }
 }
 @media (min-width: 1080px) {
   #crop-pic {
@@ -1723,10 +1732,6 @@ html {
     width: 32px;
     height: 32px;
   }
-}
-.form__icon-active {
-  fill: #D22856;
-  opacity: 100%;
 }
 .form__range {
   padding-bottom: 34px;
@@ -1759,6 +1764,9 @@ html {
   border: 2px solid #d22856;
   border-radius: 50%;
 }
+.scale__button-value:active {
+  background-color: #d22856;
+}
 .form__button-wrapper {
   display: flex;
   flex-direction: column;
@@ -1774,39 +1782,59 @@ html {
     gap: 44px;
   }
 }
-.form__button {
+.form-post__button {
+  margin-bottom: 12px;
   width: 100%;
   height: 55px;
   color: #d22856;
   border-color: #d22856;
 }
 @media (min-width: 660px) {
-  .form__button {
+  .form-post__button {
+    width: 95%;
+    margin-right: auto;
+    margin-bottom: 24px;
+  }
+}
+@media (min-width: 1080px) {
+  .form-post__button {
+    font-size: 21px;
+    margin: 0;
+  }
+}
+.form-post__button:hover {
+  background-color: #d22856;
+  color: white;
+}
+.form-post__button:active {
+  background-color: #d22856;
+  color: rgba(255, 255, 255, 0.3);
+}
+.form-cancel__button {
+  opacity: 10%;
+  width: 100%;
+  height: 55px;
+  color: #283645;
+  border-color: #283645;
+}
+@media (min-width: 660px) {
+  .form-cancel__button {
     width: 95%;
     margin-right: auto;
   }
 }
 @media (min-width: 1080px) {
-  .form__button {
+  .form-cancel__button {
     font-size: 21px;
   }
 }
-.form__button:first-of-type {
-  margin-bottom: 12px;
+.form-cancel__button:hover {
+  opacity: 30%;
 }
-@media (min-width: 660px) {
-  .form__button:first-of-type {
-    margin-bottom: 24px;
-  }
-}
-@media (min-width: 1080px) {
-  .form__button:first-of-type {
-    margin: 0;
-  }
-}
-.form__button:disabled {
-  color: rgba(40, 54, 69, 0.1);
-  border-color: rgba(40, 54, 69, 0.1);
+.form-cancel__button:active {
+  background-color: #283645;
+  opacity: 30%;
+  color: rgba(255, 255, 255, 0.3);
 }
 @media (min-width: 1080px) {
   .form__photo-to-load-wrapper {
@@ -3415,8 +3443,16 @@ html {
 }
 .social__developer {
   display: block;
-  height: 34px;
-  width: 27px;
+  height: 40px;
+  width: 35px;
+  position: relative;
+}
+.social__developer:hover use {
+  fill: #283645;
+}
+.social__developer:active use {
+  fill: #283645;
+  opacity: 30%;
 }
 .social__icon circle {
   stroke: #283645;
@@ -3608,6 +3644,10 @@ html {
 }
 .social__icon--youtube use {
   transform: translate(22.5px, 23.5px);
+}
+.form__icon-active {
+  fill: #D22856;
+  opacity: 100%;
 }
 body {
   font-family: "Open Sans", sans-serif;
