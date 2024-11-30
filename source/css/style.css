@@ -775,6 +775,17 @@ html {
   font-size: 18px;
   line-height: 30px;
 }
+.button-for-form:hover {
+  background-color: #1C9B5E;
+}
+.button-for-form:active {
+  background-color: #1C9B5E;
+  color: rgba(255, 255, 255, 0.3);
+}
+.button-for-form:disabled {
+  color: #FFFFFF;
+  background-color: #E5E5E5;
+}
 .header-form {
   color: #FFFFFF;
   background-color: transparent;
@@ -2798,6 +2809,23 @@ html {
     border-radius: 4px 0 0 4px;
   }
 }
+.contacts-list__field:hover {
+  border-color: #283645;
+}
+.contacts-list__field:hover + div {
+  border-right: 2px solid #283645;
+  border-top: 2px solid #283645;
+  border-bottom: 2px solid #283645;
+}
+.contacts-list__field:focus-visible {
+  outline: none;
+  border-color: #D22856;
+}
+.contacts-list__field:focus-visible + div {
+  border-right: 2px solid #D22856;
+  border-top: 2px solid #D22856;
+  border-bottom: 2px solid #D22856;
+}
 .contacts-list__icon {
   display: none;
   width: 60px;
@@ -2979,6 +3007,12 @@ html {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
+.select-list__label:hover .select-list__control_checkbox {
+  border-color: #283645;
+}
+.select-list__label:active .select-list__control_checkbox {
+  border-color: #D22856;
+}
 .select-list__title_checkbox {
   display: block;
   padding: 10px 0 10px 57px;
@@ -3004,6 +3038,12 @@ html {
   background-color: white;
   border: 2px solid #E5E5E5;
   border-radius: 50%;
+}
+.select-list__label:hover .select-list__control_radio {
+  border-color: #283645;
+}
+.select-list__label:active .select-list__control_radio {
+  border-color: #D22856;
 }
 .select-list__title_radio {
   display: block;
