@@ -1,26 +1,31 @@
 .site-list {
   background-color: rgba(40, 54, 69, 1);
 }
+
 .site-list a {
-    color: white;
+  color: #ffffff;
+
   @media (max-width: @mobile-and-tablet-width-only) {
     padding: 25px;
     background-color: #283645;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #000000;
     border-top: 1px solid rgba(72, 84, 97, 1);
     text-transform: uppercase;
     text-align: center;
     font-size: 18px;
     font-weight: 700;
     line-height: 1;
+
     &:hover {
       color: rgba(210, 40, 86, 1);
     }
+
     &:active {
       color: fade(rgba(210, 40, 86, 1), 30%);
     }
   }
 }
+
 @media (min-width: @desktop-width) {
   .site-list {
     background-color: transparent;
@@ -28,10 +33,12 @@
     flex-wrap: wrap;
   }
 }
+
 @media (min-width: @desktop-width) {
   .site-list .site-list__item:not(:last-child) {
     margin-right: 78px;
   }
+
   .site-list a {
     padding: 48px 0;
     font-size: 18px;

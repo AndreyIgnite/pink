@@ -1,0 +1,1 @@
+const mediaQueryLoop=window.matchMedia("(max-width: 1079px)");console.log(mediaQueryLoop.matches);let loop=!0;mediaQueryLoop.matches&&(loop=!1),console.log("повтор = "+loop),new Swiper(".swiper",{pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},loop:loop});

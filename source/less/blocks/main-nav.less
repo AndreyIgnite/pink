@@ -1,21 +1,24 @@
 .main-nav {
-  background-color: fade(black, 30%);
+  background-color: fade(rgb(0, 0, 0), 30%);
+
   @media (max-width: @mobile-and-tablet-width-only) {
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
     min-height: @menu-height-mobile;
-    color: white;
+    color: rgb(255, 255, 255);
   }
+
   @media (min-width: @tablet-width) {
     min-height: 110px;
     padding: 0 4%;
   }
 }
+
 .main-nav--opened {
   @media (max-width: @mobile-and-tablet-width-only) {
     background-color: #283645;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(0, 0, 0);
   }
 }
 
@@ -25,6 +28,7 @@
     padding: 0;
     padding-top: 66px;
   }
+
   @media (min-width: @tablet-width) and (max-width: @mobile-and-tablet-width-only) {
     padding-top: 110px;
   }
