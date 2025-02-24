@@ -27,11 +27,8 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "lint": "npm run editorconfig && npm run stylelint",
-    "min-css": "gulp styles",
     "build": "gulp build",
-    "start": "gulp",
-    "min-html": "gulp html",
-    "copy": "gulp copy"
+    "start": "gulp"
   },
   "browserslist": [
     "last 2 versions",
