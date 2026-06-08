@@ -61,6 +61,12 @@ export const styles = () => {
 }
 
 
+const reloadFunc = async (done) => {
+  await reload()
+  done()
+}
+
+
 //Copy
 
 export const copy = (done) => {
@@ -133,7 +139,8 @@ const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('soucre/less/**/*.js', gulp.series(scripts));
   gulp.watch('soucre/js/*.js', gulp.series(scripts));
-  gulp.watch('source/*.html', gulp.series(html, reload));
+  gulp.watch('source/*.html', gulp.series(html, reloadFunc));
+
 }
 
 
